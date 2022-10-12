@@ -62,7 +62,7 @@ jateteksti.id="jateteksti";
 jateteksti.style.position = 'absolute';
 jateteksti.style.color = "black";
 jateteksti.style.top = "530px";
-jateteksti.style.left = "105px";
+jateteksti.style.left = "109px";
 document.body.appendChild(jateteksti);
 jateteksti.innerHTML = "SEKAJÄTE";
 
@@ -71,7 +71,7 @@ jate1.id="jateteksti";
 jate1.style.position = 'absolute';
 jate1.style.color = "black";
 jate1.style.top = "530px";
-jate1.style.left = "210px";
+jate1.style.left = "219px";
 document.body.appendChild(jate1);
 jate1.innerHTML = "METALLI";
 
@@ -80,7 +80,7 @@ jate2.id="jateteksti";
 jate2.style.position = 'absolute';
 jate2.style.color = "black";
 jate2.style.top = "530px";
-jate2.style.left = "325px";
+jate2.style.left = "340px";
 document.body.appendChild(jate2);
 jate2.innerHTML = "LASI";
 
@@ -89,7 +89,7 @@ jate3.id="jateteksti";
 jate3.style.position = 'absolute';
 jate3.style.color = "black";
 jate3.style.top = "530px";
-jate3.style.left = "430px";
+jate3.style.left = "450px";
 document.body.appendChild(jate3);
 jate3.innerHTML = "BIO";
 
@@ -98,7 +98,7 @@ jate4.id="jateteksti";
 jate4.style.position = 'absolute';
 jate4.style.color = "black";
 jate4.style.top = "530px";
-jate4.style.left = "517px";
+jate4.style.left = "542px";
 document.body.appendChild(jate4);
 jate4.innerHTML = "PAPERI";
 
@@ -107,7 +107,7 @@ jate5.id="jateteksti";
 jate5.style.position = 'absolute';
 jate5.style.color = "black";
 jate5.style.top = "530px";
-jate5.style.left = "617px";
+jate5.style.left = "648px";
 document.body.appendChild(jate5);
 jate5.innerHTML = "MUOVI";
 
@@ -116,7 +116,7 @@ jate6.id="jateteksti";
 jate6.style.position = 'absolute';
 jate6.style.color = "black";
 jate6.style.top = "530px";
-jate6.style.left = "705px";
+jate6.style.left = "740px";
 document.body.appendChild(jate6);
 jate6.innerHTML = "KARTONKI";
 
@@ -138,7 +138,7 @@ jate6.innerHTML = "KARTONKI";
 
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
-         
+     
       nappula[i].style.position = 'absolute';
       nappula[i].style.top = "100px";
 
@@ -178,16 +178,10 @@ jate6.innerHTML = "KARTONKI";
 
         document.body.appendChild(nappula[i]);
       
-        
-
-                             //Make the DIV element draggagle:
-
       
-       
       }
        
-       
-      
+          
 var img_seka = document.createElement("img");
 var img_metalli = document.createElement("img");
 var img_lasi = document.createElement("img");
@@ -210,10 +204,9 @@ var img_kartonki = document.createElement("img");
         kuva0.id=("kuva0");
         kuva0=img_seka;
         kuva0.className="droptarget0";
-        kuva0.style.zIndex=10;
         kuva0.style.position = 'absolute';
         kuva0.style.top = "400px";
-        kuva0.style.left = "100px";
+        kuva0.style.left = "105px";
         document.body.appendChild(kuva0);
         
     
@@ -223,7 +216,7 @@ var img_kartonki = document.createElement("img");
         kuva1.className="droptarget1";
         kuva1.style.position = 'absolute';
         kuva1.style.top = "400px";
-        kuva1.style.left = "200px";
+        kuva1.style.left = "210px";
         document.body.appendChild(kuva1);
 
         var kuva2 = document.createElement("div");
@@ -232,7 +225,7 @@ var img_kartonki = document.createElement("img");
         kuva2.className="droptarget2";
         kuva2.style.position = 'absolute';
         kuva2.style.top = "400px";
-        kuva2.style.left = "300px";
+        kuva2.style.left = "315px";
         document.body.appendChild(kuva2);
 
         var kuva3 = document.createElement("div");
@@ -241,7 +234,7 @@ var img_kartonki = document.createElement("img");
         kuva3.className="droptarget3";
         kuva3.style.position = 'absolute';
         kuva3.style.top = "400px";
-        kuva3.style.left = "400px";
+        kuva3.style.left = "420px";
         document.body.appendChild(kuva3);
   
         var kuva4 = document.createElement("div");
@@ -250,7 +243,7 @@ var img_kartonki = document.createElement("img");
         kuva4.className="droptarget4";
         kuva4.style.position = 'absolute';
         kuva4.style.top = "400px";
-        kuva4.style.left = "500px";
+        kuva4.style.left = "525px";
         document.body.appendChild(kuva4);
 
         var kuva5 = document.createElement("div");
@@ -259,7 +252,7 @@ var img_kartonki = document.createElement("img");
         kuva5.className="droptarget5";
         kuva5.style.position = 'absolute';
         kuva5.style.top = "400px";
-        kuva5.style.left = "600px";
+        kuva5.style.left = "630px";
         document.body.appendChild(kuva5);   
         
         var kuva6 = document.createElement("div");
@@ -268,7 +261,7 @@ var img_kartonki = document.createElement("img");
         kuva6.className="droptarget6";
         kuva6.style.position = 'absolute';
         kuva6.style.top = "400px";
-        kuva6.style.left = "700px";
+        kuva6.style.left = "735px";
         document.body.appendChild(kuva6); 
                
  
@@ -295,7 +288,7 @@ var img_kartonki = document.createElement("img");
                  
                 
                  // Output some text when starting to drag the p element
-                 document.getElementById("demo").innerHTML = "Started to drag the p element.";
+                 //document.getElementById("demo").innerHTML = "Started to drag the p element.";
                 
                  // Change the opacity of the draggable element
                  event.target.style.opacity = "0.4";
@@ -303,7 +296,7 @@ var img_kartonki = document.createElement("img");
                
                // While dragging the p element, change the color of the output text
                document.addEventListener("drag", function(event) {
-                 document.getElementById("demo").style.color = "red";
+                 //document.getElementById("demo").style.color = "red";
                });
                
                // Output some text when finished dragging the p element and reset the opacity
@@ -363,7 +356,7 @@ var img_kartonki = document.createElement("img");
                  event.target.className == ("droptarget5")||
                  event.target.className == ("droptarget6")) {
                   
-                   document.getElementById("demo").style.color = "green";
+                   //document.getElementById("demo").style.color = "green";
                    event.target.style.border = "";
                    
                    var data = event.dataTransfer.getData("div");
