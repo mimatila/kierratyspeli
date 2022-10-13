@@ -412,7 +412,7 @@ var img_kartonki = document.createElement("img");
                     success_count=success_count+1;
                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                  if(event.target.className == ("droptarget6")&&muovi.includes(event.dataTransfer.getData("text"))){
+                  if(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
