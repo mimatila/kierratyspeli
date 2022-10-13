@@ -377,6 +377,17 @@ var img_kartonki = document.createElement("img");
                    
                    last=last+1;
 
+                  if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
+                    ||(event.target.className == ("droptarget6")&&muovi.includes(event.dataTransfer.getData("text"))))
+                    {
+                      console.log("ei osunut")
+                    } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";
+
                   if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
                      success_count=success_count+1;    
                      document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
