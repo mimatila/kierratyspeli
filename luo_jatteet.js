@@ -121,10 +121,22 @@ document.body.appendChild(jate6);
 jate6.innerHTML = "KARTONKI";
 
 
+
+
+
     var nappula=[];
     var teksti=[];
-
+    var pallo=[];
+    var sijainti=115;
     for (var i = 0; i < 15; i++) {  
+
+      pallo[i]=document.createElement("div");
+      pallo[i].id="pallo"+i;
+      pallo[i].style.position="absolute";     
+      pallo[i].style.top=(sijainti+i*30)+"px";
+      pallo[i].style.left="900px";   
+      pallo[i].className="pallo";
+      document.body.appendChild(pallo[i]);
         
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
@@ -284,9 +296,9 @@ var img_kartonki = document.createElement("img");
                   
                                  
                   event.dataTransfer.setData("text", teksti[index].innerHTML);
-                 
-                 
-                
+                  event.dataTransfer.setData("pallo", pallo[last].id);
+                  
+                                 
                  // Output some text when starting to drag the p element
                  //document.getElementById("demo").innerHTML = "Started to drag the p element.";
                 
@@ -366,34 +378,33 @@ var img_kartonki = document.createElement("img");
                    last=last+1;
 
                   if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
-                     success_count=success_count+1;
-                    
-                                         
-                   }
+                     success_count=success_count+1;    
+                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
+                   } 
                   if(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                    
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
                   if(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                    
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
                   if(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                    
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  } 
                   if(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                   
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
                   if(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                    
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
                   if(event.target.className == ("droptarget6")&&muovi.includes(event.dataTransfer.getData("text"))){
                     success_count=success_count+1;
-                    
-                  }
+                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
                     if(last==15){
                     document.getElementById("p").innerHTML=success_count+"/15";
                     }
