@@ -47,22 +47,35 @@ var index=0;
 // tulos näytölle x/15
 
 var result=document.createElement("p");
-result.id="p";
+result.id="result";
 result.style.position = 'absolute';
-result.style.left = "1000px";
-result.style.top = "20px";
+result.style.left = "640px";
+result.style.top = "280px";
 result.style.color = "black";
 result.style.fontSize = "35px";
+result.style.display="none";
 
 document.body.appendChild(result);
 result.innerHTML=success_count+"/15";
+
+var gameover=document.createElement("p");
+gameover.id="gameover";
+gameover.style.position = 'absolute';
+gameover.style.left = "570px";
+gameover.style.top = "240px";
+gameover.style.color = "black";
+gameover.style.fontSize = "35px";
+gameover.style.display="none";
+
+document.body.appendChild(gameover);
+gameover.innerHTML="GAMEOVER";
 
 var jateteksti=document.createElement("p");
 jateteksti.id="jateteksti";
 jateteksti.style.position = 'absolute';
 jateteksti.style.color = "black";
 jateteksti.style.top = "530px";
-jateteksti.style.left = "109px";
+jateteksti.style.left = "320px";
 document.body.appendChild(jateteksti);
 jateteksti.innerHTML = "SEKAJÄTE";
 
@@ -71,7 +84,7 @@ jate1.id="jateteksti";
 jate1.style.position = 'absolute';
 jate1.style.color = "black";
 jate1.style.top = "530px";
-jate1.style.left = "219px";
+jate1.style.left = "430px";
 document.body.appendChild(jate1);
 jate1.innerHTML = "METALLI";
 
@@ -80,7 +93,7 @@ jate2.id="jateteksti";
 jate2.style.position = 'absolute';
 jate2.style.color = "black";
 jate2.style.top = "530px";
-jate2.style.left = "340px";
+jate2.style.left = "550px";
 document.body.appendChild(jate2);
 jate2.innerHTML = "LASI";
 
@@ -89,7 +102,7 @@ jate3.id="jateteksti";
 jate3.style.position = 'absolute';
 jate3.style.color = "black";
 jate3.style.top = "530px";
-jate3.style.left = "450px";
+jate3.style.left = "661px";
 document.body.appendChild(jate3);
 jate3.innerHTML = "BIO";
 
@@ -98,7 +111,7 @@ jate4.id="jateteksti";
 jate4.style.position = 'absolute';
 jate4.style.color = "black";
 jate4.style.top = "530px";
-jate4.style.left = "542px";
+jate4.style.left = "753px";
 document.body.appendChild(jate4);
 jate4.innerHTML = "PAPERI";
 
@@ -107,7 +120,7 @@ jate5.id="jateteksti";
 jate5.style.position = 'absolute';
 jate5.style.color = "black";
 jate5.style.top = "530px";
-jate5.style.left = "648px";
+jate5.style.left = "858px";
 document.body.appendChild(jate5);
 jate5.innerHTML = "MUOVI";
 
@@ -116,7 +129,7 @@ jate6.id="jateteksti";
 jate6.style.position = 'absolute';
 jate6.style.color = "black";
 jate6.style.top = "530px";
-jate6.style.left = "740px";
+jate6.style.left = "950px";
 document.body.appendChild(jate6);
 jate6.innerHTML = "KARTONKI";
 
@@ -127,14 +140,14 @@ jate6.innerHTML = "KARTONKI";
     var nappula=[];
     var teksti=[];
     var pallo=[];
-    var sijainti=115;
+    var sijainti=460;
     for (var i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
       pallo[i].id="pallo"+i;
       pallo[i].style.position="absolute";     
-      pallo[i].style.top=(sijainti+i*30)+"px";
-      pallo[i].style.left="900px";   
+      pallo[i].style.top="580px";
+      pallo[i].style.left=(sijainti+(i*30))+"px";   
       pallo[i].className="pallo";
       document.body.appendChild(pallo[i]);
         
@@ -155,24 +168,24 @@ jate6.innerHTML = "KARTONKI";
       nappula[i].style.top = "100px";
 
         if(i==0||i==5||i==10){
-            nappula[i].style.left = "100px";
+            nappula[i].style.left = "300px";
         }
         
         if((i>0&&i<5)){
             
-            var h_sijainti=100+(i*150)+"px";
+            var h_sijainti=320+(i*150)+"px";
             nappula[i].style.left = h_sijainti;
         }    
         
         if((i>5&&i<10)){
             
-          var h_sijainti=100+((i-5)*150)+"px";
+          var h_sijainti=320+((i-5)*150)+"px";
           nappula[i].style.left = h_sijainti;
       } 
 
       if((i>10)){
             
-        var h_sijainti=100+((i-10)*150)+"px";
+        var h_sijainti=320+((i-10)*150)+"px";
         nappula[i].style.left = h_sijainti;
     } 
        
@@ -218,7 +231,7 @@ var img_kartonki = document.createElement("img");
         kuva0.className="droptarget0";
         kuva0.style.position = 'absolute';
         kuva0.style.top = "400px";
-        kuva0.style.left = "105px";
+        kuva0.style.left = "315px";
         document.body.appendChild(kuva0);
         
     
@@ -228,7 +241,7 @@ var img_kartonki = document.createElement("img");
         kuva1.className="droptarget1";
         kuva1.style.position = 'absolute';
         kuva1.style.top = "400px";
-        kuva1.style.left = "210px";
+        kuva1.style.left = "420px";
         document.body.appendChild(kuva1);
 
         var kuva2 = document.createElement("div");
@@ -237,7 +250,7 @@ var img_kartonki = document.createElement("img");
         kuva2.className="droptarget2";
         kuva2.style.position = 'absolute';
         kuva2.style.top = "400px";
-        kuva2.style.left = "315px";
+        kuva2.style.left = "525px";
         document.body.appendChild(kuva2);
 
         var kuva3 = document.createElement("div");
@@ -246,7 +259,7 @@ var img_kartonki = document.createElement("img");
         kuva3.className="droptarget3";
         kuva3.style.position = 'absolute';
         kuva3.style.top = "400px";
-        kuva3.style.left = "420px";
+        kuva3.style.left = "630px";
         document.body.appendChild(kuva3);
   
         var kuva4 = document.createElement("div");
@@ -255,7 +268,7 @@ var img_kartonki = document.createElement("img");
         kuva4.className="droptarget4";
         kuva4.style.position = 'absolute';
         kuva4.style.top = "400px";
-        kuva4.style.left = "525px";
+        kuva4.style.left = "735px";
         document.body.appendChild(kuva4);
 
         var kuva5 = document.createElement("div");
@@ -264,7 +277,7 @@ var img_kartonki = document.createElement("img");
         kuva5.className="droptarget5";
         kuva5.style.position = 'absolute';
         kuva5.style.top = "400px";
-        kuva5.style.left = "630px";
+        kuva5.style.left = "840px";
         document.body.appendChild(kuva5);   
         
         var kuva6 = document.createElement("div");
@@ -273,7 +286,7 @@ var img_kartonki = document.createElement("img");
         kuva6.className="droptarget6";
         kuva6.style.position = 'absolute';
         kuva6.style.top = "400px";
-        kuva6.style.left = "735px";
+        kuva6.style.left = "945px";
         document.body.appendChild(kuva6); 
                
  
@@ -328,7 +341,7 @@ var img_kartonki = document.createElement("img");
                 event.target.className == ("droptarget4")||
                 event.target.className == ("droptarget5")||
                 event.target.className == ("droptarget6"))  {
-                   event.target.style.border = "3px dotted red";
+                   event.target.style.border = "3px dotted yellow";
                  }
                });
                
@@ -417,7 +430,10 @@ var img_kartonki = document.createElement("img");
                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
                     if(last==15){
-                    document.getElementById("p").innerHTML=success_count+"/15";
+                      document.getElementById("result").style.display="block";
+                      document.getElementById("gameover").style.display="block";
+                      document.getElementById("result").innerHTML=success_count+"/15";
+                    
                     }
                  }
                });
