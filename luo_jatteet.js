@@ -46,29 +46,28 @@ var index=0;
 
 // tulos näytölle x/15
 
-var result=document.createElement("p");
-result.id="result";
-result.style.position = 'absolute';
-result.style.left = "640px";
-result.style.top = "280px";
-result.style.color = "black";
-result.style.fontSize = "35px";
-result.style.display="none";
-
-document.body.appendChild(result);
-result.innerHTML=success_count+"/15";
-
 var gameover=document.createElement("p");
 gameover.id="gameover";
-gameover.style.position = 'absolute';
-gameover.style.left = "570px";
-gameover.style.top = "240px";
 gameover.style.color = "black";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
-
-document.body.appendChild(gameover);
+gameover.style.position="absolute";
+gameover.style.top="70%";
+gameover.style.left="50%";
+document.querySelector("article").appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
+
+var result=document.createElement("p");
+result.id="result";
+result.style.color = "black";
+result.style.fontSize = "35px";
+result.style.display="none";
+result.style.position="absolute";
+result.style.top="80%";
+result.style.left="55%";
+
+document.querySelector("article").appendChild(result);
+result.innerHTML=success_count+"/15";
 
 var jate0=document.createElement("p");
 jate0.id="jateteksti";
@@ -117,15 +116,15 @@ jate6.innerHTML = "KARTONKI";
 
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
-    document.body.appendChild(grid_nappulat);
+    document.querySelector("article").appendChild(grid_nappulat);
 
     grid_pontot=document.createElement("div");
     grid_pontot.className="grid-pontot-container";
-    document.body.appendChild(grid_pontot);
+    document.querySelector("article").appendChild(grid_pontot);
 
     grid_valot=document.createElement("div");
     grid_valot.className="grid-valot-container";
-    document.body.appendChild(grid_valot);
+    document.querySelector("article").appendChild(grid_valot);
     
     
     var pallo=[];
