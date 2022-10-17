@@ -113,6 +113,8 @@ jate6.innerHTML = "KARTONKI";
     var teksti=[];
     var grid_nappulat;
     var grid_pontot;
+    var grid_valot;
+
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
     document.body.appendChild(grid_nappulat);
@@ -120,19 +122,21 @@ jate6.innerHTML = "KARTONKI";
     grid_pontot=document.createElement("div");
     grid_pontot.className="grid-pontot-container";
     document.body.appendChild(grid_pontot);
+
+    grid_valot=document.createElement("div");
+    grid_valot.className="grid-valot-container";
+    document.body.appendChild(grid_valot);
     
     
     var pallo=[];
-    var sijainti=460;
+    
     for (var i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
-      pallo[i].id="pallo"+i;
-      pallo[i].style.position="absolute";     
-      pallo[i].style.top="580px";
-      pallo[i].style.left=(sijainti+(i*30))+"px";   
+      pallo[i].id="pallo"+i;   
       pallo[i].className="pallo";
-      document.body.appendChild(pallo[i]);
+      grid_valot.appendChild(pallo[i]);
+      
       
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
