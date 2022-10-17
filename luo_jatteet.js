@@ -336,7 +336,7 @@ var img_kartonki = document.createElement("img");
                     ||(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text")))
                     ||(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text")))
                     ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget6")&&muovi.includes(event.dataTransfer.getData("text"))))
+                    ||(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))))
                     {
                       console.log("ei osunut")
                     } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";
