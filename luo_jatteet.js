@@ -70,67 +70,39 @@ gameover.style.display="none";
 document.body.appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
 
-var jateteksti=document.createElement("p");
-jateteksti.id="jateteksti";
-jateteksti.style.position = 'absolute';
-jateteksti.style.color = "black";
-jateteksti.style.top = "530px";
-jateteksti.style.left = "320px";
-document.body.appendChild(jateteksti);
-jateteksti.innerHTML = "SEKAJÄTE";
+var jate0=document.createElement("p");
+jate0.id="jateteksti";
+jate0.style.color = "black";
+jate0.innerHTML = "SEKAJÄTE";
 
 var jate1=document.createElement("p");
 jate1.id="jateteksti";
-jate1.style.position = 'absolute';
 jate1.style.color = "black";
-jate1.style.top = "530px";
-jate1.style.left = "430px";
-document.body.appendChild(jate1);
 jate1.innerHTML = "METALLI";
 
 var jate2=document.createElement("p");
 jate2.id="jateteksti";
-jate2.style.position = 'absolute';
 jate2.style.color = "black";
-jate2.style.top = "530px";
-jate2.style.left = "550px";
-document.body.appendChild(jate2);
 jate2.innerHTML = "LASI";
 
 var jate3=document.createElement("p");
 jate3.id="jateteksti";
-jate3.style.position = 'absolute';
 jate3.style.color = "black";
-jate3.style.top = "530px";
-jate3.style.left = "661px";
-document.body.appendChild(jate3);
 jate3.innerHTML = "BIO";
 
 var jate4=document.createElement("p");
 jate4.id="jateteksti";
-jate4.style.position = 'absolute';
 jate4.style.color = "black";
-jate4.style.top = "530px";
-jate4.style.left = "753px";
-document.body.appendChild(jate4);
 jate4.innerHTML = "PAPERI";
 
 var jate5=document.createElement("p");
 jate5.id="jateteksti";
-jate5.style.position = 'absolute';
 jate5.style.color = "black";
-jate5.style.top = "530px";
-jate5.style.left = "858px";
-document.body.appendChild(jate5);
 jate5.innerHTML = "MUOVI";
 
 var jate6=document.createElement("p");
 jate6.id="jateteksti";
-jate6.style.position = 'absolute';
 jate6.style.color = "black";
-jate6.style.top = "530px";
-jate6.style.left = "950px";
-document.body.appendChild(jate6);
 jate6.innerHTML = "KARTONKI";
 
 
@@ -244,6 +216,14 @@ var img_kartonki = document.createElement("img");
         kuva6=img_kartonki;
         kuva6.className="droptarget6";
         grid_pontot.appendChild(kuva6);
+
+        grid_pontot.appendChild(jate0);
+        grid_pontot.appendChild(jate1);
+        grid_pontot.appendChild(jate2);
+        grid_pontot.appendChild(jate3);
+        grid_pontot.appendChild(jate4);
+        grid_pontot.appendChild(jate5);
+        grid_pontot.appendChild(jate6);
                
  
 
