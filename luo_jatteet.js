@@ -139,10 +139,15 @@ jate6.innerHTML = "KARTONKI";
 
     var nappula=[];
     var teksti=[];
-    var flex;
-    flex=document.createElement("div");
-    flex.className="flex-container";
-    document.body.appendChild(flex);
+    var grid_nappulat;
+    var grid_pontot;
+    grid_nappulat=document.createElement("div");
+    grid_nappulat.className="grid-container";
+    document.body.appendChild(grid_nappulat);
+
+    grid_pontot=document.createElement("div");
+    grid_pontot.className="grid-pontot-container";
+    document.body.appendChild(grid_pontot);
     
     
     var pallo=[];
@@ -171,7 +176,7 @@ jate6.innerHTML = "KARTONKI";
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
       
-      flex.appendChild(nappula[i]);
+      grid_nappulat.appendChild(nappula[i]);
       
       
       
@@ -200,65 +205,45 @@ var img_kartonki = document.createElement("img");
         kuva0.id=("kuva0");
         kuva0=img_seka;
         kuva0.className="droptarget0";
-        kuva0.style.position = 'absolute';
-        kuva0.style.top = "400px";
-        kuva0.style.left = "315px";
-        document.body.appendChild(kuva0);
+        
+        grid_pontot.appendChild(kuva0);
         
     
         var kuva1 = document.createElement("div");
         kuva1.id=("kuva1");
         kuva1=img_metalli;
         kuva1.className="droptarget1";
-        kuva1.style.position = 'absolute';
-        kuva1.style.top = "400px";
-        kuva1.style.left = "420px";
-        document.body.appendChild(kuva1);
+        grid_pontot.appendChild(kuva1);
 
         var kuva2 = document.createElement("div");
         kuva2.id=("kuva2");
         kuva2=img_lasi;
         kuva2.className="droptarget2";
-        kuva2.style.position = 'absolute';
-        kuva2.style.top = "400px";
-        kuva2.style.left = "525px";
-        document.body.appendChild(kuva2);
+         grid_pontot.appendChild(kuva2);
 
         var kuva3 = document.createElement("div");
         kuva3.id=("kuva3");
         kuva3=img_bio;
         kuva3.className="droptarget3";
-        kuva3.style.position = 'absolute';
-        kuva3.style.top = "400px";
-        kuva3.style.left = "630px";
-        document.body.appendChild(kuva3);
+        grid_pontot.appendChild(kuva3);
   
         var kuva4 = document.createElement("div");
         kuva4.id=("kuva4");
         kuva4=img_paperi;
         kuva4.className="droptarget4";
-        kuva4.style.position = 'absolute';
-        kuva4.style.top = "400px";
-        kuva4.style.left = "735px";
-        document.body.appendChild(kuva4);
+        grid_pontot.appendChild(kuva4);
 
         var kuva5 = document.createElement("div");
         kuva5.id=("kuva5");
         kuva5=img_muovi;
         kuva5.className="droptarget5";
-        kuva5.style.position = 'absolute';
-        kuva5.style.top = "400px";
-        kuva5.style.left = "840px";
-        document.body.appendChild(kuva5);   
+        grid_pontot.appendChild(kuva5);  
         
         var kuva6 = document.createElement("div");
         kuva6.id=("kuva6");
         kuva6=img_kartonki;
         kuva6.className="droptarget6";
-        kuva6.style.position = 'absolute';
-        kuva6.style.top = "400px";
-        kuva6.style.left = "945px";
-        document.body.appendChild(kuva6); 
+        grid_pontot.appendChild(kuva6);
                
  
 
