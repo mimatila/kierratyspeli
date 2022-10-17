@@ -52,7 +52,7 @@ gameover.style.color = "black";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
 gameover.style.position="absolute";
-gameover.style.top="70%";
+gameover.style.top="45%";
 gameover.style.left="50%";
 document.querySelector("article").appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
@@ -63,7 +63,7 @@ result.style.color = "black";
 result.style.fontSize = "35px";
 result.style.display="none";
 result.style.position="absolute";
-result.style.top="80%";
+result.style.top="50%";
 result.style.left="55%";
 
 document.querySelector("article").appendChild(result);
