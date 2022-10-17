@@ -139,6 +139,12 @@ jate6.innerHTML = "KARTONKI";
 
     var nappula=[];
     var teksti=[];
+    var flex;
+    flex=document.createElement("div");
+    flex.className="flex-container";
+    document.body.appendChild(flex);
+    
+    
     var pallo=[];
     var sijainti=460;
     for (var i = 0; i < 15; i++) {  
@@ -150,11 +156,12 @@ jate6.innerHTML = "KARTONKI";
       pallo[i].style.left=(sijainti+(i*30))+"px";   
       pallo[i].className="pallo";
       document.body.appendChild(pallo[i]);
-        
+      
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
       nappula[i].id = "mydiv"+i;
       nappula[i].className = "mydiv";
+      
       //teksti[i].innerHTML=jatteet[i];
       
       const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
@@ -163,45 +170,9 @@ jate6.innerHTML = "KARTONKI";
 
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
-     
-      nappula[i].style.position = 'absolute';
-      nappula[i].style.top = "100px";
-
-        if(i==0||i==5||i==10){
-            nappula[i].style.left = "300px";
-        }
-        
-        if((i>0&&i<5)){
-            
-            var h_sijainti=320+(i*150)+"px";
-            nappula[i].style.left = h_sijainti;
-        }    
-        
-        if((i>5&&i<10)){
-            
-          var h_sijainti=320+((i-5)*150)+"px";
-          nappula[i].style.left = h_sijainti;
-      } 
-
-      if((i>10)){
-            
-        var h_sijainti=320+((i-10)*150)+"px";
-        nappula[i].style.left = h_sijainti;
-    } 
-       
-        if(i>4&&i<10){
-            
-          var v_sijainti=150+"px";
-          nappula[i].style.top = v_sijainti;
-        }  
-
-        if(i>9){
-            
-          var v_sijainti=200+"px";
-          nappula[i].style.top = v_sijainti;
-        }  
-
-        document.body.appendChild(nappula[i]);
+      
+      flex.appendChild(nappula[i]);
+      
       
       
       }
