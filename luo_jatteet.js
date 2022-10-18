@@ -48,7 +48,7 @@ var index=0;
 
 var gameover=document.createElement("p");
 gameover.id="gameover";
-gameover.style.color = "black";
+gameover.style.color = "red";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
 gameover.style.position="absolute";
@@ -59,7 +59,7 @@ gameover.innerHTML="GAMEOVER";
 
 var result=document.createElement("p");
 result.id="result";
-result.style.color = "black";
+result.style.color = "red";
 result.style.fontSize = "35px";
 result.style.display="none";
 result.style.position="absolute";
