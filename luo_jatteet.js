@@ -54,7 +54,7 @@ gameover.style.display="none";
 gameover.style.position="absolute";
 gameover.style.top="45%";
 gameover.style.left="50%";
-document.querySelector("article").appendChild(gameover);
+document.querySelector("peli").appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
 
 var result=document.createElement("p");
@@ -66,7 +66,7 @@ result.style.position="absolute";
 result.style.top="50%";
 result.style.left="55%";
 
-document.querySelector("article").appendChild(result);
+document.querySelector("peli").appendChild(result);
 result.innerHTML=success_count+"/15";
 
 var jate0=document.createElement("p");
@@ -104,10 +104,6 @@ jate6.id="jateteksti";
 jate6.style.color = "black";
 jate6.innerHTML = "KARTONKI";
 
-
-
-
-
     var nappula=[];
     var teksti=[];
     var grid_nappulat;
@@ -116,15 +112,15 @@ jate6.innerHTML = "KARTONKI";
 
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
-    document.querySelector("article").appendChild(grid_nappulat);
+    document.querySelector("peli").appendChild(grid_nappulat);
 
     grid_pontot=document.createElement("div");
     grid_pontot.className="grid-pontot-container";
-    document.querySelector("article").appendChild(grid_pontot);
+    document.querySelector("peli").appendChild(grid_pontot);
 
     grid_valot=document.createElement("div");
     grid_valot.className="grid-valot-container";
-    document.querySelector("article").appendChild(grid_valot);
+    document.querySelector("peli").appendChild(grid_valot);
     
     
     var pallo=[];
