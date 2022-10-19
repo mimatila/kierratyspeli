@@ -62,13 +62,35 @@ footer {
   color: white;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
+   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+   @media (max-width: 600px) {
   nav, peli {
     width: 100%;
     height: auto;
   }
 }
+
+ /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+ @media (min-width: 900px) {
+  .grid-container { grid-template-columns: repeat(5, 1fr); }
+
+  }
+
+  @media (min-width: 600px) and (max-width: 900px) {
+  .grid-container { grid-template-columns: repeat(3, 1fr); }
+
+  }
+
+
+   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+ @media (max-width: 600px) {
+  .grid-container { grid-template-columns: repeat(1, 1fr);max-height: 50px;overflow: hidden;}
+
+  }
+
+
+ 
+
 
 .droptarget0 {
     
@@ -117,8 +139,7 @@ footer {
     .grid-container{
         display: grid; 
         width:80%;
-        height:220px;     
-        grid-template-columns: auto auto auto auto auto;
+        height:220px;            
         margin: 0% 10% 0% 10%;     
         justify-content: center;
         align-items: center;  
@@ -139,6 +160,8 @@ footer {
         text-align: center;   
             
     }
+
+ 
 
     .grid-valot-container{
         margin: 2% 20% 0% 20%;
