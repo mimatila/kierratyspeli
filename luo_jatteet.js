@@ -71,37 +71,30 @@ result.innerHTML=success_count+"/15";
 
 var jate0=document.createElement("p");
 jate0.id="jateteksti";
-jate0.style.color = "black";
 jate0.innerHTML = "SEKAJÄTE";
 
 var jate1=document.createElement("p");
 jate1.id="jateteksti";
-jate1.style.color = "black";
 jate1.innerHTML = "METALLI";
 
 var jate2=document.createElement("p");
 jate2.id="jateteksti";
-jate2.style.color = "black";
 jate2.innerHTML = "LASI";
 
 var jate3=document.createElement("p");
 jate3.id="jateteksti";
-jate3.style.color = "black";
 jate3.innerHTML = "BIO";
 
 var jate4=document.createElement("p");
 jate4.id="jateteksti";
-jate4.style.color = "black";
 jate4.innerHTML = "PAPERI";
 
 var jate5=document.createElement("p");
 jate5.id="jateteksti";
-jate5.style.color = "black";
 jate5.innerHTML = "MUOVI";
 
 var jate6=document.createElement("p");
 jate6.id="jateteksti";
-jate6.style.color = "black";
 jate6.innerHTML = "KARTONKI";
 
     var nappula=[];
@@ -175,11 +168,9 @@ var img_kartonki = document.createElement("img");
         
         kuva0.id=("kuva0");
         kuva0=img_seka;
-        kuva0.className="droptarget0";
-        
+        kuva0.className="droptarget0";      
         grid_pontot.appendChild(kuva0);
-        
-    
+          
         var kuva1 = document.createElement("div");
         kuva1.id=("kuva1");
         kuva1=img_metalli;
