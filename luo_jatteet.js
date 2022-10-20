@@ -136,6 +136,7 @@ jate6.innerHTML = "KARTONKI";
       const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
       //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
       teksti[i].innerHTML=randomItem(jatteet);
+      teksti[i].style.fontWeight="bold";
 
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
