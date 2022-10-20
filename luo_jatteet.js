@@ -107,6 +107,10 @@ jate6.innerHTML = "KARTONKI";
     grid_nappulat.className="grid-container";
     document.querySelector("peli").appendChild(grid_nappulat);
 
+    grid_keskusta=document.createElement("div");
+    grid_keskusta.className="grid-keskusta";
+    document.querySelector("peli").appendChild(grid_keskusta);
+
     grid_pontot=document.createElement("div");
     grid_pontot.className="grid-pontot-container";
     document.querySelector("peli").appendChild(grid_pontot);
