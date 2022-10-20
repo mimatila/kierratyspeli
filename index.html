@@ -67,6 +67,8 @@ footer {
    @media (max-width: 700px) {
     .grid-keskusta{ max-height: 7%;}
     .grid-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;}
+    .grid-pontot-container { padding:28px 0px 0px 0px;
+   }
   nav, peli {
     width: 100%;
     height: auto;
@@ -91,7 +93,9 @@ footer {
   @media (min-width: 700px) and (max-width: 952px) {
   .grid-container { grid-template-columns: repeat(3, 1fr);
    }
-   .grid-keskusta{ max-height: 20%;}
+   .grid-pontot-container { padding:28px 0px 0px 0px;
+   }
+  
    .droptarget0{width:70px;}
   .droptarget1{width:70px;}
   .droptarget2{width:70px;}
@@ -106,8 +110,11 @@ footer {
   @media (min-width: 952px) and (max-width: 1150px) {
   .grid-container { grid-template-columns: repeat(3, 1fr);
    }
-   .grid-pontot-container{ max-height: 25%;}
-  .grid-keskusta{ max-height: 21%;}
+
+   .grid-pontot-container { padding:28px 0px 0px 0px;
+   }
+   
+  
    .droptarget0{width:70px;}
   .droptarget1{width:70px;}
   .droptarget2{width:70px;}
@@ -119,9 +126,7 @@ footer {
     padding:0px 0px 0px 0px;}
   }
 
-  .grid-pontot-container{
-    padding:0px 0px 0px 0px;
-  }
+  
  
   #jateteksti{font-size: 10px;
     padding:0px 0px 0px 0px;}
@@ -185,7 +190,8 @@ footer {
 
     .grid-container{
         display: grid; 
-        width:80%;                
+        width:80%;   
+        height:180px;             
         margin: auto;     
         justify-content: center;
         align-items: center;    
