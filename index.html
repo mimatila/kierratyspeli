@@ -1,296 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:gray;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 20%;
-  height: 600px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-peli {
-  padding: 10px;
-  float: left;
-  width: 80%;
-  height: 600px; /* only for demonstration, should be removed */
-  
-}
-
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-   @media (max-width: 700px) {
-    .grid-keskusta{ max-height: 7%;}
-    .grid-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;}
-    .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
-   .pallo{max-width: 0.5em;max-height: 0.5em;}
-  nav, peli {
-    width: 100%;
-    height: auto;
-  }
-  .droptarget0{width:60px;}
-  .droptarget1{width:60px;}
-  .droptarget2{width:60px;}
-  .droptarget3{width:60px;}
-  .droptarget4{width:60px;}
-  .droptarget5{width:60px;}
-  .droptarget6{width:60px;}
-    
-  }
-
-
- /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
- @media (min-width: 1125px) {
-  .grid-container { grid-template-columns: repeat(5, 1fr); }
-  .grid-valot-container{width:80%;}
-  }
-
-  @media (min-width: 700px) and (max-width: 952px) {
-  .grid-container { grid-template-columns: repeat(3, 1fr);
-   }
-   .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
-   .pallo{max-width: 0.5em;max-height: 0.7em;}
-  
-   .droptarget0{width:70px;}
-  .droptarget1{width:70px;}
-  .droptarget2{width:70px;}
-  .droptarget3{width:70px;}
-  .droptarget4{width:70px;}
-  .droptarget5{width:70px;}
-  .droptarget6{width:70px;}
-  #jateteksti{font-size: 10px;
-    padding:0px 0px 0px 0px;}
-  }
-
-  @media (min-width: 952px) and (max-width: 1150px) {
-  .grid-container { grid-template-columns: repeat(3, 1fr);
-   }
-   .pallo{max-width: 0.7em;max-height: 0.7em;}
-
-   .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
-   
-  
-   .droptarget0{width:70px;}
-  .droptarget1{width:70px;}
-  .droptarget2{width:70px;}
-  .droptarget3{width:70px;}
-  .droptarget4{width:70px;}
-  .droptarget5{width:70px;}
-  .droptarget6{width:70px;}
-  #jateteksti{font-size: 10px;
-    padding:0px 0px 0px 0px;}
-  }
-
-  
- 
-  #jateteksti{font-size: 10px;
-    padding:0px 0px 0px 0px;}
- 
-
-  #jateteksti{
-    color:black;
-    font-size: 1em;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    display:block;
-  }
-
-.droptarget0 {
-    
-  min-width: 0px;
-    min-height: 0px;
-    margin: 0 auto;
-   
-}
-.droptarget1 {
-    
-  min-width: 0px;
-    min-height: 0px; 
-    margin: 0 auto;
-}
-.droptarget2 {
-    
-  min-width: 0px;
-    min-height: 0px;
-    margin: 0 auto;
-}
-.droptarget3 {
-    
-    min-width: 0px;
-    min-height: 0px; 
-    margin: 0 auto; 
-}
-.droptarget4 {
-    
-  min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto;
-}
-.droptarget5 {
-    
-  min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto; 
-}
-
-.droptarget6 {
-    
-  min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto; 
-}
-
-    .grid-container{
-        display: grid; 
-        width:80%;   
-        height:180px;             
-        margin: auto;     
-        justify-content: center;
-        align-items: center;    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
     }
 
-    .grid-keskusta{
-        display: grid; 
-        width:80%;
-        height:220px;          
-        margin: auto;     
-        justify-content: center;
-        align-items: center;    
+    .cards{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20vw;
+      height: 10vh;
+      border: 0.5px solid rgba(0, 140, 186, 0.5);
+      border-radius: 4px;
+      margin: 5px;
+      text-align: center;
     }
 
-    .grid-pontot-container{
-        width:80%;
-        height:auto; 
-        margin: auto;
-        display: grid;      
-        grid-template-columns: auto auto auto auto auto auto auto;
-        align-items: center;     
-        grid-row-gap: 0px;
-        grid-column-gap: 10px;
-        justify-content: center; 
-        text-align: center;   
-            
+    .cards:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      cursor: pointer;
+  
     }
 
-    .grid-valot-container{
-        width:50%;      
-        display: grid;      
-        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;         
-        border: 2px solid black;
-        background-color: black;
-        grid-gap: 3.4%;
-        border-radius: 6px;
-        align-items: center;
-        justify-content: center;
-        margin:1% 0% 0% 25%;         
+    .circle {
+      border: 2px solid rgba(0, 140, 186, 0.5);
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      margin: auto;
     }
 
-    .mydiv {
-        display: flex;  
-        width: 130px;
-        height: 40px;
-        border: 1px solid darkgreen;
-        background-color: lightyellow;      
-        font-size:11px;  
-        box-sizing: border-box;   
-        justify-content: center;
-        align-items: center;
-        text-align:center; 
-        margin:10px;
-        border-radius: 6px;
-            
-        
-      }
+    .bins{
+      margin: auto;
+      width: 8vw;
+    }
 
-    .pallo {
-    border: 1px solid black;
-    background:yellow;
-    border-radius: 50%;
-    width: 13px; 
-    height: 13px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;    
-   
-  }
-</style>
+    .bins:hover {
+      cursor: pointer;
+    }
+
+    #canvas{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #firstLine{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin:  3vh 2vw 0vw 2vw;
+      height: 50vh;     
+    }
+
+    #secondLine{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 3vh;
+      height: 25vh;
+    }
+
+    #thirdLine{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 7vh;
+    }
+
+    #forthLine{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 7vh;
+    }
+
+    #innerLine{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 80vw;
+    }
+
+    
+  </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
 <body>
 
-<h2>CSS Layout Float</h2>
-<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+  <!-- <div class="p-5 bg-primary text-white text-center">
+  <h1>My First Bootstrap 5 Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div> -->
 
-<header>
-  <h2>Kierrätyspelien Aatelia!</h2>
-</header>
-
-<section>
-  <nav>
-    <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
   </nav>
+  <!-- <h1 id="h1">Kierrätyspelien aatelia!</h1> -->
+  <div id="canvas">
+    <div id="firstLine"></div>
+    <div id="secondLine"></div>
+    <div id="thirdLine"></div>
+    <div id="forthLine"><div id="innerLine"></div></div>
+  </div>
   
-  <peli style="background-image: url('tree.jpg');background-size:cover;background-repeat:no-repeat">   
-    
-   <script src="luo_jatteet.js"></script>
-  </peli>
 
-</section>
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <p>Footer</p>
+  </div>
 
-<footer>
-  <p>Footer</p>
-</footer>
+  <script src="luo_jatteet.js"></script>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+
 
 </body>
+
 </html>
