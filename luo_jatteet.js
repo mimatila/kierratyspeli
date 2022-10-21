@@ -105,9 +105,9 @@ gameover.id="gameover";
 gameover.style.color = "red";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
-gameover.style.position="absolute";
-gameover.style.top="90%";
-gameover.style.left="50%";
+gameover.style.position="relative";
+gameover.style.top="40%";
+gameover.style.left="30%";
 grid_keskusta.appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
 
@@ -116,11 +116,10 @@ result.id="result";
 result.style.color = "red";
 result.style.fontSize = "35px";
 result.style.display="none";
-result.style.position="absolute";
-result.style.top="100%";
-result.style.left="56%";
-
-document.querySelector("peli").appendChild(result);
+result.style.position="relative";
+result.style.top="40%";
+result.style.left="50%";
+grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
     
     var pallo=[];
