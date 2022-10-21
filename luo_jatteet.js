@@ -102,9 +102,10 @@ jate6.innerHTML = "KARTONKI";
 
 var gameover=document.createElement("p");
 gameover.id="gameover";
-gameover.style.color = "red";
+gameover.style.color = "black";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
+gameover.style.margin="0px";
 //gameover.style.position="relative";
 //gameover.style.top="40%";
 //gameover.style.left="30%";
@@ -114,13 +115,16 @@ gameover.innerHTML="GAMEOVER";
 
 var result=document.createElement("p");
 result.id="result";
-result.style.color = "red";
+result.style.margin="0px";
+result.style.color = "black";
 result.style.fontSize = "35px";
 result.style.display="none";
 result.style.textAlign="center";
+
+result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
-    
+
     var pallo=[];
     
     for (var i = 0; i < 1; i++) {  
@@ -367,6 +371,7 @@ var img_kartonki = document.createElement("img");
                       document.getElementById("result").style.display="block";
                       document.getElementById("gameover").style.display="block";
                       document.getElementById("result").innerHTML=success_count+"/15";
+                      
                     
                     }
                  }
