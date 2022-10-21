@@ -44,30 +44,7 @@ var success_count=0;
 var last=0;
 var index=0;
 
-// tulos näytölle x/15
 
-var gameover=document.createElement("p");
-gameover.id="gameover";
-gameover.style.color = "red";
-gameover.style.fontSize = "35px";
-gameover.style.display="none";
-gameover.style.position="absolute";
-gameover.style.top="45%";
-gameover.style.left="50%";
-document.querySelector("peli").appendChild(gameover);
-gameover.innerHTML="GAMEOVER";
-
-var result=document.createElement("p");
-result.id="result";
-result.style.color = "red";
-result.style.fontSize = "35px";
-result.style.display="none";
-result.style.position="absolute";
-result.style.top="50%";
-result.style.left="55%";
-
-document.querySelector("peli").appendChild(result);
-result.innerHTML=success_count+"/15";
 
 var jate0=document.createElement("p");
 jate0.id="jateteksti";
@@ -102,6 +79,7 @@ jate6.innerHTML = "KARTONKI";
     var grid_nappulat;
     var grid_pontot;
     var grid_valot;
+    var grid_keskusta;
 
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
@@ -119,10 +97,35 @@ jate6.innerHTML = "KARTONKI";
     grid_valot.className="grid-valot-container";
     document.querySelector("peli").appendChild(grid_valot);
     
+    // tulos näytölle x/15
+
+
+var gameover=document.createElement("p");
+gameover.id="gameover";
+gameover.style.color = "red";
+gameover.style.fontSize = "35px";
+gameover.style.display="none";
+gameover.style.position="absolute";
+gameover.style.top="90%";
+gameover.style.left="50%";
+grid_keskusta.appendChild(gameover);
+gameover.innerHTML="GAMEOVER";
+
+var result=document.createElement("p");
+result.id="result";
+result.style.color = "red";
+result.style.fontSize = "35px";
+result.style.display="none";
+result.style.position="absolute";
+result.style.top="100%";
+result.style.left="56%";
+
+document.querySelector("peli").appendChild(result);
+result.innerHTML=success_count+"/15";
     
     var pallo=[];
     
-    for (var i = 0; i < 15; i++) {  
+    for (var i = 0; i < 1; i++) {  
 
       pallo[i]=document.createElement("div");
       pallo[i].id="pallo"+i;   
@@ -360,7 +363,7 @@ var img_kartonki = document.createElement("img");
                     success_count=success_count+1;
                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                    if(last==15){
+                    if(last==1){
                       document.getElementById("result").style.display="block";
                       document.getElementById("gameover").style.display="block";
                       document.getElementById("result").innerHTML=success_count+"/15";
