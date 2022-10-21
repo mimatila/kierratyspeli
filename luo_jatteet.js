@@ -105,9 +105,10 @@ gameover.id="gameover";
 gameover.style.color = "red";
 gameover.style.fontSize = "35px";
 gameover.style.display="none";
-gameover.style.position="relative";
-gameover.style.top="40%";
-gameover.style.left="30%";
+//gameover.style.position="relative";
+//gameover.style.top="40%";
+//gameover.style.left="30%";
+gameover.style.textAlign="center";
 grid_keskusta.appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
 
@@ -116,9 +117,7 @@ result.id="result";
 result.style.color = "red";
 result.style.fontSize = "35px";
 result.style.display="none";
-result.style.position="relative";
-result.style.top="40%";
-result.style.left="50%";
+result.style.textAlign="center";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
     
@@ -134,6 +133,7 @@ result.innerHTML=success_count+"/15";
       
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
+      teksti[i].style.borderRadius="6px";
       nappula[i].id = "mydiv"+i;
       nappula[i].className = "mydiv";
       
@@ -143,7 +143,7 @@ result.innerHTML=success_count+"/15";
       //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
       teksti[i].innerHTML=randomItem(jatteet);
       teksti[i].style.fontWeight="bold";
-
+      
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
       
@@ -231,6 +231,7 @@ var img_kartonki = document.createElement("img");
                  // The dataTransfer.setData() method sets the data type and the value of the dragged data
                  
                   event.dataTransfer.setData("div", event.target.id);
+                  
                   
                   if(event.target.id.length<7){
                     index = event.target.id.charAt(event.target.id.length-1);
