@@ -106,7 +106,7 @@ jate6.innerHTML = "KARTONKI";
 
 var gameover=document.createElement("p");
 gameover.id="gameover";
-gameover.style.color = "black";
+gameover.style.color = "white";
 gameover.style.fontSize = "35px";
 gameover.style.fontWeight="bold";
 gameover.style.display="none";
@@ -121,7 +121,7 @@ gameover.innerHTML="GAMEOVER";
 var result=document.createElement("p");
 result.id="result";
 result.style.margin="0px";
-result.style.color = "black";
+result.style.color = "white";
 result.style.fontSize = "35px";
 result.style.fontWeight="bold";
 result.style.display="none";
