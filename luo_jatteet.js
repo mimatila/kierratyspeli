@@ -1,6 +1,6 @@
 function myFunction(){
 
-document.getElementById("clickMe").style.display=("none");
+document.getElementById("clickMe").style.display="none";
 
 const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
 "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
@@ -232,7 +232,7 @@ var img_kartonki = document.createElement("img");
         grid_pontot.appendChild(jate5);
         grid_pontot.appendChild(jate6);
                
- 
+        
 
                /* Events fired on the drag target */
                
@@ -383,12 +383,80 @@ var img_kartonki = document.createElement("img");
                     if(last==1){
                       document.getElementById("result").style.display="block";
                       document.getElementById("gameover").style.display="block";
+                      document.getElementById("clickMe").style.display="block";
                       document.getElementById("result").innerHTML=success_count+"/15";
                       
                     
                     }
                  }
                });
-              }           
+              }        
+              
+              function GameOver(){     
+                console.log("hier");          
+                document.removeEventListener("dragstart", function(event) {
+                });
+                document.removeEventListener("drag", function(event) {
+                });
+                document.removeEventListener("dragend", function(event) {
+                });
+                document.removeEventListener("dragenter", function(event) {
+                });
+                document.removeEventListener("dragover", function(event) {
+                });
+                document.removeEventListener("dragleave", function(event) {
+                });
+                document.removeEventListener("drop", function(event) {
+                });
+                jatteet=null;
+                seka=null;
+                bio=null;
+                metalli=null;
+                paperi=null;
+                kartonki=null;
+                muovi=null;
+                lasi=null;
+
+                success_count=0;
+                last=0;
+                index=0;
+
+                jate0=null;
+                jate1=null;
+                jate2=null;
+                jate3=null;
+                jate4=null;
+                jate5=null;
+                jate6=null;
+
+                nappula=null;
+                teksti=null;
+                grid_nappulat=null;
+                grid_pontot=null;
+                grid_valot=null;
+                grid_keskusta=null;
+                gameover=null;
+                result=null;
+                pallo=null;
+
+                img_seka = null;
+                img_metalli = null;
+                img_lasi = null;
+                img_bio = null;
+                img_paperi = null;
+                img_muovi = null;
+                img_kartonki = null;
+
+                kuva0=null;
+                kuva1=null;
+                kuva2=null;
+                kuva3=null;
+                kuva4=null;
+                kuva5=null;
+                kuva6=null;
+
+               
+
+            }
                
        
