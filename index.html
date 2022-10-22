@@ -4,6 +4,7 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="luo_jatteet.js"></script>
 <style>
 * {
   box-sizing: border-box;
@@ -64,7 +65,7 @@ footer {
 }
 
    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-   @media (max-width: 700px) {
+   @media (max-width: 800px) {
     .grid-keskusta{ max-height: 7%;}
     .grid-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;}
     .grid-pontot-container { padding:28px 0px 0px 0px;
@@ -86,12 +87,12 @@ footer {
 
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
- @media (min-width: 1125px) {
+ @media (min-width: 1150px) {
   .grid-container { grid-template-columns: repeat(5, 1fr); }
   .grid-valot-container{width:80%;}
   }
 
-  @media (min-width: 700px) and (max-width: 952px) {
+  @media (min-width: 800px) and (max-width: 952px) {
   .grid-container { grid-template-columns: repeat(3, 1fr);
    }
    .grid-pontot-container { padding:28px 0px 0px 0px;
@@ -211,6 +212,7 @@ footer {
     }
 
     .grid-pontot-container{
+        
         width:80%;
         height:auto; 
         margin: auto;
@@ -220,7 +222,10 @@ footer {
         grid-row-gap: 0px;
         grid-column-gap: 10px;
         justify-content: center; 
-        text-align: center;   
+        text-align: center; 
+        
+        
+        
          
     }
 
@@ -228,8 +233,7 @@ footer {
         width:50%;      
         display: grid;      
         grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;         
-        border: 2px solid black;
-        background-color: black;
+        background-color: transparent;
         grid-gap: 3.4%;
         border-radius: 6px;
         align-items: center;
@@ -262,7 +266,15 @@ footer {
     height: 13px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;    
-   
+  }
+  #clickMe{
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left:60%;
+    font-size: 1em;
+    border-radius: 6px;
+    font-weight: bold;
   }
 </style>
 </head>
@@ -270,6 +282,7 @@ footer {
 
 <header>
   <h2>Kierrätyspelien Aatelia!</h2>
+  
 </header>
 
 <section>
@@ -283,7 +296,8 @@ footer {
   
   <peli style="background-image: url('tree.jpg');background-size:cover;background-repeat:no-repeat">   
     
-   <script src="luo_jatteet.js"></script>
+    <input id="clickMe" type="button" value="Aloita Peli" onclick="myFunction();" />
+  
   </peli>
 
 </section>

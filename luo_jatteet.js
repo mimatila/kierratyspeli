@@ -1,3 +1,7 @@
+function myFunction(){
+
+document.getElementById("clickMe").style.display=("none");
+
 const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
 "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
 "tablettien läpipainopakkaukset","lelu- ja autotarvikepakkaukset","sipsipussit ja kahvipaketit","tuhka ja tupakantumpit", 
@@ -104,6 +108,7 @@ var gameover=document.createElement("p");
 gameover.id="gameover";
 gameover.style.color = "black";
 gameover.style.fontSize = "35px";
+gameover.style.fontWeight="bold";
 gameover.style.display="none";
 gameover.style.margin="0px";
 //gameover.style.position="relative";
@@ -118,6 +123,7 @@ result.id="result";
 result.style.margin="0px";
 result.style.color = "black";
 result.style.fontSize = "35px";
+result.style.fontWeight="bold";
 result.style.display="none";
 result.style.textAlign="center";
 
@@ -279,7 +285,10 @@ var img_kartonki = document.createElement("img");
                 event.target.className == ("droptarget4")||
                 event.target.className == ("droptarget5")||
                 event.target.className == ("droptarget6"))  {
-                   event.target.style.border = "3px dotted yellow";
+                   
+                   //event.target.style.border = "0.5px dotted yellow";
+                   event.target.style.background = "yellow";
+                   event.target.style.borderRadius = "6px";
                  }
                });
                
@@ -298,6 +307,8 @@ var img_kartonki = document.createElement("img");
                 event.target.className == ("droptarget5")||
                 event.target.className == ("droptarget6"))  {
                    event.target.style.border = "";
+                   event.target.style.background = "";
+                   event.target.style.borderRadius = "";
                  }
                });
                
@@ -321,6 +332,8 @@ var img_kartonki = document.createElement("img");
                   
                    //document.getElementById("demo").style.color = "green";
                    event.target.style.border = "";
+                   event.target.style.background = "";
+                   event.target.style.borderRadius = "";
                    
                    var data = event.dataTransfer.getData("div");
                    
@@ -376,6 +389,6 @@ var img_kartonki = document.createElement("img");
                     }
                  }
                });
-               
+              }           
                
        
