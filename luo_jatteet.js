@@ -1,24 +1,32 @@
 var gameover_status=false;
+
 var nappula=[];
-    var teksti=[];
-    var grid_nappulat;
-    var grid_pontot;
-    var grid_valot;
-    var grid_keskusta;
-  var kuva0;
-  var kuva1;
-  var kuva2;
-  var kuva3;
-  var kuva4;
-  var kuva5;
-  var kuva6;
+var teksti=[];
+var pallo=[];
+var grid_nappulat;
+var grid_pontot;
+var grid_valot;
+var grid_keskusta;
+
+var success_count=0;
+var last=0;
+var index=0;
+
+
+var kuva0;
+var kuva1;
+var kuva2;
+var kuva3;
+var kuva4;
+var kuva5;
+var kuva6; 
 
 
 function myFunction(){
 
 console.log("hienoa"+gameover_status);
 if(gameover_status==false){
-//document.getElementById("clickMe").style.display="none";
+document.getElementById("clickMe").style.display="none";
 
 const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
 "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
@@ -60,11 +68,6 @@ const muovi = ["muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipuss
 
 const kartonki = ["maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
 "wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"];
-
-
-var success_count=0;
-var last=0;
-var index=0;
 
 
 
@@ -144,7 +147,7 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
 
-    var pallo=[];
+    
     
     for (var i = 0; i < 1; i++) {  
 
@@ -264,6 +267,7 @@ var img_kartonki = document.createElement("img");
                   
                                  
                   event.dataTransfer.setData("text", teksti[index].innerHTML);
+                  console.log(last+"väliä"+pallo[last].id)
                   event.dataTransfer.setData("pallo", pallo[last].id);
                   
                                  
@@ -395,7 +399,7 @@ var img_kartonki = document.createElement("img");
                       document.getElementById("result").style.display="block";
                       document.getElementById("gameover").style.display="block";
                       document.getElementById("clickMe").style.display="block";
-                      document.getElementById("clickMe").value="Pelaa uudestaan";
+                      //document.getElementById("clickMe").value="Pelaa uudestaan";
                       gameover_status=true;
                       document.getElementById("result").innerHTML=success_count+"/15";
                       
@@ -438,15 +442,15 @@ var img_kartonki = document.createElement("img");
                 img_muovi=null;
                 img_kartonki=null;
 
-                pallo=null;
-                jatteet=null;
-                seka=null;
-                metalli=null;
-                lasi=null;
-                bio=null;
-                paperi=null;
-                muovi=null;
-                kartonki=null;
+                pallo=[];
+                jatteet=[];
+                seka=[];
+                metalli=[];
+                lasi=[];
+                bio=[];
+                paperi=[];
+                muovi=[];
+                kartonki=[];
                 success_count=0;
                 last=0;
                 index=0;
@@ -459,8 +463,8 @@ var img_kartonki = document.createElement("img");
                 jate5=null;
                 jate6=null;
 
-                nappula=null;
-                teksti=null;
+                nappula=[];
+                teksti=[];
                 grid_nappulat=null;
                 grid_keskusta=null;
                 grid_pontot=null;
