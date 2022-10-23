@@ -1,10 +1,24 @@
 var gameover_status=false;
+var nappula=[];
+    var teksti=[];
+    var grid_nappulat;
+    var grid_pontot;
+    var grid_valot;
+    var grid_keskusta;
+  var kuva0;
+  var kuva1;
+  var kuva2;
+  var kuva3;
+  var kuva4;
+  var kuva5;
+  var kuva6;
+
 
 function myFunction(){
 
 console.log("hienoa"+gameover_status);
 if(gameover_status==false){
-document.getElementById("clickMe").style.display="none";
+//document.getElementById("clickMe").style.display="none";
 
 const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
 "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
@@ -82,16 +96,11 @@ var jate6=document.createElement("p");
 jate6.id="jateteksti";
 jate6.innerHTML = "KARTONKI";
 
-    var nappula=[];
-    var teksti=[];
-    var grid_nappulat;
-    var grid_pontot;
-    var grid_valot;
-    var grid_keskusta;
-
+    
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
     document.querySelector("peli").appendChild(grid_nappulat);
+    
 
     grid_keskusta=document.createElement("div");
     grid_keskusta.className="grid-keskusta";
@@ -144,7 +153,7 @@ result.innerHTML=success_count+"/15";
       pallo[i].className="pallo";
       grid_valot.appendChild(pallo[i]);
       
-      
+      console.log(nappula+"heko")
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
       teksti[i].style.borderRadius="6px";
@@ -185,44 +194,44 @@ var img_kartonki = document.createElement("img");
     img_muovi.src = "muovi.png";
     img_kartonki.src = "kartonki.png";
     
-    var kuva0 = document.createElement("div");
+    kuva0 = document.createElement("div");
         
         kuva0.id=("kuva0");
         kuva0=img_seka;
         kuva0.className="droptarget0";      
         grid_pontot.appendChild(kuva0);
           
-        var kuva1 = document.createElement("div");
+    kuva1 = document.createElement("div");
         kuva1.id=("kuva1");
         kuva1=img_metalli;
         kuva1.className="droptarget1";
         grid_pontot.appendChild(kuva1);
 
-        var kuva2 = document.createElement("div");
+    kuva2 = document.createElement("div");
         kuva2.id=("kuva2");
         kuva2=img_lasi;
         kuva2.className="droptarget2";
          grid_pontot.appendChild(kuva2);
 
-        var kuva3 = document.createElement("div");
+    kuva3 = document.createElement("div");
         kuva3.id=("kuva3");
         kuva3=img_bio;
         kuva3.className="droptarget3";
         grid_pontot.appendChild(kuva3);
   
-        var kuva4 = document.createElement("div");
+    kuva4 = document.createElement("div");
         kuva4.id=("kuva4");
         kuva4=img_paperi;
         kuva4.className="droptarget4";
         grid_pontot.appendChild(kuva4);
 
-        var kuva5 = document.createElement("div");
+    kuva5 = document.createElement("div");
         kuva5.id=("kuva5");
         kuva5=img_muovi;
         kuva5.className="droptarget5";
         grid_pontot.appendChild(kuva5);  
         
-        var kuva6 = document.createElement("div");
+    kuva6 = document.createElement("div");
         kuva6.id=("kuva6");
         kuva6=img_kartonki;
         kuva6.className="droptarget6";
@@ -399,12 +408,74 @@ var img_kartonki = document.createElement("img");
               function GameOver(){  
 
                 if(gameover_status==true){
-                  
+                  gameover_status=false;
                   console.log("wittu");
-                  location.reload();    
+
+                document.removeEventListener("dragstart", function(event) {});
+                document.removeEventListener("drag", function(event) {});
+                document.removeEventListener("dragend", function(event) {});
+                document.removeEventListener("dragenter", function(event) {});
+                document.removeEventListener("dragover", function(event) {});
+                document.removeEventListener("dragleave", function(event) {});
+                document.removeEventListener("drop", function(event) {});
+
+                //document.querySelector("peli").remove();
+                console.log(document.querySelector("peli").children)
+                
+                
+                document.querySelector("peli").removeChild(grid_nappulat);
+                document.querySelector("peli").removeChild(grid_pontot);
+                document.querySelector("peli").removeChild(grid_valot);
+                document.querySelector("peli").removeChild(grid_keskusta);
+                
+                
+
+                img_seka=null;
+                img_metalli=null;
+                img_lasi=null;
+                img_bio=null;
+                img_papaeri=null;
+                img_muovi=null;
+                img_kartonki=null;
+
+                pallo=null;
+                jatteet=null;
+                seka=null;
+                metalli=null;
+                lasi=null;
+                bio=null;
+                paperi=null;
+                muovi=null;
+                kartonki=null;
+                success_count=0;
+                last=0;
+                index=0;
+
+                jate0=null;
+                jate1=null;
+                jate2=null;
+                jate3=null;
+                jate4=null;
+                jate5=null;
+                jate6=null;
+
+                nappula=null;
+                teksti=null;
+                grid_nappulat=null;
+                grid_keskusta=null;
+                grid_pontot=null;
+                grid_valot=null;
+
+                gameover=null;
+                result=null;
+
+
+
+
+                  //location.reload();    
                
                   //document.getElementById("clickMe").onclick("myFunction();");        
-                  console.log(document.getElementById("clickMe").value);
+                 
                 }
               }
 
