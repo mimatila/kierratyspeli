@@ -134,7 +134,7 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
  
-    for (var i = 0; i < 1; i++) {  
+    for (var i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
       pallo[i].id="pallo"+i;   
@@ -275,7 +275,7 @@ var img_kartonki = document.createElement("img");
                 event.target.className == ("droptarget6"))  {
                    
                    //event.target.style.border = "0.5px dotted yellow";
-                   event.target.style.background = "yellow";
+                   event.target.style.background = "lightyellow";
                    event.target.style.borderRadius = "6px";
                  }
                });
@@ -368,7 +368,7 @@ var img_kartonki = document.createElement("img");
                     success_count=success_count+1;
                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                    if(last==1){
+                    if(last==15){
                       document.getElementById("result").style.display="block";
                       document.getElementById("gameover").style.display="block";
                       document.getElementById("clickMe").style.display="block";
