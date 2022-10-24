@@ -67,26 +67,24 @@ footer {
    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 
    @media (max-width: 500px) {
-    .grid-keskusta{ max-height: 7%;}
+    .grid-pontot-container { margin:auto;max-height:70px;
+    }
+    .grid-keskusta-container{ min-height: 44vh;}
     .grid-nappulat-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;
     }
-    .grid-pontot-container { padding:28px 0px 0px 0px;
-    }
     
-  
    .pallo{
     max-width: 0.5em;max-height: 0.5em;
     }
 
    nav {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 25vh;
     }
 
   peli{
-    width:100%;
-    min-height:400px;
-    height:auto;
+    width:100vw; 
+    height:70vh;
   }
 
   .droptarget0{width:40px;}
@@ -100,10 +98,11 @@ footer {
   }
 
    @media (min-width: 501px) and (max-width: 749px) {
-    .grid-keskusta{ max-height: 7%;}
+    
+    .grid-keskusta-container{ min-height: 55vh;}
     .grid-nappulat-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;
     }
-    .grid-pontot-container { padding:28px 0px 0px 0px;
+    .grid-pontot-container { margin:auto;max-height:100px;
     }
 
    .pallo{
@@ -111,12 +110,12 @@ footer {
     }
 
    nav {
-    width: 100%;
+    width: 100vw;
     height: auto;
     }
 
   peli{
-    width:100%;
+    width:100vw;
     min-height:400px;
     height:auto;
   }
@@ -134,14 +133,18 @@ footer {
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 1151px) {
-  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
-  .grid-valot-container{width:80%;}
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);min-height:40vh; }
+  .grid-valot-container{width:80vw;}
+  .grid-keskusta-container{max-height:20vh;}
+  .grid-pontot-container { margin:auto;max-height:140px;
+   }
   }
 
   @media (min-width: 750px) and (max-width: 952px) {
-  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
+  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);min-height:60vh;
    }
-   .grid-pontot-container { padding:28px 0px 0px 0px;
+   .grid-keskusta-container{max-height:2vh;}
+   .grid-pontot-container { margin:auto;max-height:120px;
    }
    .pallo{max-width: 0.7em;max-height: 0.7em;}
   
@@ -157,12 +160,13 @@ footer {
   }
 
   @media (min-width: 953px) and (max-width: 1150px) {
-  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
+  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);min-height:60vh;;
    }
+   .grid-keskusta-container{max-height:1vh;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}
-
-   .grid-pontot-container { padding:28px 0px 0px 0px;
+   .grid-pontot-container { margin:auto;max-height:120px;
    }
+  
    
   
   .droptarget0{width:70px;}
@@ -181,10 +185,11 @@ footer {
 
   #jateteksti{
     color:black;
-    font-size: 2vw;
+    font-size: 1vw;
     margin-block-start: 0px;
     margin-block-end: 0px;
     display:block;
+    
   }
 
 .droptarget0 {
@@ -234,39 +239,39 @@ footer {
 
 .grid-nappulat-container{
   display: grid; 
-  width:80%;   
-  height:180px;             
+  width:60vw;    
+  height:30vh;            
   margin: auto;     
   justify-content: center;
   align-items: center;  
           
     }
 
-.grid-keskusta{
+.grid-keskusta-container{
   display: grid; 
-  width:80%;
-  height:220px;          
+  width:80vw;
+  height:33vh;          
   margin: auto;     
   justify-content: center;
   align-items: center;            
 }
 
-.grid-pontot-container{
-        
-  width:80%;
-  height:auto; 
-  margin: auto;
+.grid-pontot-container{   
+  width:80vw;
+  height:20vh; 
   display: grid;      
   grid-template-columns: auto auto auto auto auto auto auto;
-  align-items: center;     
+  align-items: center;
   grid-row-gap: 0px;
   grid-column-gap: 10px;
   justify-content: center; 
   text-align: center; 
 }
 
+
 .grid-valot-container{
-  width:50%;      
+  width:50vw; 
+  height:4vh;     
   display: grid;      
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;         
   background-color: transparent;
@@ -274,7 +279,7 @@ footer {
   border-radius: 6px;
   align-items: center;
   justify-content: center;
-  margin:1% 0% 0% 25%;         
+  margin:auto;         
   }
 
 .mydiv {
@@ -305,8 +310,8 @@ footer {
 #clickMe{
   margin: 0;
   position: absolute;
-  top: 90%;
-  left:43%;
+  top: 90vh;
+  left:40vw;
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;

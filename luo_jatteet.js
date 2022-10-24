@@ -4,6 +4,7 @@ var teksti=[];
 var pallo=[];
 var grid_nappulat;
 var grid_pontot;
+var grid_tekstit;
 var grid_valot;
 var grid_keskusta;
 var success_count=0;
@@ -97,7 +98,7 @@ jate6.innerHTML = "KARTONKI";
   document.querySelector("peli").appendChild(grid_nappulat);
     
   grid_keskusta=document.createElement("div");
-  grid_keskusta.className="grid-keskusta";
+  grid_keskusta.className="grid-keskusta-container";
   document.querySelector("peli").appendChild(grid_keskusta);
 
   grid_pontot=document.createElement("div");
