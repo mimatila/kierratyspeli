@@ -16,6 +16,9 @@ var kuva3;
 var kuva4;
 var kuva5;
 var kuva6; 
+var data;
+var i;
+var counter=0;
 
 function myFunction(){
 
@@ -134,7 +137,7 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
  
-    for (var i = 0; i < 15; i++) {  
+    for (i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
       pallo[i].id="pallo"+i;   
@@ -222,14 +225,16 @@ var img_kartonki = document.createElement("img");
     grid_pontot.appendChild(jate5);
     grid_pontot.appendChild(jate6);
         
+         if(counter==0){
                /* Events fired on the drag target */
-               
+              
          document.addEventListener("dragstart", function(event) {
                 
                  // The dataTransfer.setData() method sets the data type and the value of the dragged data
+           
+               
+          event.dataTransfer.setData("div", event.target.id);
                  
-         event.dataTransfer.setData("div", event.target.id);
-                  
                   
           if(event.target.id.length<7){
            index = event.target.id.charAt(event.target.id.length-1);
@@ -238,7 +243,7 @@ var img_kartonki = document.createElement("img");
                     
            index = event.target.id.slice(-2);
           }            
-                                 
+                              
           event.dataTransfer.setData("text", teksti[index].innerHTML);
           
           event.dataTransfer.setData("pallo", pallo[last].id);
@@ -259,6 +264,7 @@ var img_kartonki = document.createElement("img");
           document.addEventListener("dragend", function(event) {
           //document.getElementById("demo").innerHTML = "Finished dragging the p element.";
           event.target.style.opacity = "1";
+          
           });
                
           /* Events fired on the drop target */
@@ -316,17 +322,18 @@ var img_kartonki = document.createElement("img");
                 event.target.className == ("droptarget4")||
                 event.target.className == ("droptarget5")||
                 event.target.className == ("droptarget6")) {
-                  
+                
+                last=last+1;
+                
                 //document.getElementById("demo").style.color = "green";
                 event.target.style.border = "";
                 event.target.style.background = "";
                 event.target.style.borderRadius = "";
                    
-              var data = event.dataTransfer.getData("div");
+              data = event.dataTransfer.getData("div");
                    
-                event.target.appendChild(document.getElementById(data));
-                   
-                last=last+1;
+               event.target.appendChild(document.getElementById(data));
+               
 
                 if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
                   ||(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text")))
@@ -336,9 +343,11 @@ var img_kartonki = document.createElement("img");
                   ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
                   ||(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))))
                   {
-                    console.log("ei osunut")
+                    console.log("osu oikeeseen");
+                    
                   } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";
-
+                          
+                
                 if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
                    success_count=success_count+1;    
                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
@@ -367,7 +376,9 @@ var img_kartonki = document.createElement("img");
                    success_count=success_count+1;
                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
+                  
                 if(last==15){
+                   
                    document.getElementById("result").style.display="block";
                    document.getElementById("gameover").style.display="block";
                    document.getElementById("clickMe").style.display="block";
@@ -377,21 +388,16 @@ var img_kartonki = document.createElement("img");
                   
                   }
                  }
-                });
+                });}
               } }       
               
               function GameOver(){  
-
+                
                 if(gameover_status==true){
+                  counter=counter+1;
                   gameover_status=false;
-
-                document.removeEventListener("dragstart", function(event) {});
-                document.removeEventListener("drag", function(event) {});
-                document.removeEventListener("dragend", function(event) {});
-                document.removeEventListener("dragenter", function(event) {});
-                document.removeEventListener("dragover", function(event) {});
-                document.removeEventListener("dragleave", function(event) {});
-                document.removeEventListener("drop", function(event) {});
+                  
+                //console.log("hurraa"+document.getElementById("mydiv0").id);           
 
                 //document.querySelector("peli").remove();
                 console.log(document.querySelector("peli").children)
@@ -421,6 +427,7 @@ var img_kartonki = document.createElement("img");
                 success_count=0;
                 last=0;
                 index=0;
+                i=0;
 
                 jate0=null;
                 jate1=null;
@@ -439,6 +446,7 @@ var img_kartonki = document.createElement("img");
 
                 gameover=null;
                 result=null;
+                data=null;
      
                  
                 }
