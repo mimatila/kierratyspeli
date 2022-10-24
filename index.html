@@ -45,8 +45,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%;
-  height: 600px; /* only for demonstration, should be removed */
-  
+  height: 600px; /* only for demonstration, should be removed */-->
 }
 
 
@@ -68,14 +67,20 @@ footer {
    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
    @media (max-width: 800px) {
     .grid-keskusta{ max-height: 7%;}
-    .grid-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;}
+    .grid-nappulat-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;
+    }
     .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
-   .pallo{max-width: 0.5em;max-height: 0.5em;}
-  nav, peli {
+    }
+
+   .pallo{
+    max-width: 0.5em;max-height: 0.5em;
+    }
+
+   nav, peli {
     width: 100%;
     height: auto;
-  }
+    }
+
   .droptarget0{width:60px;}
   .droptarget1{width:60px;}
   .droptarget2{width:60px;}
@@ -89,16 +94,16 @@ footer {
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 1150px) {
-  .grid-container { grid-template-columns: repeat(5, 1fr); }
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
   .grid-valot-container{width:80%;}
   }
 
   @media (min-width: 800px) and (max-width: 952px) {
-  .grid-container { grid-template-columns: repeat(3, 1fr);
+  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
    }
    .grid-pontot-container { padding:28px 0px 0px 0px;
    }
-   .pallo{max-width: 0.5em;max-height: 0.7em;}
+   .pallo{max-width: 0.7em;max-height: 0.7em;}
   
    .droptarget0{width:70px;}
   .droptarget1{width:70px;}
@@ -127,15 +132,12 @@ footer {
   .droptarget4{width:70px;}
   .droptarget5{width:70px;}
   .droptarget6{width:70px;}
-  #jateteksti{font-size: 10px;
+
+  #jateteksti{font-size: 0.7em;
     padding:0px 0px 0px 0px;}
+  
   }
 
-  
- 
-  #jateteksti{font-size: 10px;
-    padding:0px 0px 0px 0px;}
- 
 
   #jateteksti{
     color:black;
@@ -148,142 +150,133 @@ footer {
 .droptarget0 {
     
   min-width: 0px;
-    min-height: 0px;
-    margin: 0 auto;
+  min-height: 0px;
+  margin: 0 auto;
    
 }
 .droptarget1 {
     
   min-width: 0px;
-    min-height: 0px; 
-    margin: 0 auto;
+  min-height: 0px; 
+  margin: 0 auto;
 }
 .droptarget2 {
     
   min-width: 0px;
-    min-height: 0px;
-    margin: 0 auto;
+  min-height: 0px;
+  margin: 0 auto;
 }
 .droptarget3 {
     
-    min-width: 0px;
-    min-height: 0px; 
-    margin: 0 auto; 
+  min-width: 0px;
+  min-height: 0px; 
+  margin: 0 auto; 
 }
 .droptarget4 {
     
   min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto;
+  min-height: 0px;  
+  margin: 0 auto;
 }
 .droptarget5 {
     
   min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto; 
+  min-height: 0px;  
+  margin: 0 auto; 
 }
 
 .droptarget6 {
     
   min-width: 0px;
-    min-height: 0px;  
-    margin: 0 auto; 
+  min-height: 0px;  
+  margin: 0 auto; 
 }
 
-    .grid-container{
-        display: grid; 
-        width:80%;   
-        height:180px;             
-        margin: auto;     
-        justify-content: center;
-        align-items: center;  
+.grid-nappulat-container{
+  display: grid; 
+  width:80%;   
+  height:180px;             
+  margin: auto;     
+  justify-content: center;
+  align-items: center;  
           
     }
 
-    .grid-keskusta{
-        display: grid; 
-        width:80%;
-        height:220px;          
-        margin: auto;     
-        justify-content: center;
-        align-items: center; 
+.grid-keskusta{
+  display: grid; 
+  width:80%;
+  height:220px;          
+  margin: auto;     
+  justify-content: center;
+  align-items: center;            
+}
 
-       
-           
-    }
+.grid-pontot-container{
+        
+  width:80%;
+  height:auto; 
+  margin: auto;
+  display: grid;      
+  grid-template-columns: auto auto auto auto auto auto auto;
+  align-items: center;     
+  grid-row-gap: 0px;
+  grid-column-gap: 10px;
+  justify-content: center; 
+  text-align: center; 
+}
 
-    .grid-pontot-container{
-        
-        width:80%;
-        height:auto; 
-        margin: auto;
-        display: grid;      
-        grid-template-columns: auto auto auto auto auto auto auto;
-        align-items: center;     
-        grid-row-gap: 0px;
-        grid-column-gap: 10px;
-        justify-content: center; 
-        text-align: center; 
-        
-        
-        
-         
-    }
-
-    .grid-valot-container{
-        width:50%;      
-        display: grid;      
-        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;         
-        background-color: transparent;
-        grid-gap: 3.4%;
-        border-radius: 6px;
-        align-items: center;
-        justify-content: center;
-        margin:1% 0% 0% 25%;         
-    }
-
-    .mydiv {
-        display: flex;  
-        width: 130px;
-        height: 40px;
-        border: 1px solid darkgreen;
-        background-color: lightyellow;      
-        font-size:11px;  
-        box-sizing: border-box;   
-        justify-content: center;
-        align-items: center;
-        text-align:center; 
-        margin:10px;
-        border-radius: 6px;
-      
-      
-      }
-    
-    .pallo {
-    border: 1px solid black;
-    background:yellow;
-    border-radius: 50%;
-    width: 13px; 
-    height: 13px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;    
+.grid-valot-container{
+  width:50%;      
+  display: grid;      
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;         
+  background-color: transparent;
+  grid-gap: 3.4%;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  margin:1% 0% 0% 25%;         
   }
-  #clickMe{
-    margin: 0;
-    position: absolute;
-    top: 60%;
-    left:43%;
-    font-size: 1em;
-    border-radius: 6px;
-    font-weight: bold;
+
+.mydiv {
+  display: flex;  
+  width: 130px;
+  height: 40px;
+  border: 2px solid darkgreen;
+  background-color: lightyellow;      
+  font-size:11px;  
+  box-sizing: border-box;   
+  justify-content: center;
+  align-items: center;
+  text-align:center; 
+  margin:10px;
+  border-radius: 6px;      
+  }
+    
+.pallo {
+  border: 1px solid black;
+  background:yellow;
+  border-radius: 50%;
+  width: 13px; 
+  height: 13px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;    
+  }
+
+#clickMe{
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left:43%;
+  font-size: 1em;
+  border-radius: 6px;
+  font-weight: bold;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h2>Kierrätyspelien Aatelia!</h2>
-  
+  <h2>Kierrätyspeli!</h2>
 </header>
 
 <section>

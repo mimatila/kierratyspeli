@@ -18,7 +18,7 @@ var kuva5;
 var kuva6; 
 
 function myFunction(){
-console.log("hienoa"+gameover_status);
+
 if(gameover_status==false){
 
 document.getElementById("clickMe").style.display="none";
@@ -92,23 +92,23 @@ var jate6=document.createElement("p");
 jate6.id="jateteksti";
 jate6.innerHTML = "KARTONKI";
 
-    grid_nappulat=document.createElement("div");
-    grid_nappulat.className="grid-container";
-    document.querySelector("peli").appendChild(grid_nappulat);
+  grid_nappulat=document.createElement("div");
+  grid_nappulat.className="grid-nappulat-container";
+  document.querySelector("peli").appendChild(grid_nappulat);
     
-    grid_keskusta=document.createElement("div");
-    grid_keskusta.className="grid-keskusta";
-    document.querySelector("peli").appendChild(grid_keskusta);
+  grid_keskusta=document.createElement("div");
+  grid_keskusta.className="grid-keskusta";
+  document.querySelector("peli").appendChild(grid_keskusta);
 
-    grid_pontot=document.createElement("div");
-    grid_pontot.className="grid-pontot-container";
-    document.querySelector("peli").appendChild(grid_pontot);
+  grid_pontot=document.createElement("div");
+  grid_pontot.className="grid-pontot-container";
+  document.querySelector("peli").appendChild(grid_pontot);
 
-    grid_valot=document.createElement("div");
-    grid_valot.className="grid-valot-container";
-    document.querySelector("peli").appendChild(grid_valot);
+  grid_valot=document.createElement("div");
+  grid_valot.className="grid-valot-container";
+  document.querySelector("peli").appendChild(grid_valot);
     
-    // tulos näytölle x/15
+  // tulos näytölle x/15
 
 var gameover=document.createElement("p");
 gameover.id="gameover";
@@ -140,8 +140,7 @@ result.innerHTML=success_count+"/15";
       pallo[i].id="pallo"+i;   
       pallo[i].className="pallo";
       grid_valot.appendChild(pallo[i]);
-      
-      console.log(nappula+"heko")
+     
       nappula.push(document.createElement("div"));
       teksti[i] = nappula[i].appendChild(document.createElement("div"));
       teksti[i].style.borderRadius="6px";
@@ -174,212 +173,211 @@ var img_kartonki = document.createElement("img");
     img_kartonki.src = "kartonki.png";
     
     kuva0 = document.createElement("div");  
-        kuva0.id=("kuva0");
-        kuva0=img_seka;
-        kuva0.className="droptarget0";      
-        grid_pontot.appendChild(kuva0);
+    kuva0.id=("kuva0");
+    kuva0=img_seka;
+    kuva0.className="droptarget0";      
+    grid_pontot.appendChild(kuva0);
           
     kuva1 = document.createElement("div");
-        kuva1.id=("kuva1");
-        kuva1=img_metalli;
-        kuva1.className="droptarget1";
-        grid_pontot.appendChild(kuva1);
+    kuva1.id=("kuva1");
+    kuva1=img_metalli;
+    kuva1.className="droptarget1";
+    grid_pontot.appendChild(kuva1);
 
     kuva2 = document.createElement("div");
-        kuva2.id=("kuva2");
-        kuva2=img_lasi;
-        kuva2.className="droptarget2";
-         grid_pontot.appendChild(kuva2);
+    kuva2.id=("kuva2");
+    kuva2=img_lasi;
+    kuva2.className="droptarget2";
+    grid_pontot.appendChild(kuva2);
 
     kuva3 = document.createElement("div");
-        kuva3.id=("kuva3");
-        kuva3=img_bio;
-        kuva3.className="droptarget3";
-        grid_pontot.appendChild(kuva3);
+    kuva3.id=("kuva3");
+    kuva3=img_bio;
+    kuva3.className="droptarget3";
+    grid_pontot.appendChild(kuva3);
   
     kuva4 = document.createElement("div");
-        kuva4.id=("kuva4");
-        kuva4=img_paperi;
-        kuva4.className="droptarget4";
-        grid_pontot.appendChild(kuva4);
+    kuva4.id=("kuva4");
+    kuva4=img_paperi;
+    kuva4.className="droptarget4";
+    grid_pontot.appendChild(kuva4);
 
     kuva5 = document.createElement("div");
-        kuva5.id=("kuva5");
-        kuva5=img_muovi;
-        kuva5.className="droptarget5";
-        grid_pontot.appendChild(kuva5);  
+    kuva5.id=("kuva5");
+    kuva5=img_muovi;
+    kuva5.className="droptarget5";
+    grid_pontot.appendChild(kuva5);  
         
     kuva6 = document.createElement("div");
-        kuva6.id=("kuva6");
-        kuva6=img_kartonki;
-        kuva6.className="droptarget6";
-        grid_pontot.appendChild(kuva6);
+    kuva6.id=("kuva6");
+    kuva6=img_kartonki;
+    kuva6.className="droptarget6";
+    grid_pontot.appendChild(kuva6);
 
-        grid_pontot.appendChild(jate0);
-        grid_pontot.appendChild(jate1);
-        grid_pontot.appendChild(jate2);
-        grid_pontot.appendChild(jate3);
-        grid_pontot.appendChild(jate4);
-        grid_pontot.appendChild(jate5);
-        grid_pontot.appendChild(jate6);
+    grid_pontot.appendChild(jate0);
+    grid_pontot.appendChild(jate1);
+    grid_pontot.appendChild(jate2);
+    grid_pontot.appendChild(jate3);
+    grid_pontot.appendChild(jate4);
+    grid_pontot.appendChild(jate5);
+    grid_pontot.appendChild(jate6);
         
                /* Events fired on the drag target */
                
-               document.addEventListener("dragstart", function(event) {
+         document.addEventListener("dragstart", function(event) {
                 
                  // The dataTransfer.setData() method sets the data type and the value of the dragged data
                  
-                  event.dataTransfer.setData("div", event.target.id);
+         event.dataTransfer.setData("div", event.target.id);
                   
                   
-                  if(event.target.id.length<7){
-                    index = event.target.id.charAt(event.target.id.length-1);
-                  }
-                  if(event.target.id.length>6){
+          if(event.target.id.length<7){
+           index = event.target.id.charAt(event.target.id.length-1);
+          }
+          if(event.target.id.length>6){
                     
-                    index = event.target.id.slice(-2);
-                  }            
+           index = event.target.id.slice(-2);
+          }            
                                  
-                  event.dataTransfer.setData("text", teksti[index].innerHTML);
-                  console.log(last+"väliä"+pallo[last].id)
-                  event.dataTransfer.setData("pallo", pallo[last].id);
+          event.dataTransfer.setData("text", teksti[index].innerHTML);
+          
+          event.dataTransfer.setData("pallo", pallo[last].id);
                                
-                 // Output some text when starting to drag the p element
-                 //document.getElementById("demo").innerHTML = "Started to drag the p element.";
+          // Output some text when starting to drag the p element
+          //document.getElementById("demo").innerHTML = "Started to drag the p element.";
                 
-                 // Change the opacity of the draggable element
-                 event.target.style.opacity = "0.4";
-               });
+          // Change the opacity of the draggable element
+          event.target.style.opacity = "0.4";
+          });
                
-               // While dragging the p element, change the color of the output text
-               document.addEventListener("drag", function(event) {
-                 //document.getElementById("demo").style.color = "red";
-               });
+          // While dragging the p element, change the color of the output text
+          document.addEventListener("drag", function(event) {
+          //document.getElementById("demo").style.color = "red";
+          });
                
-               // Output some text when finished dragging the p element and reset the opacity
-               document.addEventListener("dragend", function(event) {
-                 //document.getElementById("demo").innerHTML = "Finished dragging the p element.";
-                 event.target.style.opacity = "1";
-               });
+          // Output some text when finished dragging the p element and reset the opacity
+          document.addEventListener("dragend", function(event) {
+          //document.getElementById("demo").innerHTML = "Finished dragging the p element.";
+          event.target.style.opacity = "1";
+          });
                
-               /* Events fired on the drop target */
+          /* Events fired on the drop target */
                
-               // When the draggable p element enters the droptarget, change the DIVS's border style
-               document.addEventListener("dragenter", function(event) {
-                if ( event.target.className == ("droptarget0") || 
-                event.target.className == ("droptarget1")||
-                event.target.className == ("droptarget2")||
-                event.target.className == ("droptarget3")||
-                event.target.className == ("droptarget4")||
-                event.target.className == ("droptarget5")||
-                event.target.className == ("droptarget6"))  {
+          // When the draggable p element enters the droptarget, change the DIVS's border style
+          document.addEventListener("dragenter", function(event) {
+          if ( event.target.className == ("droptarget0") || 
+            event.target.className == ("droptarget1")||
+            event.target.className == ("droptarget2")||
+            event.target.className == ("droptarget3")||
+            event.target.className == ("droptarget4")||
+            event.target.className == ("droptarget5")||
+            event.target.className == ("droptarget6"))  {
                    
-                   //event.target.style.border = "0.5px dotted yellow";
-                   event.target.style.background = "lightyellow";
-                   event.target.style.borderRadius = "6px";
-                 }
-               });
+            //event.target.style.border = "0.5px dotted yellow";
+            event.target.style.background = "lightyellow";
+            event.target.style.borderRadius = "6px";
+            }
+            });
                
-               // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
-               document.addEventListener("dragover", function(event) {
-                 event.preventDefault();
-               });
+            // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
+            document.addEventListener("dragover", function(event) {
+            event.preventDefault();
+            });
                
-               // When the draggable p element leaves the droptarget, reset the DIVS's border style
-               document.addEventListener("dragleave", function(event) {
-                if ( event.target.className == ("droptarget0") || 
-                event.target.className == ("droptarget1")||
-                event.target.className == ("droptarget2")||
-                event.target.className == ("droptarget3")||
-                event.target.className == ("droptarget4")||
-                event.target.className == ("droptarget5")||
-                event.target.className == ("droptarget6"))  {
-                   event.target.style.border = "";
-                   event.target.style.background = "";
-                   event.target.style.borderRadius = "";
-                 }
-               });
+            // When the draggable p element leaves the droptarget, reset the DIVS's border style
+            document.addEventListener("dragleave", function(event) {
+            if ( event.target.className == ("droptarget0") || 
+              event.target.className == ("droptarget1")||
+              event.target.className == ("droptarget2")||
+              event.target.className == ("droptarget3")||
+              event.target.className == ("droptarget4")||
+              event.target.className == ("droptarget5")||
+              event.target.className == ("droptarget6"))  {
+              event.target.style.border = "";
+              event.target.style.background = "";
+              event.target.style.borderRadius = "";
+              }
+            });
                
-               /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
-                  Reset the color of the output text and DIV's border color
-                  Get the dragged data with the dataTransfer.getData() method
-                  The dragged data is the id of the dragged element ("drag1")
-                  Append the dragged element into the drop element
-               */
-               document.addEventListener("drop", function(event) {
+              /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
+                 Reset the color of the output text and DIV's border color
+                 Get the dragged data with the dataTransfer.getData() method
+                 The dragged data is the id of the dragged element ("drag1")
+                 Append the dragged element into the drop element
+              */
+              document.addEventListener("drop", function(event) {
                  
-                 event.preventDefault();
+              event.preventDefault();
                 
-                 if ( event.target.className == ("droptarget0") || 
-                 event.target.className == ("droptarget1")||
-                 event.target.className == ("droptarget2")||
-                 event.target.className == ("droptarget3")||
-                 event.target.className == ("droptarget4")||
-                 event.target.className == ("droptarget5")||
-                 event.target.className == ("droptarget6")) {
+              if ( event.target.className == ("droptarget0") || 
+                event.target.className == ("droptarget1")||
+                event.target.className == ("droptarget2")||
+                event.target.className == ("droptarget3")||
+                event.target.className == ("droptarget4")||
+                event.target.className == ("droptarget5")||
+                event.target.className == ("droptarget6")) {
                   
-                   //document.getElementById("demo").style.color = "green";
-                   event.target.style.border = "";
-                   event.target.style.background = "";
-                   event.target.style.borderRadius = "";
+                //document.getElementById("demo").style.color = "green";
+                event.target.style.border = "";
+                event.target.style.background = "";
+                event.target.style.borderRadius = "";
                    
-                   var data = event.dataTransfer.getData("div");
+              var data = event.dataTransfer.getData("div");
                    
-                   event.target.appendChild(document.getElementById(data));
+                event.target.appendChild(document.getElementById(data));
                    
-                   last=last+1;
+                last=last+1;
 
-                  if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
-                    ||(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))))
-                    {
-                      console.log("ei osunut")
-                    } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";
+                if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
+                  ||(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))))
+                  {
+                    console.log("ei osunut")
+                  } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";
 
-                  if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
-                     success_count=success_count+1;    
-                     document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
-                   } 
-                  if(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
-                  }  
-                  if(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
-                  }  
-                  if(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;    
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
                   } 
-                  if(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                if(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                  if(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                if(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                  if(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))){
-                    success_count=success_count+1;
-                    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                if(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  } 
+                if(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
                   }  
-                    if(last==15){
-                      document.getElementById("result").style.display="block";
-                      document.getElementById("gameover").style.display="block";
-                      document.getElementById("clickMe").style.display="block";
-                      //document.getElementById("clickMe").value="Pelaa uudestaan";
-                      gameover_status=true;
-                      document.getElementById("result").innerHTML=success_count+"/15";
-                      
-                    
-                    }
+                if(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
+                if(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))){
+                   success_count=success_count+1;
+                   document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+                  }  
+                if(last==15){
+                   document.getElementById("result").style.display="block";
+                   document.getElementById("gameover").style.display="block";
+                   document.getElementById("clickMe").style.display="block";
+                   //document.getElementById("clickMe").value="Pelaa uudestaan";
+                   gameover_status=true;
+                   document.getElementById("result").innerHTML=success_count+"/15";
+                  
+                  }
                  }
-               });
+                });
               } }       
               
               function GameOver(){  
@@ -441,13 +439,7 @@ var img_kartonki = document.createElement("img");
 
                 gameover=null;
                 result=null;
-
-
-
-
-                  //location.reload();    
-               
-                  //document.getElementById("clickMe").onclick("myFunction();");        
+     
                  
                 }
               }
