@@ -1,5 +1,4 @@
 var gameover_status=false;
-
 var nappula=[];
 var teksti=[];
 var pallo=[];
@@ -7,12 +6,9 @@ var grid_nappulat;
 var grid_pontot;
 var grid_valot;
 var grid_keskusta;
-
 var success_count=0;
 var last=0;
 var index=0;
-
-
 var kuva0;
 var kuva1;
 var kuva2;
@@ -21,11 +17,10 @@ var kuva4;
 var kuva5;
 var kuva6; 
 
-
 function myFunction(){
-
 console.log("hienoa"+gameover_status);
 if(gameover_status==false){
+
 document.getElementById("clickMe").style.display="none";
 
 const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
@@ -69,8 +64,6 @@ const muovi = ["muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipuss
 const kartonki = ["maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
 "wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"];
 
-
-
 var jate0=document.createElement("p");
 jate0.id="jateteksti";
 jate0.innerHTML = "SEKAJÄTE";
@@ -99,12 +92,10 @@ var jate6=document.createElement("p");
 jate6.id="jateteksti";
 jate6.innerHTML = "KARTONKI";
 
-    
     grid_nappulat=document.createElement("div");
     grid_nappulat.className="grid-container";
     document.querySelector("peli").appendChild(grid_nappulat);
     
-
     grid_keskusta=document.createElement("div");
     grid_keskusta.className="grid-keskusta";
     document.querySelector("peli").appendChild(grid_keskusta);
@@ -119,7 +110,6 @@ jate6.innerHTML = "KARTONKI";
     
     // tulos näytölle x/15
 
-
 var gameover=document.createElement("p");
 gameover.id="gameover";
 gameover.style.color = "white";
@@ -127,9 +117,6 @@ gameover.style.fontSize = "35px";
 gameover.style.fontWeight="bold";
 gameover.style.display="none";
 gameover.style.margin="0px";
-//gameover.style.position="relative";
-//gameover.style.top="40%";
-//gameover.style.left="30%";
 gameover.style.textAlign="center";
 grid_keskusta.appendChild(gameover);
 gameover.innerHTML="GAMEOVER";
@@ -146,9 +133,7 @@ result.style.textAlign="center";
 result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
-
-    
-    
+ 
     for (var i = 0; i < 1; i++) {  
 
       pallo[i]=document.createElement("div");
@@ -163,23 +148,15 @@ result.innerHTML=success_count+"/15";
       nappula[i].id = "mydiv"+i;
       nappula[i].className = "mydiv";
       
-      //teksti[i].innerHTML=jatteet[i];
-      
       const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
       //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
       teksti[i].innerHTML=randomItem(jatteet);
       teksti[i].style.fontWeight="bold";
-      
       teksti[i].id = "dragtarget"; 
       nappula[i].draggable="true";  
-      
-      grid_nappulat.appendChild(nappula[i]);
-      
-      
-      
+      grid_nappulat.appendChild(nappula[i]); 
       }
-       
-          
+              
 var img_seka = document.createElement("img");
 var img_metalli = document.createElement("img");
 var img_lasi = document.createElement("img");
@@ -187,7 +164,6 @@ var img_bio = document.createElement("img");
 var img_paperi = document.createElement("img");
 var img_muovi = document.createElement("img");
 var img_kartonki = document.createElement("img");
-
 
     img_seka.src = "seka.png";  
     img_metalli.src = "metalli.png";
@@ -197,8 +173,7 @@ var img_kartonki = document.createElement("img");
     img_muovi.src = "muovi.png";
     img_kartonki.src = "kartonki.png";
     
-    kuva0 = document.createElement("div");
-        
+    kuva0 = document.createElement("div");  
         kuva0.id=("kuva0");
         kuva0=img_seka;
         kuva0.className="droptarget0";      
@@ -263,14 +238,12 @@ var img_kartonki = document.createElement("img");
                   if(event.target.id.length>6){
                     
                     index = event.target.id.slice(-2);
-                  }
-                  
+                  }            
                                  
                   event.dataTransfer.setData("text", teksti[index].innerHTML);
                   console.log(last+"väliä"+pallo[last].id)
                   event.dataTransfer.setData("pallo", pallo[last].id);
-                  
-                                 
+                               
                  // Output some text when starting to drag the p element
                  //document.getElementById("demo").innerHTML = "Started to drag the p element.";
                 
@@ -413,7 +386,6 @@ var img_kartonki = document.createElement("img");
 
                 if(gameover_status==true){
                   gameover_status=false;
-                  console.log("wittu");
 
                 document.removeEventListener("dragstart", function(event) {});
                 document.removeEventListener("drag", function(event) {});
@@ -425,14 +397,11 @@ var img_kartonki = document.createElement("img");
 
                 //document.querySelector("peli").remove();
                 console.log(document.querySelector("peli").children)
-                
-                
+                          
                 document.querySelector("peli").removeChild(grid_nappulat);
                 document.querySelector("peli").removeChild(grid_pontot);
                 document.querySelector("peli").removeChild(grid_valot);
-                document.querySelector("peli").removeChild(grid_keskusta);
-                
-                
+                document.querySelector("peli").removeChild(grid_keskusta);           
 
                 img_seka=null;
                 img_metalli=null;
