@@ -11,18 +11,26 @@
   box-sizing: border-box;
 }
 
+a:link {color:yellow; background-color:transparent; text-decoration:none}
+a:visited {color:black; background-color:transparent; text-decoration:none}
+a:hover {color:red; background-color:transparent; text-decoration:underline}
+a:active {color:green; background-color:transparent; text-decoration:underline}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color:gray;
+  
 }
 
 /* Style the header */
 header {
-  background-color: #666;
+  background-color:white;
   padding: 30px;
   text-align: center;
-  font-size: 25px;
-  color: white;
+  font-size: 35px;
+  color: green;
+  
+  
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -30,9 +38,12 @@ nav {
   float: left;
   width: 20%;
   height: 600px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-  text-align: center;
+  background: lightgreen;
+  padding: 20px 20px 0px 50px;
+  text-align: left;
+  
+
+  
 }
 
 /* Style the list inside the menu */
@@ -46,7 +57,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%;
-  height: 600px; /* only for demonstration, should be removed */-->
+  height: 600px; /* only for demonstration, should be removed */
 }
 
 
@@ -69,12 +80,11 @@ footer {
 
    @media (max-width: 500px) {
     .grid-keskusta{ max-height: 7%;}
-    .grid-nappulat-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;
-    }
+    .grid-nappulat-container { max-height: 50px;overflow: hidden;
+     max-width: 150px;overflow: hidden;}
     .grid-pontot-container { padding:28px 0px 0px 0px;
     }
     
-  
    .pallo{
     max-width: 0.5em;max-height: 0.5em;
     }
@@ -102,7 +112,8 @@ footer {
 
    @media (min-width: 501px) and (max-width: 749px) {
     .grid-keskusta{ max-height: 7%;}
-    .grid-nappulat-container { max-height: 50px;overflow: hidden;max-width: 150px;overflow: hidden;
+    .grid-nappulat-container { max-height: 50px;overflow: hidden;
+     max-width: 150px;overflow: hidden;
     }
     .grid-pontot-container { padding:28px 0px 0px 0px;
     }
@@ -174,7 +185,7 @@ footer {
   .droptarget5{width:70px;}
   .droptarget6{width:70px;}
 
-  #jateteksti{font-size: 10px;
+  #jateteksti{font-size: 0.7em;
     padding:0px 0px 0px 0px;}
   
   }
@@ -241,7 +252,7 @@ footer {
   justify-content: center;
   align-items: center;  
           
-    }
+}
 
 .grid-keskusta{
   display: grid; 
@@ -317,16 +328,16 @@ footer {
 </head>
 <body>
 
-<header>
+<header style="background-image: url('recycling_image.jpg');background-size:contain;background-repeat:no-repeat">
   <h2>Kierrätyspeli!</h2>
 </header>
 
 <section>
   <nav>
     <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
+      <li><u><a href="https://fi.wikipedia.org/wiki/Kierr%C3%A4tys" target=”_blank”>Kierrätys tietoa</a></u></li>
+      <li><u><a href="https://www.infofinland.fi/fi/housing/waste-and-recycling" target=”_blank”>Infoa kierrätyksestä</a></u></li>   
+      <li><u><a href="https://www.hsy.fi/jatteet-ja-kierratys/jateopas/" target=”_blank”>Jäteopas</a></u></li>
     </ul>
   </nav>
   
