@@ -24,14 +24,21 @@ body {
 
 /* Style the header */
 header {
-  background-color:white;
-  padding: 30px;
+  background-color:#5b92e5;
+  padding: 2px;
   text-align: center;
-  font-size: 35px;
-  color: green;
-  
+  font-size: 1.8em;
+  color: green;  
   
 }
+
+.logo{
+  background-image: url('recycling_image_trans.png');
+  background-position:3%;
+  background-size:100px;
+  background-repeat:no-repeat;
+}
+
 
 /* Create two columns/boxes that floats next to each other */
 nav {
@@ -39,12 +46,12 @@ nav {
   width: 20%;
   height: 600px; /* only for demonstration, should be removed */
   background: lightgreen;
-  padding: 20px 20px 0px 50px;
+  padding: 20px 20px 0px 10px;
   text-align: left;
-  
-
+  font-size: 1em;
   
 }
+
 
 /* Style the list inside the menu */
 nav ul {
@@ -89,6 +96,21 @@ footer {
     max-width: 0.5em;max-height: 0.5em;
     }
 
+    nav{
+      text-align: center;
+      font-size: 1em;
+    }
+
+    .logo{
+      background-image: url('recycling_image_trans.png');
+      background-position:3%;
+      background-size: 60px;
+      background-repeat:no-repeat;
+    }
+    header{
+      font-size: 1.2em;
+    }
+
    nav {
     width: 100%;
     height: auto;
@@ -117,7 +139,21 @@ footer {
     }
     .grid-pontot-container { padding:28px 0px 0px 0px;
     }
+    .logo{
+      background-image: url('recycling_image_trans.png');
+      background-position:3%;
+      background-size: 80px;
+      background-repeat:no-repeat;
+    }
 
+    nav{
+      text-align: center;
+      font-size: 1em;
+    }
+    header{
+      font-size: 1.5em;
+    }
+   
    .pallo{
     max-width: 0.5em;max-height: 0.5em;
     }
@@ -148,6 +184,7 @@ footer {
  @media (min-width: 1151px) {
   .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
   .grid-valot-container{width:80%;}
+  
   }
 
   @media (min-width: 750px) and (max-width: 952px) {
@@ -156,6 +193,10 @@ footer {
    .grid-pontot-container { padding:28px 0px 0px 0px;
    }
    .pallo{max-width: 0.7em;max-height: 0.7em;}
+
+   nav{
+    font-size: 0.9em;
+   }
   
   .droptarget0{width:70px;}
   .droptarget1{width:70px;}
@@ -328,7 +369,7 @@ footer {
 </head>
 <body>
 
-<header style="background-image: url('recycling_image.jpg');background-size:contain;background-repeat:no-repeat">
+<header class="logo">
   <h2>Kierrätyspeli!</h2>
 </header>
 
