@@ -175,46 +175,39 @@ var img_kartonki = document.createElement("img");
     img_muovi.src = "muovi.png";
     img_kartonki.src = "kartonki.png";
     
-    kuva0 = document.createElement("div");  
-    kuva0.id=("kuva0");
-    kuva0=img_seka;
-    kuva0.className="droptarget0";      
+    kuva0 = document.createElement("div"); 
+    kuva0.appendChild(img_seka);
+    img_seka.className="droptarget0";      
     grid_pontot.appendChild(kuva0);
           
     kuva1 = document.createElement("div");
-    kuva1.id=("kuva1");
-    kuva1=img_metalli;
-    kuva1.className="droptarget1";
+    kuva1.appendChild(img_metalli);
+    img_metalli.className="droptarget1";
     grid_pontot.appendChild(kuva1);
 
     kuva2 = document.createElement("div");
-    kuva2.id=("kuva2");
-    kuva2=img_lasi;
-    kuva2.className="droptarget2";
+    kuva2.appendChild(img_lasi);
+    img_lasi.className="droptarget2";
     grid_pontot.appendChild(kuva2);
 
     kuva3 = document.createElement("div");
-    kuva3.id=("kuva3");
-    kuva3=img_bio;
-    kuva3.className="droptarget3";
+    kuva3.appendChild(img_bio);
+    img_bio.className="droptarget3";
     grid_pontot.appendChild(kuva3);
   
     kuva4 = document.createElement("div");
-    kuva4.id=("kuva4");
-    kuva4=img_paperi;
-    kuva4.className="droptarget4";
+    kuva4.appendChild(img_paperi);
+    img_paperi.className="droptarget4";
     grid_pontot.appendChild(kuva4);
 
     kuva5 = document.createElement("div");
-    kuva5.id=("kuva5");
-    kuva5=img_muovi;
-    kuva5.className="droptarget5";
+    kuva5.appendChild(img_muovi);
+    img_muovi.className="droptarget5";
     grid_pontot.appendChild(kuva5);  
         
     kuva6 = document.createElement("div");
-    kuva6.id=("kuva6");
-    kuva6=img_kartonki;
-    kuva6.className="droptarget6";
+    kuva6.appendChild(img_kartonki);
+    img_kartonki.className="droptarget6";
     grid_pontot.appendChild(kuva6);
 
     grid_pontot.appendChild(jate0);
@@ -329,10 +322,12 @@ var img_kartonki = document.createElement("img");
                 event.target.style.border = "";
                 event.target.style.background = "";
                 event.target.style.borderRadius = "";
-                   
+                  
               data = event.dataTransfer.getData("div");
-                   
+                   console.log("heko: "+event.target.className+" hik "+data)
                event.target.appendChild(document.getElementById(data));
+               
+               
                
 
                 if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
