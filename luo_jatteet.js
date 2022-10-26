@@ -22,6 +22,16 @@ var counter=0;
 var jate=[];
 var kuva=[];
 var img=[];
+var json_jatteet;
+var json_seka;
+var json_metalli;
+var json_lasi;
+var json_bio;
+var json_paperi;
+var json_muovi;
+var json_kartonki;
+var text;
+
 
 function myFunction(){
 
@@ -83,6 +93,23 @@ var kotijate = {
 
 };
 
+json_jatteet=JSON.stringify(kotijate.jatteet[0]);
+json_seka=JSON.stringify(kotijate.SEKAJÄTE[0]);
+json_metalli=JSON.stringify(kotijate.METALLI[0]);
+json_lasi=JSON.stringify(kotijate.LASI[0]);
+json_bio=JSON.stringify(kotijate.BIO[0]);
+json_paperi=JSON.stringify(kotijate.PAPERI[0]);
+json_muovi=JSON.stringify(kotijate.MUOVI[0]);
+json_kartonki=JSON.stringify(kotijate.KARTONKI[0]);
+localStorage.setItem("jatteet", json_jatteet);
+localStorage.setItem("seka", json_seka);
+localStorage.setItem("metalli", json_metalli);
+localStorage.setItem("lasi", json_lasi);
+localStorage.setItem("bio", json_bio);
+localStorage.setItem("paperi", json_paperi);
+localStorage.setItem("muovi", json_muovi);
+localStorage.setItem("kartonki", json_kartonki);
+
 for(var i=0;i<Object.keys(kotijate).length-1;i++){
    jate[i]=document.createElement("p");
    jate[i].id="jateteksti";
@@ -131,31 +158,25 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
 
-for(var i=0;i<Object.values(kotijate.jatteet)[0].length;i++){
-  jatteet.push(Object.values(kotijate.jatteet)[0][i]);
-}
+text = localStorage.getItem("jatteet");
+jatteet=JSON.parse(text);
+text = localStorage.getItem("seka");
+seka=JSON.parse(text);
+text = localStorage.getItem("metalli");
+metalli=JSON.parse(text);
+text = localStorage.getItem("lasi");
+lasi=JSON.parse(text);
+text = localStorage.getItem("bio");
+bio=JSON.parse(text);
+text = localStorage.getItem("paperi");
+paperi=JSON.parse(text);
+text = localStorage.getItem("muovi");
+muovi=JSON.parse(text);
+text = localStorage.getItem("kartonki");
+kartonki=JSON.parse(text);
 
-for(var i=0;i<Object.values(kotijate.SEKAJÄTE)[0].length;i++){
-  seka.push(Object.values(kotijate.SEKAJÄTE)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.METALLI)[0].length;i++){
-  metalli.push(Object.values(kotijate.METALLI)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.LASI)[0].length;i++){
-  lasi.push(Object.values(kotijate.LASI)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.BIO)[0].length;i++){
-  bio.push(Object.values(kotijate.BIO)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.PAPERI)[0].length;i++){
-  paperi.push(Object.values(kotijate.PAPERI)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.MUOVI)[0].length;i++){
-  muovi.push(Object.values(kotijate.MUOVI)[0][i]);
-}
-for(var i=0;i<Object.values(kotijate.KARTONKI)[0].length;i++){
-  kartonki.push(Object.values(kotijate.KARTONKI)[0][i]);
-}
+console.log(jatteet.length);
+
  
     for (var i = 0; i < 15; i++) {  
 
