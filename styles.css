@@ -12,7 +12,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color:gray;
-  
+ 
 }
 
 /* Style the header */
@@ -94,6 +94,8 @@ footer {
     nav{
       text-align: center;
       font-size: 1em;
+      width: 100%;
+      height: auto;
     }
 
     .logo{
@@ -106,10 +108,6 @@ footer {
       font-size: 1.2em;
     }
 
-   nav {
-    width: 100%;
-    height: auto;
-    }
 
   peli{
     width:100%;
@@ -166,7 +164,7 @@ footer {
 
   peli{
     width:100%;
-    min-height:400px;
+    min-height:505px;
     height:auto;
   }
 
@@ -190,6 +188,7 @@ footer {
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
   
+  
   }
 
   @media (min-width: 750px) and (max-width: 952px) {
@@ -197,11 +196,7 @@ footer {
    }
    .grid-pontot-container { padding:28px 0px 0px 0px;
    }
-   .pallo{max-width: 0.7em;max-height: 0.7em;}
-
-   nav{
-    font-size: 0.9em;
-   }
+   .pallo{max-width: 0.7em;max-height: 0.7em;}  
   
   .droptarget0{width:70px;}
   .droptarget1{width:70px;}
