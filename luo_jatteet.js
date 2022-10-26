@@ -2,6 +2,14 @@ var gameover_status=false;
 var nappula=[];
 var teksti=[];
 var pallo=[];
+var jatteet=[];
+var seka=[];
+var metalli=[];
+var lasi=[];
+var bio=[];
+var paperi=[];
+var muovi=[];
+var kartonki=[];
 var grid_nappulat;
 var grid_pontot;
 var grid_valot;
@@ -9,16 +17,11 @@ var grid_keskusta;
 var success_count=0;
 var last=0;
 var index=0;
-var kuva0;
-var kuva1;
-var kuva2;
-var kuva3;
-var kuva4;
-var kuva5;
-var kuva6; 
 var data;
-var i;
 var counter=0;
+var jate=[];
+var kuva=[];
+var img=[];
 
 function myFunction(){
 
@@ -26,74 +29,65 @@ if(gameover_status==false){
 
 document.getElementById("clickMe").style.display="none";
 
-const jatteet = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
-"pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
-"tablettien läpipainopakkaukset","lelu- ja autotarvikepakkaukset","sipsipussit ja kahvipaketit","tuhka ja tupakantumpit", 
-"ikkuna- ja peililasi","pyrexlasi","posliini","keramiikka","kristalli","kasetit (VHS- ja C-kasetit)","tulostimien värikasetit", 
-"valokuvat ja negatiivit","nahka ja lumput","polkupyörän renkaat","kumiset lelut","rikkinäiset kengät ja vaatteet", 
-"kertakäyttövaipat ja terveyssiteet","tavallinen ja  mineraalipohjainen kissanhiekka","lemmikkieläinten jätökset",
-"ruoantähteet", "pilaantuneet elintarvikkeet","hedelmien- ja kasvistenkuoret","naatit","mehumaijan sakat","kahvin- ja teenporot", 
-"käytetyt suodatin- ja teepussit","kananmunankuoret","kalanperkuujätteet","pienet luut","talouspaperi","lautasliinat ja nenäliinat", 
-"leikkokukat","ruukkukukkien kasviosat",
-"muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipussit ja -kääreet","muovipullot, -kanisterit ja -purkit","styroksipakkaukset",
-"ikkunalasi ilman karmeja","peili- ja tasolasi","juomalasit","kristalli","muut lasituotteet","opaalilasiset pullot",
-"paistinpannujen ja kattiloiden lasiset kannet","säilyketölkit","kotitalouden pienmetalliesineet","metalliset kannet ja korkit","alumiinifoliot ja -vuoat","tuikkujen kuoret","maalipurkit", 
-"spraypullot","sanoma- ja aikakauslehdet","toimistopaperit","mainospostit","uusiopaperit","kirjekuoret","värilliset kopiopaperit","pehmeäkantiset kirjat", 
-"kovakantisen kirjan sivut","maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
-"wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"];
 
-const seka = ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
-"pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
-"tablettien läpipainopakkaukset","lelu- ja autotarvikepakkaukset","sipsipussit ja kahvipaketit","tuhka ja tupakantumpit", 
-"ikkuna- ja peililasi","pyrexlasi","posliini","keramiikka","kristalli","kasetit (VHS- ja C-kasetit)","tulostimien värikasetit", 
-"valokuvat ja negatiivit","nahka ja lumput","polkupyörän renkaat","kumiset lelut","rikkinäiset kengät ja vaatteet", 
-"kertakäyttövaipat ja terveyssiteet","tavallinen ja  mineraalipohjainen kissanhiekka","lemmikkieläinten jätökset"];
+var kotijate = {
+  "jatteet": [
+    ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
+    "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
+    "tablettien läpipainopakkaukset","lelu- ja autotarvikepakkaukset","sipsipussit ja kahvipaketit","tuhka ja tupakantumpit", 
+    "ikkuna- ja peililasi","pyrexlasi","posliini","keramiikka","kristalli","kasetit (VHS- ja C-kasetit)","tulostimien värikasetit", 
+    "valokuvat ja negatiivit","nahka ja lumput","polkupyörän renkaat","kumiset lelut","rikkinäiset kengät ja vaatteet", 
+    "kertakäyttövaipat ja terveyssiteet","tavallinen ja  mineraalipohjainen kissanhiekka","lemmikkieläinten jätökset",
+    "ruoantähteet", "pilaantuneet elintarvikkeet","hedelmien- ja kasvistenkuoret","naatit","mehumaijan sakat","kahvin- ja teenporot", 
+    "käytetyt suodatin- ja teepussit","kananmunankuoret","kalanperkuujätteet","pienet luut","talouspaperi","lautasliinat ja nenäliinat", 
+    "leikkokukat","ruukkukukkien kasviosat",
+    "muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipussit ja -kääreet","muovipullot, -kanisterit ja -purkit","styroksipakkaukset",
+    "ikkunalasi ilman karmeja","peili- ja tasolasi","juomalasit","kristalli","muut lasituotteet","opaalilasiset pullot",
+    "paistinpannujen ja kattiloiden lasiset kannet","säilyketölkit","kotitalouden pienmetalliesineet","metalliset kannet ja korkit","alumiinifoliot ja -vuoat","tuikkujen kuoret","maalipurkit", 
+    "spraypullot","sanoma- ja aikakauslehdet","toimistopaperit","mainospostit","uusiopaperit","kirjekuoret","värilliset kopiopaperit","pehmeäkantiset kirjat", 
+    "kovakantisen kirjan sivut","maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
+    "wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"]
+  ],
+  "SEKAJÄTE": [
+    ["likaantuneet paperit ja pahvit","hehku- ja halogeenilamput","sulakkeet","siivousjäte","imurin pölypussit",
+    "pvc–muovia sisältävät puhallettavat lelut","pvc-muovia sisältävät muovipressut","pvc–muovia sisältävät sadevaatteet",
+    "tablettien läpipainopakkaukset","lelu- ja autotarvikepakkaukset","sipsipussit ja kahvipaketit","tuhka ja tupakantumpit", 
+    "ikkuna- ja peililasi","pyrexlasi","posliini","keramiikka","kristalli","kasetit (VHS- ja C-kasetit)","tulostimien värikasetit", 
+    "valokuvat ja negatiivit","nahka ja lumput","polkupyörän renkaat","kumiset lelut","rikkinäiset kengät ja vaatteet", 
+    "kertakäyttövaipat ja terveyssiteet","tavallinen ja  mineraalipohjainen kissanhiekka","lemmikkieläinten jätökset"]
+  ],
+  "METALLI": [
+    ["säilyketölkit","kotitalouden pienmetalliesineet","metalliset kannet ja korkit","alumiinifoliot ja -vuoat","tuikkujen kuoret","maalipurkit", 
+    "spraypullot"]
+  ],
+  "LASI": [
+    ["ikkunalasi ilman karmeja","peili- ja tasolasi","juomalasit","kristalli","muut lasituotteet","opaalilasiset pullot",
+    "paistinpannujen ja kattiloiden lasiset kannet"]
+  ],
+  "BIO": [
+    ["ruoantähteet", "pilaantuneet elintarvikkeet","hedelmien- ja kasvistenkuoret","naatit","mehumaijan sakat","kahvin- ja teenporot", 
+    "käytetyt suodatin- ja teepussit","kananmunankuoret","kalanperkuujätteet","pienet luut","talouspaperi","lautasliinat ja nenäliinat", 
+    "leikkokukat","ruukkukukkien kasviosat"]
+  ],
+  "PAPERI": [
+    ["sanoma- ja aikakauslehdet","toimistopaperit","mainospostit","uusiopaperit","kirjekuoret","värilliset kopiopaperit","pehmeäkantiset kirjat", 
+    "kovakantisen kirjan sivut"]
+  ],
+  "MUOVI": [
+    ["muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipussit ja -kääreet","muovipullot, -kanisterit ja -purkit","styroksipakkaukset"]
+  ],
+  "KARTONKI": [
+    ["maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
+    "wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"]
+  ],
 
-const metalli = ["säilyketölkit","kotitalouden pienmetalliesineet","metalliset kannet ja korkit","alumiinifoliot ja -vuoat","tuikkujen kuoret","maalipurkit", 
-"spraypullot"];
+};
 
-const lasi = ["ikkunalasi ilman karmeja","peili- ja tasolasi","juomalasit","kristalli","muut lasituotteet","opaalilasiset pullot",
-"paistinpannujen ja kattiloiden lasiset kannet"];
-
-const bio = ["ruoantähteet", "pilaantuneet elintarvikkeet","hedelmien- ja kasvistenkuoret","naatit","mehumaijan sakat","kahvin- ja teenporot", 
-"käytetyt suodatin- ja teepussit","kananmunankuoret","kalanperkuujätteet","pienet luut","talouspaperi","lautasliinat ja nenäliinat", 
-"leikkokukat","ruukkukukkien kasviosat"];
-
-const paperi = ["sanoma- ja aikakauslehdet","toimistopaperit","mainospostit","uusiopaperit","kirjekuoret","värilliset kopiopaperit","pehmeäkantiset kirjat", 
-"kovakantisen kirjan sivut"];
-
-const muovi = ["muovipakkaukset","elintarvike- ja pesuainepakkaukset","muovipussit ja -kääreet","muovipullot, -kanisterit ja -purkit","styroksipakkaukset"];
-
-const kartonki = ["maito- ja mehutölkit","muro- ja keksipaketit","muut kuivien tuotteiden kartonkipakkaukset","pahvilaatikot","pitsalaatikot", 
-"wc- ja talouspaperirullien hylsyt","kartonkiset kertakäyttöastiat"];
-
-var jate0=document.createElement("p");
-jate0.id="jateteksti";
-jate0.innerHTML = "SEKAJÄTE";
-
-var jate1=document.createElement("p");
-jate1.id="jateteksti";
-jate1.innerHTML = "METALLI";
-
-var jate2=document.createElement("p");
-jate2.id="jateteksti";
-jate2.innerHTML = "LASI";
-
-var jate3=document.createElement("p");
-jate3.id="jateteksti";
-jate3.innerHTML = "BIO";
-
-var jate4=document.createElement("p");
-jate4.id="jateteksti";
-jate4.innerHTML = "PAPERI";
-
-var jate5=document.createElement("p");
-jate5.id="jateteksti";
-jate5.innerHTML = "MUOVI";
-
-var jate6=document.createElement("p");
-jate6.id="jateteksti";
-jate6.innerHTML = "KARTONKI";
+for(var i=0;i<Object.keys(kotijate).length-1;i++){
+   jate[i]=document.createElement("p");
+   jate[i].id="jateteksti";
+   jate[i].innerHTML=Object.keys(kotijate)[i+1];
+}
 
   grid_nappulat=document.createElement("div");
   grid_nappulat.className="grid-nappulat-container";
@@ -136,8 +130,34 @@ result.style.textAlign="center";
 result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
+
+for(var i=0;i<Object.values(kotijate.jatteet)[0].length;i++){
+  jatteet.push(Object.values(kotijate.jatteet)[0][i]);
+}
+
+for(var i=0;i<Object.values(kotijate.SEKAJÄTE)[0].length;i++){
+  seka.push(Object.values(kotijate.SEKAJÄTE)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.METALLI)[0].length;i++){
+  metalli.push(Object.values(kotijate.METALLI)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.LASI)[0].length;i++){
+  lasi.push(Object.values(kotijate.LASI)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.BIO)[0].length;i++){
+  bio.push(Object.values(kotijate.BIO)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.PAPERI)[0].length;i++){
+  paperi.push(Object.values(kotijate.PAPERI)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.MUOVI)[0].length;i++){
+  muovi.push(Object.values(kotijate.MUOVI)[0][i]);
+}
+for(var i=0;i<Object.values(kotijate.KARTONKI)[0].length;i++){
+  kartonki.push(Object.values(kotijate.KARTONKI)[0][i]);
+}
  
-    for (i = 0; i < 15; i++) {  
+    for (var i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
       pallo[i].id="pallo"+i;   
@@ -149,7 +169,8 @@ result.innerHTML=success_count+"/15";
       teksti[i].style.borderRadius="6px";
       nappula[i].id = "mydiv"+i;
       nappula[i].className = "mydiv";
-      
+                
+      //console.log("wit "+jatteet2[4]);
       const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
       //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
       teksti[i].innerHTML=randomItem(jatteet);
@@ -158,65 +179,31 @@ result.innerHTML=success_count+"/15";
       nappula[i].draggable="true";  
       grid_nappulat.appendChild(nappula[i]); 
       }
-              
-var img_seka = document.createElement("img");
-var img_metalli = document.createElement("img");
-var img_lasi = document.createElement("img");
-var img_bio = document.createElement("img");
-var img_paperi = document.createElement("img");
-var img_muovi = document.createElement("img");
-var img_kartonki = document.createElement("img");
+         
+      for(var i=0;i<Object.keys(kotijate).length-1;i++){
+        img[i]=document.createElement("img");
+        img[i].className="droptarget"+i;      
+      }
 
-    img_seka.src = "seka.png";  
-    img_metalli.src = "metalli.png";
-    img_lasi.src = "lasi.png";  
-    img_bio.src = "bio.png";
-    img_paperi.src = "paperi.png";  
-    img_muovi.src = "muovi.png";
-    img_kartonki.src = "kartonki.png";
+
+    img[0].src = "seka.png";  
+    img[1].src = "metalli.png";
+    img[2].src = "lasi.png";  
+    img[3].src = "bio.png";
+    img[4].src = "paperi.png";  
+    img[5].src = "muovi.png";
+    img[6].src = "kartonki.png";
     
-    kuva0 = document.createElement("div"); 
-    kuva0.appendChild(img_seka);
-    img_seka.className="droptarget0";      
-    grid_pontot.appendChild(kuva0);
-          
-    kuva1 = document.createElement("div");
-    kuva1.appendChild(img_metalli);
-    img_metalli.className="droptarget1";
-    grid_pontot.appendChild(kuva1);
+    for(var i=0;i<Object.keys(kotijate).length-1;i++){
+        kuva[i]=document.createElement("div");
+        kuva[i].appendChild(img[i]);
+        grid_pontot.appendChild(kuva[i]);
+    }
+   
+    for(var i=0;i<Object.keys(kotijate).length-1;i++){
+      grid_pontot.appendChild(jate[i]);
+    }
 
-    kuva2 = document.createElement("div");
-    kuva2.appendChild(img_lasi);
-    img_lasi.className="droptarget2";
-    grid_pontot.appendChild(kuva2);
-
-    kuva3 = document.createElement("div");
-    kuva3.appendChild(img_bio);
-    img_bio.className="droptarget3";
-    grid_pontot.appendChild(kuva3);
-  
-    kuva4 = document.createElement("div");
-    kuva4.appendChild(img_paperi);
-    img_paperi.className="droptarget4";
-    grid_pontot.appendChild(kuva4);
-
-    kuva5 = document.createElement("div");
-    kuva5.appendChild(img_muovi);
-    img_muovi.className="droptarget5";
-    grid_pontot.appendChild(kuva5);  
-        
-    kuva6 = document.createElement("div");
-    kuva6.appendChild(img_kartonki);
-    img_kartonki.className="droptarget6";
-    grid_pontot.appendChild(kuva6);
-
-    grid_pontot.appendChild(jate0);
-    grid_pontot.appendChild(jate1);
-    grid_pontot.appendChild(jate2);
-    grid_pontot.appendChild(jate3);
-    grid_pontot.appendChild(jate4);
-    grid_pontot.appendChild(jate5);
-    grid_pontot.appendChild(jate6);
         
          if(counter==0){
                /* Events fired on the drag target */
@@ -402,14 +389,7 @@ var img_kartonki = document.createElement("img");
                 document.querySelector("peli").removeChild(grid_valot);
                 document.querySelector("peli").removeChild(grid_keskusta);           
 
-                img_seka=null;
-                img_metalli=null;
-                img_lasi=null;
-                img_bio=null;
-                img_papaeri=null;
-                img_muovi=null;
-                img_kartonki=null;
-
+                img=null;
                 pallo=[];
                 jatteet=[];
                 seka=[];
@@ -422,23 +402,15 @@ var img_kartonki = document.createElement("img");
                 success_count=0;
                 last=0;
                 index=0;
-                i=0;
-
-                jate0=null;
-                jate1=null;
-                jate2=null;
-                jate3=null;
-                jate4=null;
-                jate5=null;
-                jate6=null;
-
+                kuva=null;
+                img=null;
+                jate=null;
                 nappula=[];
                 teksti=[];
                 grid_nappulat=null;
                 grid_keskusta=null;
                 grid_pontot=null;
                 grid_valot=null;
-
                 gameover=null;
                 result=null;
                 data=null;
