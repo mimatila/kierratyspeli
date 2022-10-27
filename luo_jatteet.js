@@ -93,6 +93,9 @@ var kotijate = {
 
 };
 
+
+console.log(jatteet.length);
+
 json_jatteet=JSON.stringify(kotijate.jatteet[0]);
 json_seka=JSON.stringify(kotijate.SEKAJÄTE[0]);
 json_metalli=JSON.stringify(kotijate.METALLI[0]);
@@ -175,7 +178,6 @@ muovi=JSON.parse(text);
 text = localStorage.getItem("kartonki");
 kartonki=JSON.parse(text);
 
-console.log(jatteet.length);
 
  
     for (var i = 0; i < 15; i++) {  
@@ -423,9 +425,9 @@ console.log(jatteet.length);
                 success_count=0;
                 last=0;
                 index=0;
-                kuva=null;
-                img=null;
-                jate=null;
+                kuva=[];
+                img=[];
+                jate=[];
                 nappula=[];
                 teksti=[];
                 grid_nappulat=null;
