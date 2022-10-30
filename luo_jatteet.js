@@ -10,6 +10,7 @@ var bio=[];
 var paperi=[];
 var muovi=[];
 var kartonki=[];
+//var jatteet=[];
 var grid_nappulat;
 var grid_pontot;
 var grid_valot;
@@ -22,20 +23,13 @@ var counter=0;
 var jate=[];
 var kuva=[];
 var img=[];
-var json_jatteet;
-var json_seka;
-var json_metalli;
-var json_lasi;
-var json_bio;
-var json_paperi;
-var json_muovi;
-var json_kartonki;
 var text;
 
 
 function myFunction(){
 
 if(gameover_status==false){
+
 
 document.getElementById("clickMe").style.display="none";
 
@@ -93,26 +87,6 @@ var kotijate = {
 
 };
 
-
-console.log(jatteet.length);
-
-json_jatteet=JSON.stringify(kotijate.jatteet[0]);
-json_seka=JSON.stringify(kotijate.SEKAJÄTE[0]);
-json_metalli=JSON.stringify(kotijate.METALLI[0]);
-json_lasi=JSON.stringify(kotijate.LASI[0]);
-json_bio=JSON.stringify(kotijate.BIO[0]);
-json_paperi=JSON.stringify(kotijate.PAPERI[0]);
-json_muovi=JSON.stringify(kotijate.MUOVI[0]);
-json_kartonki=JSON.stringify(kotijate.KARTONKI[0]);
-localStorage.setItem("jatteet", json_jatteet);
-localStorage.setItem("seka", json_seka);
-localStorage.setItem("metalli", json_metalli);
-localStorage.setItem("lasi", json_lasi);
-localStorage.setItem("bio", json_bio);
-localStorage.setItem("paperi", json_paperi);
-localStorage.setItem("muovi", json_muovi);
-localStorage.setItem("kartonki", json_kartonki);
-
 for(var i=0;i<Object.keys(kotijate).length-1;i++){
    jate[i]=document.createElement("p");
    jate[i].id="jateteksti";
@@ -161,25 +135,9 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
 
-text = localStorage.getItem("jatteet");
-jatteet=JSON.parse(text);
-text = localStorage.getItem("seka");
-seka=JSON.parse(text);
-text = localStorage.getItem("metalli");
-metalli=JSON.parse(text);
-text = localStorage.getItem("lasi");
-lasi=JSON.parse(text);
-text = localStorage.getItem("bio");
-bio=JSON.parse(text);
-text = localStorage.getItem("paperi");
-paperi=JSON.parse(text);
-text = localStorage.getItem("muovi");
-muovi=JSON.parse(text);
-text = localStorage.getItem("kartonki");
-kartonki=JSON.parse(text);
+console.log(jatteet)
 
 
- 
     for (var i = 0; i < 15; i++) {  
 
       pallo[i]=document.createElement("div");
@@ -194,6 +152,7 @@ kartonki=JSON.parse(text);
       nappula[i].className = "mydiv";
                 
       //console.log("wit "+jatteet2[4]);
+     
       const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
       //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
       teksti[i].innerHTML=randomItem(jatteet);
@@ -394,7 +353,8 @@ kartonki=JSON.parse(text);
                   }
                  }
                 });}
-              } }       
+              } 
+            }       
               
               function GameOver(){  
                 
