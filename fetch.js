@@ -9,13 +9,13 @@ async function getJatteet() {
     //console.log(response);
   }
    
-    getJatteet().then((result)=>{  
-      jatteet=result;
-      for(var i=0;i<jatteet.length;i++){
-        jatteetorg.push(jatteet[i]);
-      }
-      console.log(jatteet[0]);
-    })
+  getJatteet().then((result)=>{  
+    jatteet=result;
+    for(var i=0;i<jatteet.length;i++){
+      jatteetorg.push(jatteet[i]);
+    }
+    console.log(jatteet[0]);
+  })
 
   async function getSeka() {
     let apiResponse = await fetch("http://localhost/kierrätys/seka.json");
