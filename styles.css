@@ -36,7 +36,7 @@ nav {
   float: left;
   width: 20%;
   height: 600px; /* only for demonstration, should be removed */
-  background: green;
+  background: lightgreen;
   padding: 20px 20px 0px 10px;
   text-align: left;
   font-size: 1em; 
@@ -65,7 +65,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #5b92e5;
+  background-color: #777;
   padding: 10px;
   text-align: center;
   color: white;
