@@ -1,5 +1,12 @@
 ﻿var jatteet=[];
 var jatteetorg=[];
+var seka=[];
+var metalli=[];
+var lasi=[];
+var bio=[];
+var paperi=[];
+var muovi=[];
+var kartonki=[];
 
 async function getJatteet() {
     let apiResponse = await fetch("http://localhost/kierrätys/jatteet.json");
