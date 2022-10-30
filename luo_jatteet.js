@@ -3,6 +3,7 @@ var nappula=[];
 var teksti=[];
 var pallo=[];
 var jatteet=[];
+var jatteetorg=[];
 var seka=[];
 var metalli=[];
 var lasi=[];
