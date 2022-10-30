@@ -1,4 +1,6 @@
-﻿
+﻿var jatteet=[];
+var jatteetorg=[];
+
 async function getJatteet() {
     let apiResponse = await fetch("http://localhost/kierrätys/jatteet.json");
     let response = apiResponse.json();
