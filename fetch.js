@@ -9,7 +9,7 @@ var muovi=[];
 var kartonki=[];
 
 async function getJatteet() {
-    let apiResponse = await fetch("http://localhost/kierrätys/jatteet.json");
+    let apiResponse = await fetch("http://localhost/jatteet.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -27,7 +27,7 @@ async function getJatteet() {
   })
 
   async function getSeka() {
-    let apiResponse = await fetch("http://localhost/kierrätys/seka.json");
+    let apiResponse = await fetch("http://localhost/seka.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -43,7 +43,7 @@ async function getJatteet() {
   })
 
   async function getMetalli() {
-    let apiResponse = await fetch("http://localhost/kierrätys/metalli.json");
+    let apiResponse = await fetch("http://localhost/metalli.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -58,7 +58,7 @@ async function getJatteet() {
   })
 
   async function getLasi() {
-    let apiResponse = await fetch("http://localhost/kierrätys/lasi.json");
+    let apiResponse = await fetch("http://localhost/lasi.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -73,7 +73,7 @@ async function getJatteet() {
   })
 
   async function getBio() {
-    let apiResponse = await fetch("http://localhost/kierrätys/bio.json");
+    let apiResponse = await fetch("http://localhost/bio.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -88,7 +88,7 @@ async function getJatteet() {
   })
  
   async function getPaperi() {
-    let apiResponse = await fetch("http://localhost/kierrätys/paperi.json");
+    let apiResponse = await fetch("http://localhost/paperi.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -104,7 +104,7 @@ async function getJatteet() {
 
 
   async function getMuovi() {
-    let apiResponse = await fetch("http://localhost/kierrätys/muovi.json");
+    let apiResponse = await fetch("http://localhost/muovi.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -120,7 +120,7 @@ async function getJatteet() {
 
 
   async function getKartonki() {
-    let apiResponse = await fetch("http://localhost/kierrätys/kartonki.json");
+    let apiResponse = await fetch("http://localhost/kartonki.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
