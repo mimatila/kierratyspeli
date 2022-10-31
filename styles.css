@@ -32,7 +32,7 @@ header {
 nav {
   float: left;
   width: 20%;
-  height: 100vh; /* only for demonstration, should be removed */
+  height: 80vh; /* only for demonstration, should be removed */
   background: green;
   padding: 20px 20px 0px 10px;
   text-align: left;
@@ -50,7 +50,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%; /* only for demonstration, should be removed */
-  height: 100vh; 
+  height: 80vh; 
 }
 
 /* Clear floats after the columns */
@@ -76,9 +76,9 @@ footer {
 
    @media (max-width: 500px) {
     
-    .grid-keskusta{min-height:70%;}
-    .grid-nappulat-container { max-height: 50px;overflow: hidden;
-     max-width: 150px;overflow: hidden;}
+    .grid-keskusta{min-height:60%;}
+    .grid-nappulat-container { max-height: 100px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:50px 0px 0px 0px;}
     
     #jateteksti{font-size: 0.5em;font-weight:bold;
     padding:0px 0px 0px 0px;}
@@ -91,7 +91,7 @@ footer {
       text-align: center;
       font-size: 1em;
       width: 100%;
-      height:15vh;
+      height:20vh;
     }
 
     .logo{
@@ -124,9 +124,9 @@ footer {
 /*  (min-width: 501px) and (max-width: 749px)*/
 
    @media (min-width: 501px) and (max-width: 749px) {
-    .grid-keskusta{min-height:66%;}
-    .grid-nappulat-container { max-height: 50px;overflow: hidden;
-     max-width: 150px;overflow: hidden;
+    .grid-keskusta{min-height:50%;}
+    .grid-nappulat-container { max-height: 100px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:50px 0px 0px 0px;
     }
 
     .logo{
@@ -142,7 +142,7 @@ footer {
     nav{
       text-align: center;
       font-size: 1em;
-      height:17vh;
+      height:20vh;
       width:100%;
       
     }
@@ -154,7 +154,7 @@ footer {
 
     header{
       font-size: 1.5em;
-      height:13vh;
+      height:10vh;
     }
    
    .pallo{
@@ -195,12 +195,12 @@ footer {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
     min-height: 57%;
    }
-  .grid-keskusta{max-height:16%;}
+  .grid-keskusta{max-height:15%;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}  
 
    header{
     font-size: 1.5em;
-    height:13vh;
+    height:17vh;
   }
   
   .droptarget0{width:70px;}
@@ -219,14 +219,14 @@ footer {
 
   @media (min-width: 953px) and (max-width: 1150px) {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
-    min-height: 60%;
+    min-height: 57%;
    }
 
    header{
     font-size: 1.5em;
-    height:13vh;
+    height:17vh;
   }
-   .grid-keskusta{max-height:16%;}
+   .grid-keskusta{max-height:15%;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}
 
   .droptarget0{width:70px;}
