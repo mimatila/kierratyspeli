@@ -2,13 +2,6 @@ var gameover_status=false;
 var nappula=[];
 var teksti=[];
 var pallo=[];
-var seka=[];
-var metalli=[];
-var lasi=[];
-var bio=[];
-var paperi=[];
-var muovi=[];
-var kartonki=[];
 var grid_nappulat;
 var grid_pontot;
 var grid_valot;
@@ -22,20 +15,17 @@ var jate=[];
 var kuva=[];
 var img=[];
 var text;
-var pontot=[];
 
 function myFunction(){
 
-pontot=["SEKAJÄTE","METALLI","LASI","BIO","PAPERI","MUOVI","KARTONKI"];
-
 document.getElementById("clickMe").style.display="none";
-
+console.log(jatteet.length+"hiehie")
 for(var i=0;i<pontot.length;i++){
   jate[i]=document.createElement("p");
   jate[i].id="jateteksti";
   jate[i].innerHTML=pontot[i];
 }
-
+ 
   grid_nappulat=document.createElement("div");
   grid_nappulat.className="grid-nappulat-container";
   document.querySelector("peli").appendChild(grid_nappulat);
@@ -94,7 +84,7 @@ for (var i = 0; i < 15; i++) {
   nappula[i].id = "mydiv"+i;
   nappula[i].className = "mydiv";
                 
-  //console.log("wit "+jatteet2[4]);
+  console.log("wit "+jatteet.length+"org "+jatteetorg.length);
      
   const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
   //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
@@ -110,14 +100,10 @@ for (var i = 0; i < 15; i++) {
     img[i].className="droptarget"+i;      
       }
 
-
-  img[0].src = "seka.png";  
-  img[1].src = "metalli.png";
-  img[2].src = "lasi.png";  
-  img[3].src = "bio.png";
-  img[4].src = "paperi.png";  
-  img[5].src = "muovi.png";
-  img[6].src = "kartonki.png";
+  for(var i=0;i<pontot.length;i++){
+    img[i].src=pontot[i]+".png";
+  }
+  
     
   for(var i=0;i<pontot.length;i++){
     kuva[i]=document.createElement("div");
@@ -129,7 +115,6 @@ for (var i = 0; i < 15; i++) {
     grid_pontot.appendChild(jate[i]);
   }
      
-
   listener();
          
   } 
@@ -173,8 +158,6 @@ for (var i = 0; i < 15; i++) {
     gameover=null;
     result=null;
     data=null;
-    pontot=[];
-     
                  
     }
   }
