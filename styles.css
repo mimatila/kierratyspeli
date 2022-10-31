@@ -17,7 +17,8 @@ header {
   padding: 2px;
   text-align: center;
   font-size: 1.8em;
-  color: green;    
+  color: green; 
+  height:20vh;   
 }
 
 .logo{
@@ -31,7 +32,7 @@ header {
 nav {
   float: left;
   width: 20%;
-  height: 80vh; /* only for demonstration, should be removed */
+  height: 100vh; /* only for demonstration, should be removed */
   background: green;
   padding: 20px 20px 0px 10px;
   text-align: left;
@@ -49,7 +50,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%;
-  height: 80vh; /* only for demonstration, should be removed */
+  height: 100vh; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -65,6 +66,7 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  height:10vh;
 }
 
    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -123,7 +125,7 @@ footer {
 /*  (min-width: 501px) and (max-width: 749px)*/
 
    @media (min-width: 501px) and (max-width: 749px) {
-    .grid-keskusta{ min-height: 58vh;}
+    .grid-keskusta{ min-height: 62vh;}
     .grid-nappulat-container { max-height: 50px;overflow: hidden;
      max-width: 150px;overflow: hidden;
     }
@@ -182,7 +184,7 @@ footer {
   @media (min-width: 750px) and (max-width: 952px) {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
    }
-  .grid-keskusta{min-height:40vh;}
+  .grid-keskusta{min-height:36vh;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}  
   
   .droptarget0{width:70px;}
@@ -202,7 +204,7 @@ footer {
   @media (min-width: 953px) and (max-width: 1150px) {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
    }
-   .grid-keskusta{min-height:40vh;}
+   .grid-keskusta{min-height:36vh;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}
 
   .droptarget0{width:70px;}
