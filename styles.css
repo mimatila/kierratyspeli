@@ -1,18 +1,14 @@
 * {
   box-sizing: border-box;
 }
-
-
   a:link {color:yellow; background-color:transparent; text-decoration:none}
   a:visited {color:black; background-color:transparent; text-decoration:none}
   a:hover {color:red; background-color:transparent; text-decoration:underline}
   a:active {color:green; background-color:transparent; text-decoration:underline}
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color:gray;
- 
 }
 
 /* Style the header */
@@ -35,7 +31,7 @@ header {
 nav {
   float: left;
   width: 20%;
-  height: 600px; /* only for demonstration, should be removed */
+  height: 100vh; /* only for demonstration, should be removed */
   background: green;
   padding: 20px 20px 0px 10px;
   text-align: left;
@@ -53,7 +49,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%;
-  height: 600px; /* only for demonstration, should be removed */
+  height: 100vh; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -77,17 +73,15 @@ footer {
    /* (max-width: 500px) */
 
    @media (max-width: 500px) {
-    .grid-keskusta{ max-height: 7%;}
+    
+    .grid-keskusta{ min-height: 50vh;}
     .grid-nappulat-container { max-height: 50px;overflow: hidden;
      max-width: 150px;overflow: hidden;}
-    .grid-pontot-container { padding:28px 0px 0px 0px;
-    }
-
+    
     #jateteksti{font-size: 0.5em;font-weight:bold;
     padding:0px 0px 0px 0px;}
-  
-    
-   .pallo{
+   
+    .pallo{
     max-width: 0.5em;max-height: 0.5em;
     }
 
@@ -104,10 +98,10 @@ footer {
       background-size: 60px;
       background-repeat:no-repeat;
     }
+   
     header{
       font-size: 1.2em;
     }
-
 
   peli{
     width:100%;
@@ -129,12 +123,11 @@ footer {
 /*  (min-width: 501px) and (max-width: 749px)*/
 
    @media (min-width: 501px) and (max-width: 749px) {
-    .grid-keskusta{ max-height: 7%;}
+    .grid-keskusta{ min-height: 63vh;}
     .grid-nappulat-container { max-height: 50px;overflow: hidden;
      max-width: 150px;overflow: hidden;
     }
-    .grid-pontot-container { padding:28px 0px 0px 0px;
-    }
+
     .logo{
       background-image: url('recycling_image_trans.png');
       background-position:3%;
@@ -149,6 +142,7 @@ footer {
       text-align: center;
       font-size: 1em;
     }
+
     header{
       font-size: 1.5em;
     }
@@ -157,16 +151,7 @@ footer {
     max-width: 0.5em;max-height: 0.5em;
     }
 
-   nav {
-    width: 100%;
-    height: auto;
-    }
-
-  peli{
-    width:100%;
-    min-height:505px;
-    height:auto;
-  }
+  
 
   .droptarget0{width:60px;}
   .droptarget1{width:60px;}
@@ -185,17 +170,17 @@ footer {
  @media (min-width: 1151px) {
   .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
   .grid-valot-container{width:80%;}
+  .grid-keskusta{min-height:38vh;}
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
-  
-  
   }
+
+  /* -----------------------------------------------------------------------------------------------*/
 
   @media (min-width: 750px) and (max-width: 952px) {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
    }
-   .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
+  .grid-keskusta{min-height:35vh;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}  
   
   .droptarget0{width:70px;}
@@ -215,12 +200,9 @@ footer {
   @media (min-width: 953px) and (max-width: 1150px) {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
    }
+   .grid-keskusta{min-height:35vh;}
    .pallo{max-width: 0.7em;max-height: 0.7em;}
 
-   .grid-pontot-container { padding:28px 0px 0px 0px;
-   }
-   
-  
   .droptarget0{width:70px;}
   .droptarget1{width:70px;}
   .droptarget2{width:70px;}
@@ -236,13 +218,13 @@ footer {
 
  /* -----------------------------------------------------------------------------------------------*/
 
-  #jateteksti{
+#jateteksti{
     color:black;
     font-size: em;
     margin-block-start: 0px;
     margin-block-end: 0px;
     display:block;
-  }
+}
 
 .droptarget0 {
     
@@ -295,14 +277,13 @@ footer {
   height:180px;             
   margin: auto;     
   justify-content: center;
-  align-items: center;  
-          
+  align-items: center;            
 }
 
 .grid-keskusta{
   display: grid; 
   width:80%;
-  height:220px;          
+  height:35vh;          
   margin: auto;     
   justify-content: center;
   align-items: center;            
@@ -332,7 +313,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin:1% 0% 0% 25%;         
-  }
+}
 
 .mydiv {
   display: flex;  
@@ -348,7 +329,7 @@ footer {
   margin:10px;
   border-radius: 6px;  
   
-  }
+}
     
 .pallo {
   border: 1px solid black;
@@ -358,7 +339,7 @@ footer {
   height: 13px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;    
-  }
+}
 
 #clickMe{
   margin: 0;
@@ -368,4 +349,4 @@ footer {
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
-  }
+}
