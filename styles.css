@@ -75,18 +75,11 @@ footer {
 
    @media (max-width: 500px) {
     
-<<<<<<< HEAD
     .grid-nappulat-container { max-height: 170px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;
      flex-direction: row;}
      .grid-pontot-container{position:absolute;top:78%;left:9vw;}
      .grid-valot-container{position:absolute;top:95%;}
-=======
-    .grid-nappulat-container { min-height: 370px;overflow: hidden;
-     max-width: 150px;overflow: hidden;padding:300px 0px 0px 0px;}
-     .grid-pontot-container{position:absolute;top:81vh;left:9vw;}
-     .grid-valot-container{position:absolute;top:92vh;}
->>>>>>> 243bc0fc0b95588d2291872cd58ae2b776b0b85a
     
     #jateteksti{font-size: 0.5em;font-weight:bold;}
   
