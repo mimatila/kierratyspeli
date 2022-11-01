@@ -116,7 +116,7 @@ for (var i = 0; i < 15; i++) {
     grid_pontot.appendChild(jate[i]);
   }
      
-  //listener();
+  listener();
          
   } 
                  
