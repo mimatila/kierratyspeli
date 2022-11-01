@@ -76,7 +76,7 @@ footer {
 
    @media (max-width: 500px) {
     
-    .grid-nappulat-container { max-height: 200px;overflow: hidden;
+    .grid-nappulat-container { max-height: 100px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:180px 0px 0px 0px;
     }
      .grid-pontot-container{position:absolute;top:76%;left:10%;}
@@ -128,7 +128,7 @@ footer {
 
    @media (min-width: 501px) and (max-width: 749px) {
     .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
-      max-height: 200px;overflow: hidden;
+      max-height: 100px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:180px 0px 0px 0px;}
       
       
