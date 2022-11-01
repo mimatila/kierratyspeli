@@ -25,14 +25,13 @@ header {
   background-position:3%;
   background-size:100px;
   background-repeat:no-repeat;
-  height:9vh;
+  
 }
 
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
   width: 20%;
-  height: 100vh; /* only for demonstration, should be removed */
   background: green;
   padding: 20px 20px 0px 10px;
   text-align: left;
@@ -50,7 +49,7 @@ peli {
   padding: 10px;
   float: left;
   width: 80%; /* only for demonstration, should be removed */
-  height: 100vh; 
+  
 }
 
 /* Clear floats after the columns */
@@ -76,14 +75,14 @@ footer {
 
    @media (max-width: 500px) {
     
-    .grid-nappulat-container { max-height: 250px;overflow: hidden;
-     max-width: 150px;overflow: hidden;padding:200px 0px 0px 0px;}
-     .grid-pontot-container{position:absolute;top:81vh;left:9vw;}
-     .grid-valot-container{position:absolute;top:92vh;}
+    .grid-nappulat-container { max-height: 170px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;
+     flex-direction: row;}
+     .grid-pontot-container{position:absolute;top:78%;left:9vw;}
+     .grid-valot-container{position:absolute;top:95%;}
     
-    #jateteksti{font-size: 0.5em;font-weight:bold;
-    padding:0px 0px 0px 0px;}
-   
+    #jateteksti{font-size: 0.5em;font-weight:bold;}
+  
     .pallo{
     max-width: 0.7em;max-height: 0.7em;
     }
@@ -100,6 +99,7 @@ footer {
       background-position:3%;
       background-size: 60px;
       background-repeat:no-repeat;
+      height:9vh;
     }
    
     header{
@@ -108,6 +108,7 @@ footer {
 
   peli{
     width:100%;
+    height:61vh;
     
   }
 
@@ -126,10 +127,13 @@ footer {
 
    @media (min-width: 501px) and (max-width: 749px) {
     .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
-      padding:20vh 0vh 0vh 0vh;
-    }
-    .grid-pontot-container{position:absolute;top:77vh;left:9vw;}
-    .grid-valot-container{position:absolute;top:91vh;}
+      max-height: 170px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;}
+      
+      
+    
+    .grid-pontot-container{position:absolute;top:70%;left:9vw;}
+    .grid-valot-container{position:absolute;top:95%;}
 
     .logo{
       background-image: url('recycling_image_trans.png');
@@ -151,6 +155,7 @@ footer {
     }
     peli{
       width:100%;
+      height:58vh;
       
     }
    
@@ -177,19 +182,33 @@ footer {
   }
 /* -----------------------------------------------------------------------------------------------*/
 
- /* (min-width: 1151px)*/
+ /* (min-width: 953px)*/
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 953px) {
-  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:20vh 0vh 0vh 0vh; }
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
 
-  .grid-pontot-container{position:absolute;top:73vh;left:9vw;}
+  .grid-pontot-container{position:absolute;top:73%;left:9vw;}
+  .grid-valot-container{width:80%;position:absolute;top:96%;justify-content: center;}
+
+  peli{
+    width:80%;
+    height:73vh;
+    
+  }
+
+  nav{
+    text-align: center;
+    font-size: 1em;
+    width: 20%;
+    height:73vh;
+  }
 
   .logo{
     height:17vh;
    }
   
-  .grid-valot-container{width:80%;position:absolute;top:94vh;justify-content: center;}
+  
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
 
@@ -208,15 +227,27 @@ footer {
   /* -----------------------------------------------------------------------------------------------*/
 
   @media (min-width: 750px) and (max-width: 952px) {
-  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);padding:20vh 0vh 0vh 0vh;
+  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);padding:5vh 0vh 0vh 0vh;
    }
 
-   .grid-pontot-container{position:absolute;top:76vh;left:9vw;}
-   .grid-valot-container{position:absolute;top:93vh;}
-   .logo{
-    
+   .grid-pontot-container{position:absolute;top:73%;left:9vw;}
+   .grid-valot-container{position:absolute;top:95%;}
+   .logo{ 
     height:14vh;
    }
+
+   peli{
+    width:80%;
+    height:76vh;
+    
+  }
+
+  nav{
+    text-align: center;
+    font-size: 1em;
+    width: 20%;
+    height:76vh;
+  }
 
    
    .pallo{
@@ -323,10 +354,6 @@ h2{
   grid-column-gap: 10px;
   justify-content:center; 
   text-align: center; 
-  
-  
-  
-  
   
 }
 
