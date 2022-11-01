@@ -25,7 +25,7 @@ header {
   background-position:3%;
   background-size:100px;
   background-repeat:no-repeat;
-  height:14vh;
+  height:9vh;
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -136,6 +136,7 @@ footer {
       background-position:3%;
       background-size: 80px;
       background-repeat:no-repeat;
+      height:12vh;
     }
 
     #jateteksti{font-size: 0.5em;font-weight:bold;
@@ -180,13 +181,15 @@ footer {
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 953px) {
-  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:30vh 0vh 0vh 0vh; }
-  
-  .grid-keskusta{min-height:38%;}
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:20vh 0vh 0vh 0vh; }
 
-  .grid-pontot-container{position:absolute;top:77vh;left:9vw;}
+  .grid-pontot-container{position:absolute;top:73vh;left:9vw;}
+
+  .logo{
+    height:17vh;
+   }
   
-  .grid-valot-container{width:80%;position:absolute;top:94vh;}
+  .grid-valot-container{width:80%;position:absolute;top:94vh;justify-content: center;}
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
 
@@ -199,8 +202,7 @@ footer {
     .droptarget6{width:70px;}
   
   header{
-    font-size: 1.5em;
-    height:17vh;
+    font-size: 1.8em;
   }}
 
   /* -----------------------------------------------------------------------------------------------*/
@@ -212,7 +214,8 @@ footer {
    .grid-pontot-container{position:absolute;top:76vh;left:9vw;}
    .grid-valot-container{position:absolute;top:93vh;}
    .logo{
-    min-height:17vh;
+    
+    height:14vh;
    }
 
    
@@ -343,11 +346,11 @@ h2{
 
 .mydiv {
   display: flex;  
-  width: 130px;
-  height: 40px;
+  width: 140px;
+  height: 45px;
   border: 2px solid darkgreen;
   background-color: lightyellow;      
-  font-size:11px;  
+  font-size:12px;  
   box-sizing: border-box;   
   justify-content: center;
   align-items: center;
