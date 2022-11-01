@@ -148,7 +148,7 @@ if(counter==0){
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
         console.log("wittujen"+last)          
-    if(last==1){                
+    if(last==15){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("clickMe").style.display="block";
