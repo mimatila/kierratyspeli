@@ -98,7 +98,7 @@ for (var i = 0; i < 15; i++) {
   for(var i=0;i<pontot.length;i++){
     img[i]=document.createElement("img");
     img[i].className="droptarget"+i; 
-    img[i].style.alignSelf="start";    
+       
       }
 
   for(var i=0;i<pontot.length;i++){
