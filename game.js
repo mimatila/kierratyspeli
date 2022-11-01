@@ -16,7 +16,7 @@ var kuva=[];
 var img=[];
 var text;
 
-function myFunction(){
+function myGame(){
 
 document.getElementById("clickMe").style.display="none";
 console.log(jatteet.length+"hiehie")
@@ -97,7 +97,8 @@ for (var i = 0; i < 15; i++) {
          
   for(var i=0;i<pontot.length;i++){
     img[i]=document.createElement("img");
-    img[i].className="droptarget"+i;      
+    img[i].className="droptarget"+i; 
+    img[i].style.alignSelf="start";    
       }
 
   for(var i=0;i<pontot.length;i++){
@@ -115,7 +116,7 @@ for (var i = 0; i < 15; i++) {
     grid_pontot.appendChild(jate[i]);
   }
      
-  listener();
+  //listener();
          
   } 
                  

@@ -78,6 +78,7 @@ footer {
     
     .grid-nappulat-container { max-height: 100px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:50px 0px 0px 0px;}
+     .grid-pontot-container{min-height:115px;align-self:flex-start;}
     
     #jateteksti{font-size: 0.3em;font-weight:bold;
     padding:0px 0px 0px 0px;}
@@ -161,13 +162,13 @@ footer {
 
   
 
-  .droptarget0{width:40px;}
-  .droptarget1{width:40px;}
-  .droptarget2{width:40px;}
-  .droptarget3{width:40px;}
-  .droptarget4{width:40px;}
-  .droptarget5{width:40px;}
-  .droptarget6{width:40px;}
+  .droptarget0{width:70px;}
+  .droptarget1{width:70px;}
+  .droptarget2{width:70px;}
+  .droptarget3{width:70px;}
+  .droptarget4{width:70px;}
+  .droptarget5{width:70px;}
+  .droptarget6{width:70px;}
     
   }
 /* -----------------------------------------------------------------------------------------------*/
@@ -175,20 +176,20 @@ footer {
  /* (min-width: 1151px)*/
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
- @media (min-width: 1151px) {
+ @media (min-width: 953px) {
   .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
   .grid-keskusta{min-height:38%;}
   .grid-valot-container{width:80%;}
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
 
-    .droptarget0{width:50px;}
-    .droptarget1{width:50px;}
-    .droptarget2{width:50px;}
-    .droptarget3{width:50px;}
-    .droptarget4{width:50px;}
-    .droptarget5{width:50px;}
-    .droptarget6{width:50px;}
+    .droptarget0{width:70px;}
+    .droptarget1{width:70px;}
+    .droptarget2{width:70px;}
+    .droptarget3{width:70px;}
+    .droptarget4{width:70px;}
+    .droptarget5{width:70px;}
+    .droptarget6{width:70px;}
   
   header{
     font-size: 1.5em;
@@ -215,13 +216,13 @@ footer {
     
   }
   
-  .droptarget0{width:40px;}
-  .droptarget1{width:40px;}
-  .droptarget2{width:40px;}
-  .droptarget3{width:40px;}
-  .droptarget4{width:40px;}
-  .droptarget5{width:40px;}
-  .droptarget6{width:40px;}
+  .droptarget0{width:70px;}
+  .droptarget1{width:70px;}
+  .droptarget2{width:70px;}
+  .droptarget3{width:70px;}
+  .droptarget4{width:70px;}
+  .droptarget5{width:70px;}
+  .droptarget6{width:70px;}
   #jateteksti{font-size: 0.7em;font-weight: bold;
     padding:0px 0px 0px 0px;}
   }
@@ -229,33 +230,7 @@ footer {
 
 /*(min-width: 953px) and (max-width: 1150px)*/
 
-  @media (min-width: 953px) and (max-width: 1150px) {
-  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
-    
-   }
-   .logo{
-    min-height:17vh;
-   }
-
-   header{
-    font-size: 1.8em;
-    
-  }
-   
   
-
-  .droptarget0{width:50px;}
-  .droptarget1{width:50px;}
-  .droptarget2{width:50px;}
-  .droptarget3{width:50px;}
-  .droptarget4{width:50px;}
-  .droptarget5{width:50px;}
-  .droptarget6{width:50px;}
-
-  #jateteksti{font-size: 0.7em;font-weight: bold;
-    padding:0px 0px 0px 0px;}
-  
-  }
 
  /* -----------------------------------------------------------------------------------------------*/
 
@@ -326,20 +301,21 @@ h2{
 
 
 .grid-pontot-container{
-        
+       
   width:80%;
   height:auto; 
   margin: auto;
   display: grid;      
   grid-template-columns: auto auto auto auto auto auto auto;
-  align-items: center;     
+  align-items:center;     
   grid-row-gap: 0px;
   grid-column-gap: 10px;
-  justify-content: center; 
+  justify-content:center; 
   text-align: center; 
   position:absolute;
-  top:77vh;
+  top:72vh;
   left:9vw;
+  
   
   
 }
@@ -353,7 +329,7 @@ h2{
   border-radius: 6px;
   align-items: center;
   justify-content: center;
-  margin:0% 0% 0% 25%;   
+  margin:0% 0% 0% 23%;   
   position:absolute;
   top:93vh;
       
