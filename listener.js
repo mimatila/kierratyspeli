@@ -152,6 +152,10 @@ if(counter==0){
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("clickMe").style.display="block";
+      document.getElementById("clickMe").style.position="relative";
+      document.getElementById("clickMe").style.top="60%";
+      document.getElementById("clickMe").style.textAlign="center";
+
       //document.getElementById("clickMe").value="Pelaa uudestaan";
       gameover_status=true;
       document.getElementById("result").innerHTML=success_count+"/15";

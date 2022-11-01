@@ -78,8 +78,8 @@ footer {
     .grid-nappulat-container { max-height: 170px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;
      flex-direction: row;}
-     .grid-pontot-container{position:absolute;top:78%;left:9vw;}
-     .grid-valot-container{position:absolute;top:95%;}
+     .grid-pontot-container{position:absolute;top:76%;left:12%;}
+     .grid-valot-container{position:absolute;top:94%;}
     
     #jateteksti{font-size: 0.5em;font-weight:bold;}
   
@@ -133,7 +133,7 @@ footer {
       
     
     .grid-pontot-container{position:absolute;top:70%;left:9vw;}
-    .grid-valot-container{position:absolute;top:95%;}
+    .grid-valot-container{position:absolute;top:92%;}
 
     .logo{
       background-image: url('recycling_image_trans.png');
@@ -188,8 +188,8 @@ footer {
  @media (min-width: 953px) {
   .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
 
-  .grid-pontot-container{position:absolute;top:73%;left:9vw;}
-  .grid-valot-container{width:80%;position:absolute;top:96%;justify-content: center;}
+  .grid-pontot-container{position:absolute;top:74%;left:9vw;}
+  .grid-valot-container{width:80%;position:absolute;top:95%;justify-content: center;}
 
   peli{
     width:80%;
@@ -230,8 +230,8 @@ footer {
   .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);padding:5vh 0vh 0vh 0vh;
    }
 
-   .grid-pontot-container{position:absolute;top:73%;left:9vw;}
-   .grid-valot-container{position:absolute;top:95%;}
+   .grid-pontot-container{position:absolute;top:74%;left:9vw;}
+   .grid-valot-container{position:absolute;top:93%;}
    .logo{ 
     height:14vh;
    }
@@ -366,7 +366,7 @@ h2{
   border-radius: 6px;
   align-items: center;
   justify-content: center;
-  margin:0% 0% 0% 23%;   
+  margin:0% 25% 0% 25%;   
  
       
 }
