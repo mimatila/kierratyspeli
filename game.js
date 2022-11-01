@@ -31,7 +31,7 @@ for(var i=0;i<pontot.length;i++){
   document.querySelector("peli").appendChild(grid_nappulat);
     
   grid_keskusta=document.createElement("div");
-  grid_keskusta.className="grid-keskusta";
+  grid_keskusta.className="grid-keskusta-container";
   document.querySelector("peli").appendChild(grid_keskusta);
 
   grid_pontot=document.createElement("div");
@@ -71,7 +71,7 @@ result.innerHTML=success_count+"/15";
 //console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
 
 
-for (var i = 0; i < 15; i++) {  
+for (var i = 0; i < 1; i++) {  
 
   pallo[i]=document.createElement("div");
   pallo[i].id="pallo"+i;   

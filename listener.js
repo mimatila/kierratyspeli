@@ -147,20 +147,24 @@ if(counter==0){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
-                  
-    if(last==15){                
+        console.log("wittujen"+last)          
+    if(last==1){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("clickMe").style.display="block";
       document.getElementById("clickMe").style.position="relative";
-      document.getElementById("clickMe").style.top="60%";
+      document.getElementById("clickMe").style.top="50%";
       document.getElementById("clickMe").style.textAlign="center";
+      
 
       //document.getElementById("clickMe").value="Pelaa uudestaan";
       gameover_status=true;
       document.getElementById("result").innerHTML=success_count+"/15";
                   
     }
+    
     }
+    
     });}
+    
     }

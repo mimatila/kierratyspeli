@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-  a:link {color:yellow; background-color:transparent; text-decoration:none}
+  a:link {color:gray; background-color:transparent; text-decoration:none}
   a:visited {color:black; background-color:transparent; text-decoration:none}
   a:hover {color:red; background-color:transparent; text-decoration:underline}
-  a:active {color:green; background-color:transparent; text-decoration:underline}
+  a:active {color:black; background-color:transparent; text-decoration:underline}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +17,8 @@ header {
   padding: 2px;
   text-align: center;
   font-size: 1.8em;
-  color: green;   
+  color: green;
+    
 }
 
 .logo{
@@ -32,7 +33,7 @@ header {
 nav {
   float: left;
   width: 20%;
-  background: green;
+  background: lightgreen;
   padding: 20px 20px 0px 10px;
   text-align: left;
   font-size: 1em; 
@@ -188,7 +189,7 @@ footer {
  @media (min-width: 953px) {
   .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
 
-  .grid-pontot-container{position:absolute;top:74%;left:9vw;}
+  .grid-pontot-container{position:absolute;top:66%;left:9vw;}
   .grid-valot-container{width:80%;position:absolute;top:95%;justify-content: center;}
 
   peli{
@@ -335,12 +336,22 @@ h2{
 .grid-nappulat-container{
   display: grid; 
   width:80%;   
-  height:250px;             
+  max-height:250px;             
   margin: auto;     
   justify-content: center;
   align-items: center;            
 }
 
+.grid-keskusta-container{
+  display: grid; 
+  width:80%;   
+  height:50px;             
+  margin: auto;     
+  justify-content: center;
+  align-items: center; 
+  
+ 
+}
 
 .grid-pontot-container{
        
@@ -405,4 +416,5 @@ h2{
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
+  background-color: yellow;
 }
