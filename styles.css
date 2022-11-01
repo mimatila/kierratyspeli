@@ -76,8 +76,8 @@ footer {
 
    @media (max-width: 500px) {
     
-    .grid-nappulat-container { max-height: 250px;overflow: hidden;
-     max-width: 150px;overflow: hidden;padding:200px 0px 0px 0px;}
+    .grid-nappulat-container { min-height: 370px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:300px 0px 0px 0px;}
      .grid-pontot-container{position:absolute;top:81vh;left:9vw;}
      .grid-valot-container{position:absolute;top:92vh;}
     
