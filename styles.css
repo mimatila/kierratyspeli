@@ -76,8 +76,8 @@ footer {
 
    @media (max-width: 500px) {
     
-    .grid-nappulat-container { max-height: 200px;overflow: hidden;
-     max-width: 150px;overflow: hidden;padding:150px 0px 0px 0px;}
+    .grid-nappulat-container { max-height: 250px;overflow: hidden;
+     max-width: 150px;overflow: hidden;padding:200px 0px 0px 0px;}
      .grid-pontot-container{position:absolute;top:81vh;left:9vw;}
      .grid-valot-container{position:absolute;top:92vh;}
     
@@ -125,8 +125,8 @@ footer {
 /*  (min-width: 501px) and (max-width: 749px)*/
 
    @media (min-width: 501px) and (max-width: 749px) {
-    .grid-nappulat-container { max-height: 200px;overflow: hidden;
-     max-width: 150px;overflow: hidden;padding:150px 0px 0px 0px;
+    .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
+     padding:200px 0px 0px 0px;
     }
     .grid-pontot-container{position:absolute;top:77vh;left:9vw;}
     .grid-valot-container{position:absolute;top:89vh;}
@@ -180,7 +180,7 @@ footer {
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 953px) {
-  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr); }
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:300px 0px 0px 0px; }
   
   .grid-keskusta{min-height:38%;}
 
@@ -206,7 +206,7 @@ footer {
   /* -----------------------------------------------------------------------------------------------*/
 
   @media (min-width: 750px) and (max-width: 952px) {
-  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);
+  .grid-nappulat-container { grid-template-columns: repeat(3, 1fr);padding:200px 0px 0px 0px;
    }
 
    .grid-pontot-container{position:absolute;top:76vh;left:9vw;}
