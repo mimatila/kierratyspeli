@@ -129,7 +129,7 @@ footer {
      padding:200px 0px 0px 0px;
     }
     .grid-pontot-container{position:absolute;top:77vh;left:9vw;}
-    .grid-valot-container{position:absolute;top:89vh;}
+    .grid-valot-container{position:absolute;top:91vh;}
 
     .logo{
       background-image: url('recycling_image_trans.png');
@@ -180,13 +180,13 @@ footer {
 
  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
  @media (min-width: 953px) {
-  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:300px 0px 0px 0px; }
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:30vh 0vh 0vh 0vh; }
   
   .grid-keskusta{min-height:38%;}
 
   .grid-pontot-container{position:absolute;top:77vh;left:9vw;}
   
-  .grid-valot-container{width:80%;position:absolute;top:92vh;}
+  .grid-valot-container{width:80%;position:absolute;top:94vh;}
   #jateteksti{font-size: 1em;font-weight:bold;
     padding:0px 0px 0px 0px;}
 
@@ -210,7 +210,7 @@ footer {
    }
 
    .grid-pontot-container{position:absolute;top:76vh;left:9vw;}
-   .grid-valot-container{position:absolute;top:91vh;}
+   .grid-valot-container{position:absolute;top:93vh;}
    .logo{
     min-height:17vh;
    }
