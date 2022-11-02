@@ -11,7 +11,7 @@ var muovi=[];
 var kartonki=[];
 
 async function getKotiJate() {
-    let apiResponse = await fetch("http://localhost/kierrätys/kotijate.json");
+    let apiResponse = await fetch("http://localhost/kotijate.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
