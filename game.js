@@ -18,8 +18,8 @@ var text;
 
 function myGame(){
 
-document.getElementById("clickMe").style.display="none";
-console.log(jatteet.length+"hiehie")
+document.getElementById("kotijate").style.display="none";
+
 for(var i=0;i<pontot.length;i++){
   jate[i]=document.createElement("p");
   jate[i].id="jateteksti";
@@ -70,7 +70,6 @@ result.innerHTML=success_count+"/15";
 
 //console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
 
-
 for (var i = 0; i < 15; i++) {  
 
   pallo[i]=document.createElement("div");
@@ -83,9 +82,7 @@ for (var i = 0; i < 15; i++) {
   teksti[i].style.borderRadius="6px";
   nappula[i].id = "mydiv"+i;
   nappula[i].className = "mydiv";
-                
-  console.log("wit "+jatteet.length+"org "+jatteetorg.length);
-     
+  
   const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
   //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
   teksti[i].innerHTML=randomItem(jatteet);
@@ -124,16 +121,13 @@ for (var i = 0; i < 15; i++) {
   function GameOver(){  
                 
     if(gameover_status==true){
-      console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
       jatteet=[];
       for(var i=0;i<jatteetorg.length;i++){
       jatteet.push(jatteetorg[i])
       }
     counter=counter+1;
     gameover_status=false;
-                  
-    //console.log("hurraa"+document.getElementById("mydiv0").id);           
-
+   
     //document.querySelector("peli").remove();
     console.log(document.querySelector("peli").children)
                           
@@ -158,10 +152,9 @@ for (var i = 0; i < 15; i++) {
     grid_valot=null;
     gameover=null;
     result=null;
-    data=null;
-                 
-    }
+    data=null;         
   }
+}
 
             
       
