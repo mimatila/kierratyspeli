@@ -18,7 +18,7 @@ var text;
 
 function myGame(){
 
-document.getElementById("kotijate").style.display="none";
+document.getElementById("painike").style.display="none";
 
 for(var i=0;i<pontot.length;i++){
   jate[i]=document.createElement("p");
@@ -83,9 +83,9 @@ for (var i = 0; i < 15; i++) {
   nappula[i].id = "mydiv"+i;
   nappula[i].className = "mydiv";
   
-  const randomItem = jatteet => jatteet.splice((Math.random() * jatteet.length) | 0, 1);
-  //teksti[i].innerHTML = jatteet[Math.floor(Math.random()*jatteet.length)];
-  teksti[i].innerHTML=randomItem(jatteet);
+  const randomItem = kaikki => kaikki.splice((Math.random() * kaikki.length) | 0, 1);
+  //teksti[i].innerHTML = kaikki[Math.floor(Math.random()*kaikki.length)];
+  teksti[i].innerHTML=randomItem(kaikki);
   teksti[i].style.fontWeight="bold";
   teksti[i].id = "dragtarget"; 
   nappula[i].draggable="true";  
@@ -121,9 +121,9 @@ for (var i = 0; i < 15; i++) {
   function GameOver(){  
                 
     if(gameover_status==true){
-      jatteet=[];
-      for(var i=0;i<jatteetorg.length;i++){
-      jatteet.push(jatteetorg[i])
+      kaikki=[];
+      for(var i=0;i<kaikkiorg.length;i++){
+      kaikki.push(kaikkiorg[i])
       }
     counter=counter+1;
     gameover_status=false;

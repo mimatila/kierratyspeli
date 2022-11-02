@@ -89,51 +89,51 @@ if(counter==0){
       event.target.style.borderRadius = "";  
       data = event.dataTransfer.getData("div");
       event.target.appendChild(document.getElementById(data));
-    if((event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text")))
-      ||(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))))
+    if((event.target.className == ("droptarget0")&&yksi.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget1")&&kaksi.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget2")&&kolme.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget3")&&nelja.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget4")&&viisi.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget5")&&kuusi.includes(event.dataTransfer.getData("text")))
+      ||(event.target.className == ("droptarget6")&&seitseman.includes(event.dataTransfer.getData("text"))))
         {
         console.log("osu oikeeseen");                    
         } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";                                      
-    if(event.target.className == ("droptarget0")&&seka.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget0")&&yksi.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;    
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
     } 
-    if(event.target.className == ("droptarget1")&&metalli.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget1")&&kaksi.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
-    if(event.target.className == ("droptarget2")&&lasi.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget2")&&kolme.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
-    if(event.target.className == ("droptarget3")&&bio.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget3")&&nelja.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     } 
-    if(event.target.className == ("droptarget4")&&paperi.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget4")&&viisi.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
-    if(event.target.className == ("droptarget5")&&muovi.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget5")&&kuusi.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }  
-    if(event.target.className == ("droptarget6")&&kartonki.includes(event.dataTransfer.getData("text"))){
+    if(event.target.className == ("droptarget6")&&seitseman.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
     }          
     if(last==15){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
-      document.getElementById("clickMe").style.display="block";
-      document.getElementById("clickMe").style.position="relative";
-      document.getElementById("clickMe").style.top="50%";
-      document.getElementById("clickMe").style.textAlign="center";
+      document.getElementById("painike").style.display="block";
+      document.getElementById("painike").style.position="relative";
+      document.getElementById("painike").style.top="50%";
+      document.getElementById("painike").style.textAlign="center";
       //document.getElementById("clickMe").value="Pelaa uudestaan";
       gameover_status=true;
       document.getElementById("result").innerHTML=success_count+"/15";
