@@ -76,7 +76,7 @@ footer {
 
    /* (max-width: 500px) */
 
-   @media (min-height: 851px) and (max-height: 1500px) and (min-width: 1200px){
+   @media (min-height: 851px) and (max-height: 1500px) and (min-width: 953px){
    
     .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
 
