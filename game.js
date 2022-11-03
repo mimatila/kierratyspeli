@@ -68,31 +68,18 @@ if(valinta=="Autojäte Peli"){
 
 var gameover=document.createElement("p");
   gameover.id="gameover";
-  gameover.style.color = "white";
-  gameover.style.fontSize = "35px";
-  gameover.style.fontWeight="bold";
-  gameover.style.display="none";
-  gameover.style.margin="0px";
-  gameover.style.textAlign="center";
   grid_keskusta.appendChild(gameover);
   gameover.innerHTML="GAMEOVER";
 
 var result=document.createElement("p");
-  result.id="result";
-  result.style.margin="0px";
-  result.style.color = "white";
-  result.style.fontSize = "35px";
-  result.style.fontWeight="bold";
-  result.style.display="none";
-  result.style.textAlign="center";
-
+result.id="result";
 result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
 
 //console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
 
-for (var i = 0; i < 15; i++) {  
+for (var i = 0; i < 1; i++) {  
 
   pallo[i]=document.createElement("div");
   pallo[i].id="pallo"+i;   
