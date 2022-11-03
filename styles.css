@@ -124,6 +124,7 @@ footer {
      .grid-valot-container{position:absolute;top:94%;}
     
     #jateteksti{font-size: 0.5em;font-weight:bold;}
+
   
     .pallo{
     max-width: 0.7em;max-height: 0.7em;
@@ -477,7 +478,7 @@ h2{
   margin: 0;
   position: absolute;
   top: 90%;
-  left:33%;
+  left:43%;
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
@@ -489,8 +490,8 @@ h2{
 #painike2{
   margin: 0;
   position: absolute;
-  top: 90%;
-  left:60%;
+  top: 80%;
+  left:43%;
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
