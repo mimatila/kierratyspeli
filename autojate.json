@@ -88,13 +88,13 @@
 		"jäähdyttimet ja lämmittimen kennot",
 		"sytytys- ja hehkutulpat"
 	],
-	"OLJYT": [
+	"OLJYT JA NESTEET": [
 		"musta moottoriöljy",
 		"kirkas moottoriöljy",
 		"jarruneste",
 		"jäähdytinneste"
 	],
-	"KIINTEAOLJYINEN": [
+	"KIINTEA OLJYINEN": [
 		"öljynsuodattimet",
 		"polttoainesuodattimet",
 		"öljynpuhdistusliinat ja -imeytysaineet",
@@ -105,7 +105,7 @@
 		"öljyä sisältävät trasselit ja imeytysliinat",
 		"muu öljyllä pilaantunut jäte"
 	],
-	"VAIHTOOSAT": [
+	"VAIHTO-OSAT": [
 		"vaihtovirtalaturit",
 		"ilmastointikompressorit",
 		"vetoakselit",
@@ -114,7 +114,7 @@
 		"ohjausvaihteet",
 		"ruiskusuuttimet"
 	],
-	"ENERGIA": [
+	"UUSIO ENERGIA": [
 		"varaosapakkaukset",
 		"ajoneuvojen muoviset osat",
 		"puskurit",
