@@ -1,8 +1,9 @@
 function listener(){
 
 if(counter==0){
+
 /* Events fired on the drag target */
-              
+         
    document.addEventListener("dragstart", function(event) {               
     // The dataTransfer.setData() method sets the data type and the value of the dragged data              
     event.dataTransfer.setData("div", event.target.id);                 
@@ -89,7 +90,9 @@ if(counter==0){
       event.target.style.borderRadius = "";  
       data = event.dataTransfer.getData("div");
       event.target.appendChild(document.getElementById(data));
-    if((event.target.className == ("droptarget0")&&yksi.includes(event.dataTransfer.getData("text")))
+    
+      if(valinta=="Kotijäte Peli"){
+      if((event.target.className == ("droptarget0")&&yksi.includes(event.dataTransfer.getData("text")))
       ||(event.target.className == ("droptarget1")&&kaksi.includes(event.dataTransfer.getData("text")))
       ||(event.target.className == ("droptarget2")&&kolme.includes(event.dataTransfer.getData("text")))
       ||(event.target.className == ("droptarget3")&&nelja.includes(event.dataTransfer.getData("text")))
@@ -126,14 +129,63 @@ if(counter==0){
     if(event.target.className == ("droptarget6")&&seitseman.includes(event.dataTransfer.getData("text"))){
       success_count=success_count+1;
       document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
-    }          
+    } 
+  }
+    
+  /*--------------------------------------------------------------------*/
+
+  if(valinta=="Autojäte Peli"){
+    if((event.target.className == ("droptarget0")&&yksi2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget1")&&kaksi2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget2")&&kolme2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget3")&&nelja2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget4")&&viisi2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget5")&&kuusi2.includes(event.dataTransfer.getData("text")))
+    ||(event.target.className == ("droptarget6")&&seitseman2.includes(event.dataTransfer.getData("text"))))
+      {
+      console.log("osu oikeeseen");                    
+      } else document.getElementById(event.dataTransfer.getData("pallo")).style.background="red";                                      
+  if(event.target.className == ("droptarget0")&&yksi2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;    
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green";                                                     
+  } 
+  if(event.target.className == ("droptarget1")&&kaksi2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  }  
+  if(event.target.className == ("droptarget2")&&kolme2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  }  
+  if(event.target.className == ("droptarget3")&&nelja2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  } 
+  if(event.target.className == ("droptarget4")&&viisi2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  }  
+  if(event.target.className == ("droptarget5")&&kuusi2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  }  
+  if(event.target.className == ("droptarget6")&&seitseman2.includes(event.dataTransfer.getData("text"))){
+    success_count=success_count+1;
+    document.getElementById(event.dataTransfer.getData("pallo")).style.background="green"; 
+  } 
+}
+    
     if(last==15){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("painike").style.display="block";
       document.getElementById("painike").style.position="relative";
       document.getElementById("painike").style.top="50%";
-      document.getElementById("painike").style.textAlign="center";
+      document.getElementById("painike").style.textAlign="left";
+      document.getElementById("painike2").style.display="block";
+      document.getElementById("painike2").style.position="relative";
+      document.getElementById("painike2").style.top="50%";
+      document.getElementById("painike2").style.textAlign="center";
       //document.getElementById("clickMe").value="Pelaa uudestaan";
       gameover_status=true;
       document.getElementById("result").innerHTML=success_count+"/15";
