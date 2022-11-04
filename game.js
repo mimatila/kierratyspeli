@@ -77,7 +77,7 @@ result.style.alignSelf="start";
 grid_keskusta.appendChild(result);
 result.innerHTML=success_count+"/15";
 
-//console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
+console.log("hikka :"+kaikki2.length+"  org:"+kaikkiorg2.length)
 
 for (var i = 0; i < 15; i++) {  
 
@@ -171,6 +171,13 @@ if(valinta=="Autojäte Peli"){
       for(var i=0;i<kaikkiorg.length;i++){
       kaikki.push(kaikkiorg[i])
       }
+
+  if(gameover_status==true){
+        kaikki2=[];
+        for(var i=0;i<kaikkiorg2.length;i++){
+        kaikki2.push(kaikkiorg2[i])
+        }
+
     counter=counter+1;
     gameover_status=false;
    
@@ -190,6 +197,7 @@ if(valinta=="Autojäte Peli"){
     kuva=[];
     img=[];
     jate=[];
+    jate2=[];
     nappula=[];
     teksti=[];
     grid_nappulat=null;
@@ -201,7 +209,4 @@ if(valinta=="Autojäte Peli"){
     data=null;         
   }
 }
-
-            
-      
-       
+}
