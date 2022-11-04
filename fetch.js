@@ -33,7 +33,7 @@ async function getJate() {
     //console.log(response);
   }
 
-  async function getAutoJate() {
+async function getAutoJate() {
     let autoapiResponse = await fetch("http://localhost/autojate.json");
     let autoresponse = autoapiResponse.json();
     return autoresponse;

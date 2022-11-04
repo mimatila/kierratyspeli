@@ -82,6 +82,18 @@ footer {
 
     .grid-pontot-container{position:absolute;top:73%;left:9vw;}
     .grid-valot-container{width:80%;position:absolute;top:95%;justify-content: center;}
+
+    #painike{
+      position: absolute;
+      top: 90%;
+      left:43%;
+    }
+
+    #painike2{
+      position: absolute;
+      top: 80%;
+      left:43%;
+    }
   
     peli{
       width:80%;
@@ -124,6 +136,18 @@ footer {
      .grid-valot-container{position:absolute;top:94%;}
     
     #jateteksti{font-size: 0.5em;font-weight:bold;}
+
+    #painike{
+      position: absolute;
+      top: 90%;
+      left:36%;
+    }
+
+    #painike2{
+      position: absolute;
+      top: 80%;
+      left:36%;
+    }
 
   
     .pallo{
@@ -173,7 +197,17 @@ footer {
       max-height: 170px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;}
       
-      
+     #painike{
+      position: absolute;
+      top: 90%;
+      left:41%;
+    }
+
+    #painike2{
+      position: absolute;
+      top: 80%;
+      left:41%;
+    }  
     
     .grid-pontot-container{position:absolute;top:70%;left:9vw;}
     .grid-valot-container{position:absolute;top:95%;}
@@ -236,8 +270,19 @@ footer {
 
   peli{
     width:80%;
-    height:73vh;
-    
+    height:73vh; 
+  }
+
+  #painike{
+    position: absolute;
+    top: 90%;
+    left:43%;
+  }
+
+  #painike2{
+    position: absolute;
+    top: 80%;
+    left:43%;
   }
 
   nav{
@@ -282,6 +327,18 @@ footer {
    .logo{ 
     height:14vh;
    }
+
+   #painike{
+    position: absolute;
+    top: 90%;
+    left:43%;
+  }
+
+  #painike2{
+    position: absolute;
+    top: 80%;
+    left:43%;
+  }
 
    peli{
     width:80%;
@@ -477,9 +534,6 @@ h2{
 
 #painike{
   margin: 0;
-  position: absolute;
-  top: 90%;
-  left:43%;
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
@@ -490,9 +544,6 @@ h2{
 
 #painike2{
   margin: 0;
-  position: absolute;
-  top: 80%;
-  left:43%;
   font-size: 1em;
   border-radius: 6px;
   font-weight: bold;
