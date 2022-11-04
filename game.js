@@ -79,7 +79,7 @@ result.innerHTML=success_count+"/15";
 
 //console.log("hikka :"+jatteet.length+"  org:"+jatteetorg.length)
 
-for (var i = 0; i < 1; i++) {  
+for (var i = 0; i < 15; i++) {  
 
   pallo[i]=document.createElement("div");
   pallo[i].id="pallo"+i;   
