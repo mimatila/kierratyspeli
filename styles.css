@@ -514,9 +514,12 @@ h2{
   font-weight:bold;
   display:none;
   margin:0px;
-  position:absolute;
-  top:30%;
-  left:43%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
 }
 
@@ -526,9 +529,12 @@ h2{
   font-size:35px;
   font-weight:bold;
   display:none;
-  position:absolute;
-  top:35%;
-  left:43%;
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 
 }
 
@@ -540,6 +546,13 @@ h2{
   background-color: yellow;
   height:30px;
   width:150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #painike2{
@@ -548,6 +561,13 @@ h2{
   border-radius: 6px;
   font-weight: bold;
   background-color: yellow;
+  position: absolute;
+  top: 60%;
+  left: 50%;
   height:30px;
   width:150px;
+  text-align: center;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }

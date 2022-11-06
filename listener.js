@@ -175,21 +175,15 @@ if(counter==0){
   } 
 }
     
-    if(last==15){                
+    if(last==1){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("painike").style.display="block";
-      document.getElementById("painike").style.position="absolute";
-      document.getElementById("painike").style.top="50%";
-      document.getElementById("painike").style.left="47%";
+    
       //document.getElementById("painike").style.width="150px";
       //document.getElementById("painike").style.height="30px";
-      document.getElementById("painike").style.textAlign="center";
       document.getElementById("painike2").style.display="block";
-      document.getElementById("painike2").style.position="absolute";
-      document.getElementById("painike2").style.top="60%";
-      document.getElementById("painike2").style.left="47%";
-      document.getElementById("result").style.left="50%";
+        
       //document.getElementById("painike2").style.width="150px";
       //document.getElementById("painike2").style.height="30px";
       document.getElementById("painike2").style.textAlign="center";
