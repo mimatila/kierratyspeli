@@ -71,47 +71,15 @@ footer {
   font-size: 20px;
 }
 
+/* -----------------------------------------------------------------------------------------------*/
+
    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
    /* max width 500px*/
 
    /* (max-width: 500px) */
 
-   @media (min-height: 851px) and (max-height: 1500px) and (min-width: 953px){
-   
-    .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
-  
-    peli{
-      width:80%;
-      height:73vh;
-      
-    }
-  
-    nav{
-      text-align: center;
-      font-size: 1em;
-      width: 20%;
-      height:73vh;
-    }
-  
-    .logo{
-      height:17vh;
-     }
-    
-    
-    #jateteksti{font-size: 0.7em;font-weight:bold;
-      padding:0px 0px 0px 0px;}
-  
-      .droptarget0{width:70px;}
-      .droptarget1{width:70px;}
-      .droptarget2{width:70px;}
-      .droptarget3{width:70px;}
-      .droptarget4{width:70px;}
-      .droptarget5{width:70px;}
-      .droptarget6{width:70px;}
-    
-    header{
-      font-size: 1.8em;
-    }}
+/* -----------------------------------------------------------------------------------------------*/
+
    @media (max-width: 500px) {
     
     .grid-nappulat-container { max-height: 170px;overflow: hidden;
@@ -251,7 +219,8 @@ footer {
   
   header{
     font-size: 1.8em;
-  }}
+  }
+}
 
   /* -----------------------------------------------------------------------------------------------*/
 
@@ -298,9 +267,41 @@ footer {
 }
 /* -----------------------------------------------------------------------------------------------*/
 
-/*(min-width: 953px) and (max-width: 1150px)*/
+@media (min-height: 851px) and (max-height: 1500px) and (min-width: 953px){
+   
+  .grid-nappulat-container { grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
 
+  peli{
+    width:80%;
+    height:73vh;  
+  }
+
+  nav{
+    text-align: center;
+    font-size: 1em;
+    width: 20%;
+    height:73vh;
+  }
+
+  .logo{
+    height:17vh;
+   }
+   
+  #jateteksti{font-size: 0.7em;font-weight:bold;
+    padding:0px 0px 0px 0px;}
+
+    .droptarget0{width:70px;}
+    .droptarget1{width:70px;}
+    .droptarget2{width:70px;}
+    .droptarget3{width:70px;}
+    .droptarget4{width:70px;}
+    .droptarget5{width:70px;}
+    .droptarget6{width:70px;}
   
+  header{
+    font-size: 1.8em;
+  }
+}  
 
  /* -----------------------------------------------------------------------------------------------*/
 
@@ -375,8 +376,6 @@ h2{
   margin: auto;     
   justify-content: center;
   align-items: center; 
-  
- 
 }
 
 .grid-pontot-container{
@@ -463,11 +462,11 @@ h2{
   font-weight:bold;
   display:none;
   position: absolute;
-    top: 40%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+  top: 40%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
 }
 
