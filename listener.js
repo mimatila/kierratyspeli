@@ -175,7 +175,7 @@ if(counter==0){
   } 
 }
     
-    if(last==1){                
+    if(last==15){                
       document.getElementById("result").style.display="block";
       document.getElementById("gameover").style.display="block";
       document.getElementById("painike").style.display="block";
