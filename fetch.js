@@ -24,7 +24,7 @@ var kuusi2=[];
 var seitseman2=[];
 
 async function getJate() {
-    let apiResponse = await fetch("http://localhost/kotijate.json");
+    let apiResponse = await fetch("https://mimatila.github.io/kotijate.json");
     let response = apiResponse.json();
     return response;
     // Since we waited for our API to respond using await
@@ -34,7 +34,7 @@ async function getJate() {
   }
 
 async function getAutoJate() {
-    let autoapiResponse = await fetch("http://localhost/autojate.json");
+    let autoapiResponse = await fetch("https://mimatila.github.io/autojate.json");
     let autoresponse = autoapiResponse.json();
     return autoresponse;
     // Since we waited for our API to respond using await
