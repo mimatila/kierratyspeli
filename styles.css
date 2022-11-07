@@ -497,7 +497,7 @@ h2{
   height:30px;
   width:100px;
   position: absolute;
-  bottom:2px;
+  bottom:0;
   text-align: center;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
