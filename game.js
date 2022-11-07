@@ -30,6 +30,9 @@ function myGame(){
  console.log("2. osa"+valinta)
 document.getElementById("painike").style.display="none";
 document.getElementById("painike2").style.display="none";
+document.getElementById("kierratys").style.display="none";
+document.getElementById("kierratys2").style.display="none";
+
 
 if(valinta=="Kotijäte Peli"){
 for(var i=0;i<pontot.length;i++){

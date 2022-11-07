@@ -392,8 +392,7 @@ h2{
   text-align: center; 
   position:absolute;
   left:9vw;
-  bottom:0;
-  padding: 0px 0px 50px 0px; 
+  bottom:40px; 
   
 }
 
@@ -408,8 +407,7 @@ h2{
   justify-content: center;
   margin:0% 25% 0% 25%;  
   position:absolute;
-  bottom:0;
-  padding: 0px 0px 20px 0px; 
+  bottom:20px; 
  
       
 }
@@ -447,7 +445,7 @@ h2{
   display:none;
   margin:0px;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -462,12 +460,41 @@ h2{
   font-weight:bold;
   display:none;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
+}
+
+#kierratys{
+   color:black;
+   margin:20px;
+}
+
+#kierratys2{
+  color:black;
+  position:absolute;
+  bottom:0;
+  margin:20px;
+  padding: 0px 0px 20px 0px;
+}
+
+#kotipainike{
+  font-size: 1em;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: yellow;
+  height:30px;
+  width:100px;
+  position: absolute;
+  bottom:50px;
+  
+  text-align: center;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #painike{
@@ -479,7 +506,7 @@ h2{
   height:30px;
   width:150px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   text-align: center;
   -moz-transform: translateX(-50%) translateY(-50%);
@@ -494,7 +521,7 @@ h2{
   font-weight: bold;
   background-color: yellow;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   height:30px;
   width:150px;

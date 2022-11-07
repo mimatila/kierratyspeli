@@ -189,6 +189,15 @@ if(counter==0){
       document.getElementById("painike2").style.textAlign="center";
       //document.getElementById("clickMe").value="Pelaa uudestaan";
       gameover_status=true;
+      if(success_count>13){
+        document.getElementById("result").style.color="green";
+      }
+      if(success_count>9&&success_count<13){
+        document.getElementById("result").style.color="yellow";
+      }
+      if(success_count<10){
+        document.getElementById("result").style.color="red";
+      }
       document.getElementById("result").innerHTML=success_count+"/15";
     }
     }
