@@ -32,6 +32,7 @@ header {
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
+  position:relative;
   width: 20%;
   background: lightgreen;
   padding: 20px 20px 0px 10px;
@@ -84,6 +85,14 @@ footer {
     
     .grid-nappulat-container { max-height: 170px;overflow: hidden;
      max-width: 150px;overflow: hidden;padding:100px 0px 0px 0px;
+    }
+
+    #kierratys{
+      font-size: 0.7em;
+    }
+
+    #kierratys2{
+      font-size: 0.7em;
     }
     
     #jateteksti{font-size: 0.5em;font-weight:bold;}
@@ -489,8 +498,7 @@ h2{
   height:30px;
   width:100px;
   position: absolute;
-  bottom:50px;
-  
+  bottom:20px;
   text-align: center;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
