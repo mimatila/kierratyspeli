@@ -17,6 +17,10 @@ body {
   font-size: clamp(14px, 2vw, 18px);
 }
 
+body > .layout {
+  min-height: 0;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -60,6 +64,8 @@ html, body {
   height: 100%;
 }
 
+
+
 sivupaneeli ul {
   list-style: none;
   padding: 0;
@@ -88,13 +94,6 @@ header {
   background-position: left center;
   background-size: clamp(60px, 6vw, 100px);
 }
-
-
-/*
-body {
-  display: flex;
-  flex-direction: column;
-}*/
 
 /* Create two columns/boxes that floats next to each other */
 sivupaneeli {
