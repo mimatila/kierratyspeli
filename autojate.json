@@ -1,0 +1,85 @@
+{
+	"METALLIT": [
+		"jarruosat kuten jarrupalat",
+		"jarrulevyt",
+		"hydrauliset jarrukomponentit",
+		"jarrusatulat",
+		"pakoputket ja katalysaattorit",
+		"moottorin yleiset osat",
+		"hihnojen kiristimet ja ohjainrullat",
+		"korin alustan metalliset osat",
+		"tukivarret ja metallirunkoiset kumihelat",
+		"kevytmetalli- ja teräsvanteet",
+		"aerosolipullot ilman puna-valkoista varoitusmerkkiä",
+		"pyyhkijän sulat",
+		"tyhjät metallitynnyrit", 
+		"jäähdyttimen- ja lämmittimen kennot",
+		"sytytys- ja hehkutulpat"
+	],
+	"OLJYT_JA_NESTEET": [
+		"musta moottoriöljy",
+		"kirkas moottoriöljy",
+		"jarruneste",
+		"jäähdytinneste"
+	],
+	"KIINTEA_OLJYINEN": [
+		"öljynsuodattimet",
+		"polttoainesuodattimet",
+		"öljynpuhdistusliinat ja -imeytysaineet",
+		"öljyllä sotkeutunut pahvi",
+		"muoviset voiteluainepurkit",
+		"öljykanisterit",
+		"öljyn imeytysaineet",
+		"iskunvaimentimet",
+		"öljyä sisältävät trasselit ja imeytysliinat",
+		"muu öljyllä pilaantunut jäte"
+	],
+	"VAIHTO_OSAT": [
+		"vaihtovirtalaturit",
+		"ilmastointikompressorit",
+		"vetoakselit",
+		"starttimoottorit",
+		"jarrusatulat",
+		"ohjausvaihteet eli hammastangot",
+		"ruiskusuuttimet"
+	],
+	"UUSIO_ENERGIA": [
+		"varaosapakkaukset",
+		"ajoneuvojen muoviset osat",
+		"puskurit",
+		"alustan pohjasuojat",
+		"muut muoviset korinosat",
+		"likaiset paperit ja pahvit",
+		"puupakkaukset ja -laatikot",
+		"pakkausmuovit(ei pvc)",
+                "kartongit",
+                 "vaatteet",
+		"solumuovi(styrox)"
+	],
+	"POLTETTAVA": [
+		"lattioiden lakaisujäte",
+		"hiomapaperit ja -laikat",
+        	"elintarvike- ja ruokajäte",
+		"hitsausjäte", 
+		"työhanskat",
+        	"siivousjäte ja pölypussit",
+		"moottorin ilmansuodattimet",
+       	 	"raitisilmasuodattimet",
+       		"PVC muovit, vain pienet määrät",
+		"ajovalojen lasit",
+		"maalauksen suojapaperit", 
+                "halogeenilamput ja hehkulamput", 
+		"apulaite- ja jakohihnat"
+	],
+	"SER": [
+		"moottorin ohjainlaitteet",
+		"ilmastointikompressorit",
+		"led -lamput",
+		"paloilmaisimet ja termostaatit", 
+		"laturit ja starttimoottorit",
+		"sytytyspuolat",
+		"polttoainepumput",
+		"radiot ja kaiuttimet",
+		"pyyhkijän moottorit"
+	]
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Kierrätyspeli</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css?v=12">
+</head>
+<body>
+<header class="logo">
+  <h2>Kierrätyspeli!</h2>
+</header>
+<section class="layout">
+  <sivupaneeli>
+    <ul>
+      <li><u><a href="https://fi.wikipedia.org/wiki/Kierr%C3%A4tys" target="_blank">Infoa kierrätyksestä wikipedia</a></u></li>
+      <li><u><a href="https://www.infofinland.fi/fi/housing/waste-and-recycling" target="_blank">Yleistä infoa kierrätyksestä</a></u></li>   
+      <li><u><a href="https://www.hsy.fi/jatteet-ja-kierratys/jateopas/" target="_blank">Jäteopas</a></u></li>
+    </ul>
+    <input id="kotipainike" type="button" value="Koti">
+  </sivupaneeli>
+
+  <div id="pelipaneeli"> 
+    <p id="kierratys">Kierrätys tarkoittaa materiaalin, esineen tai muun kulttuurillisen asian käyttämistä hyödyksi uudessa yhteydessä. Usein kierrätyksellä tarkoitetaan jätteiden hyötykäyttöä uusien tuotteiden valmistuksessa. Kierrätys vähentää yleensä neitseellisten raaka-aineiden ja energian kulutusta, minkä vuoksi se on ympäristöä säästävä ratkaisu. Se vähentää myös jätteiden hävittämisestä aiheutuvaa ilman, veden ja maan saastumista.</p>  
+    <!-- 🔥 NAPPI-CONTAINER -->
+    <div class="painike-container">
+    <input id="painike" type="button"
+      value="Kotijäte Peli"
+      onclick="painike();start();" />
+      <input id="painike2" type="button"
+      value="Autojäte Peli"
+      onclick="painike2();start();" />
+  </div>
+    <p id="kierratys2">Jos pelin lopputulos on <span style="color: green;">vihreä</span> eli yli 93% oikein,  olet kierrätyksen Mestari, jos lopputulos on <span style="color:yellow";>keltainen</span> eli yli 66% oikein, niin tunnet jo todella hyvin kerrätyksen perusteet ja jos lopputulos on <span style="color:red";>punainen</span> eli alle 60% oikein, tarvitset vielä lisää pelaamista! Hauskaa pelaamista!</p>
+  </div>
+</section>
+
+<script type="text/javascript" src="fetch.js?n=1"></script>
+<script type="text/javascript" src="listener.js?n=1"></script>
+<script type="text/javascript" src="game.js?n=1"></script>
+<script src="DragDropTouch.js?n=1"></script>
+
+</body>
+</html>
