@@ -185,8 +185,8 @@ h2 {
   align-content: start;
   grid-row-gap: 0px;
   grid-column-gap: 8px;
-  min-height: 250px;
-  max-height:250px;
+  min-height: 280px;
+  max-height:280px;
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
   margin: 0 auto;       /* 🔥 oikea keskitys */
