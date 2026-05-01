@@ -113,7 +113,7 @@ sivupaneeli {
   /*min-height: 100vh;*/
   /*min-height: auto;*/
   flex:1;
-  min-height: 0;
+  min-height: 100vh;
   overflow: visible;
   display: flex;
   flex-direction: column;
