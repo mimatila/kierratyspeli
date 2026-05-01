@@ -58,6 +58,8 @@ html, body {
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr;
+  flex: 1;
+  min-height: 0;
 }
 
 sivupaneeli ul {
