@@ -222,9 +222,9 @@ h2 {
 }
 
 .grid-pontot-container img {
-  width: clamp(50px, 6vw, 80px);
+  width: clamp(40px, 6vw, 80px);
   gap: clamp(6px, 2vw, 12px);
-  height: clamp(50px, 6vw, 80px);
+  height: clamp(40px, 6vw, 80px);
   object-fit: contain; /* 🔥 tärkein */
 }
 
