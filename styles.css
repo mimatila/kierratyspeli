@@ -73,10 +73,13 @@ sivupaneeli ul {
   list-style: none;
 }
 
+.jateteksti {
+   font-size: clamp(0.5rem, 2.2vw, 0.7rem);   /* tai esim 10px / 0.8rem */ 
+  text-align: center;
 
-/* Style the header */
-header {
-  /*height: 100dvh; */
+}
+
+.header {
   margin: 0; 
   padding: 0;
   background-color:#5b92e5;
@@ -84,19 +87,11 @@ header {
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: yellow;
   flex-shrink: 0;
-}
-
-.jateteksti {
-   font-size: clamp(0.5rem, 2.2vw, 0.7rem);   /* tai esim 10px / 0.8rem */ 
-  text-align: center;
-
-}
-
-.logo {
   background-image: url('recycling_image_trans.png');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: clamp(60px, 6vw, 100px);
+  background-position: 10px center;
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -365,7 +360,7 @@ h2 {
     gap: 12px; /* 🔥 pienempi mobiilissa */
   }
 
-  .logo {
+  .header {
     background-size: 40px;
     background-position: 8px center;
   }
@@ -388,7 +383,7 @@ h2 {
     padding: 0;
   }
 
-  .logo { height: 9dvh; }
+  .header-kuva { height: 9dvh; }
   #peli { width: 80%; }
 
   .pallo { max-width: 0.7em; max-height: 0.7em; }
@@ -418,7 +413,7 @@ h2 {
   }
 
 
-  .logo{
+  .header-kuva{
     height:12dvh;
    }
 
