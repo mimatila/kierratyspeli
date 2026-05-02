@@ -193,6 +193,7 @@ h2 {
   grid-column-gap: 8px;
   min-height: 260px;
   max-height:260px;
+  
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
   margin: 0 auto;       /* 🔥 oikea keskitys */
@@ -201,7 +202,7 @@ h2 {
 }
 
 #restartBtn {
-  position: absolute;
+  /*position: absolute;*/
   top: 10px;
   left: 10px;
   bottom: auto;
