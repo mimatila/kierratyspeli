@@ -97,6 +97,9 @@ header {
 
 /* Create two columns/boxes that floats next to each other */
 sivupaneeli {
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
   background: lightgreen;
   padding: 16px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -112,11 +115,10 @@ sivupaneeli {
 }
 
 #pelipaneeli {
-  height: auto; 
-  /*min-height: 100vh;*/
-  /*min-height: auto;*/
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
   flex:1;
-  min-height: 100dvh;
   overflow: visible;
   display: flex;
   flex-direction: column;
