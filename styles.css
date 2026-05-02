@@ -10,6 +10,7 @@ body {
   display: flex;
   /*min-height: 100vh;*/
   min-height: 100dvh;
+  /*min-height: 100%;*/
   flex-direction: column;
   font-family:Arial, Helvetica, sans-serif;
   color:blue;
@@ -58,7 +59,7 @@ html, body {
   display: grid;
   grid-template-columns: 220px 1fr;
   /*min-height: 0;*/
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 
@@ -113,7 +114,7 @@ sivupaneeli {
   /*min-height: 100vh;*/
   /*min-height: auto;*/
   flex:1;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -185,8 +186,8 @@ h2 {
   align-content: start;
   grid-row-gap: 0px;
   grid-column-gap: 8px;
-  min-height: 280px;
-  max-height:280px;
+  min-height: 260px;
+  max-height:260px;
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
   margin: 0 auto;       /* 🔥 oikea keskitys */
