@@ -59,7 +59,7 @@ html, body {
   display: grid;
   grid-template-columns: 220px 1fr;
   /*min-height: 0;*/
-  min-height: 60dvh;
+  min-height: 100dvh;
 }
 
 
@@ -73,8 +73,11 @@ sivupaneeli ul {
 
 /* Style the header */
 header {
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
   background-color:#5b92e5;
-  padding: 6px;
+  /*padding: 6px;*/
   text-align: center;
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: yellow;
@@ -114,7 +117,7 @@ sivupaneeli {
   /*min-height: 100vh;*/
   /*min-height: auto;*/
   flex:1;
-  min-height: 60dvh;
+  min-height: 100dvh;
   overflow: visible;
   display: flex;
   flex-direction: column;
