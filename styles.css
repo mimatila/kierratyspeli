@@ -352,7 +352,7 @@ h2 {
     grid-template-columns: 1fr !important;
     justify-items: center;
     align-items: center;
-    h/*eight: auto;*/
+    /*height: auto;*/
     overflow: visible;
     margin-top: 50px; /* 🔥 siirtää alemmas */
   }
