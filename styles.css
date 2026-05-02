@@ -80,7 +80,6 @@ header {
   margin: 0; 
   padding: 0;
   background-color:#5b92e5;
-  /*padding: 6px;*/
   text-align: center;
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: yellow;
@@ -347,7 +346,6 @@ h2 {
   .layout {
     display: flex;
     flex-direction: column;
-    min-height: calc(100dvh - 60px);
   }
 
   .grid-kortit-container {
