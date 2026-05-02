@@ -356,6 +356,7 @@ h2 {
    .roskakortti:nth-child(n+2) {
     display: none;
   } 
+  
   .grid-valot-container {
     gap: 12px; /* 🔥 pienempi mobiilissa */
   }
