@@ -59,7 +59,7 @@ html, body {
   display: grid;
   grid-template-columns: 220px 1fr;
   /*min-height: 0;*/
-  min-height: 100dvh;
+  min-height: 60dvh;
 }
 
 
@@ -114,7 +114,7 @@ sivupaneeli {
   /*min-height: 100vh;*/
   /*min-height: auto;*/
   flex:1;
-  min-height: 100dvh;
+  min-height: 60dvh;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -377,7 +377,7 @@ h2 {
     padding: 0;
   }
 
-  .logo { height: 9vh; }
+  .logo { height: 9dvh; }
 
   #peli { width: 80%; }
 
@@ -409,7 +409,7 @@ h2 {
 
 
   .logo{
-    height:12vh;
+    height:12dvh;
    }
 
   #jateteksti{font-size: 0.7em;font-weight:bold;
