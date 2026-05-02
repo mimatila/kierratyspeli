@@ -381,8 +381,7 @@ h2 {
     padding: 0;
   }
 
-  .logo { height: 9dvh; }
-
+  /*.logo { height: 9dvh; }*/
   #peli { width: 80%; }
 
   .pallo { max-width: 0.7em; max-height: 0.7em; }
