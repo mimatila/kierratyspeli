@@ -57,7 +57,6 @@ html, body {
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr;
-  flex: 1;
   min-height: 0;
   margin: 0;
   padding: 0;
@@ -181,17 +180,13 @@ h2 {
 
 .grid-kortit-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-content: start;
-  grid-row-gap: 0px;
-  grid-column-gap: 8px;
-  min-height: 260px;
-  max-height:260px;  
-  width: 100%;        /* 🔥 tärkein muutos */
-  max-width: 800px;   /* keskitys ilman rikkomista */
-  margin: 0 auto;       /* 🔥 oikea keskitys */
+  grid-template-columns: repeat(5, 130px);
+  gap: clamp(6px, 1.5vw, 30px);
   justify-content: center;
-  align-items: center;
+  align-content: start;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #restartBtn {
@@ -361,8 +356,9 @@ h2 {
  
 @media (min-width: 750px) and (max-width: 952px) {
 
-  .grid-kortit-container { 
-    grid-template-columns: repeat(4, 1fr);
+  .grid-kortit-container {
+    grid-template-columns: repeat(4, 130px);
+    justify-content: center;
   }
 
   #jateteksti {
