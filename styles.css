@@ -54,6 +54,8 @@ html, body {
   white-space: pre-line;
 }
 
+
+
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -182,11 +184,16 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, 130px);
   gap: clamp(6px, 1.5vw, 30px);
-  justify-content: center;
   align-content: start;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  grid-row-gap: 0px;
+  grid-column-gap: 8px;
+  min-height: 260px;
+  max-height:260px;
+  width: 100%;        /* 🔥 tärkein muutos */
+  max-width: 800px;   /* keskitys ilman rikkomista */
+  margin: 0 auto;       /* 🔥 oikea keskitys */
+  justify-content: center;
+  align-items: center;
 }
 
 #restartBtn {
@@ -257,7 +264,7 @@ h2 {
   width: clamp(8px, 1.2vw, 12px);
   height: clamp(8px, 1.2vw, 12px);
   border: 1px solid black;
-  background: yellow;
+  background: red;
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -329,14 +336,14 @@ h2 {
   }
 
   .grid-kortit-container {
-   height: 260px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
   }
 
-   .roskakortti:nth-child(n+2) {
-    display: none;
+  .roskakortti:nth-child(n+2) {
+  display: none;
   } 
   
   .grid-valot-container {
@@ -387,9 +394,12 @@ h2 {
 /* -----------------------------------------------------------------------------------------------*/
 
 @media (min-width: 953px) and (min-height: 851px) and (max-height: 1500px){
-
+/*
   .grid-kortit-container { 
-    grid-template-columns: repeat(5, 1fr);padding:5vh 0vh 0vh 0vh; }
+    
+    grid-template-columns: repeat(5, 1fr);
+    padding:5vh 0vh 0vh 0vh; 
+  }*/
 
   #peli{
     width:80%;
