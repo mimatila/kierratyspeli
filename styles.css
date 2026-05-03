@@ -334,12 +334,10 @@ h2 {
   }
 
   .grid-kortit-container {
-    display: grid;
-    grid-template-columns: 1fr !important;
-    justify-items: center;
-    align-items: center;
-    overflow: visible;
-    margin-top: 50px; /* 🔥 siirtää alemmas */
+   height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
    .roskakortti:nth-child(n+2) {
