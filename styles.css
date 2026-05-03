@@ -8,13 +8,18 @@
 
 body {
   display: flex;
-  height: 100dvh; 
+  height: 100dvh;
+  height: auto; 
   margin: 0; 
   padding: 0px;
   flex-direction: column;
   font-family:Arial, Helvetica, sans-serif;
   color:blue;
   font-size: clamp(14px, 2vw, 18px);
+}
+
+sivupaneeli {
+  outline: 3px solid red;
 }
 
 html, body {
@@ -60,6 +65,7 @@ html, body {
   display: grid;
   grid-template-columns: 220px 1fr;
   min-height: 0;
+  flex: 1;
   margin: 0;
   padding: 0;
 }
@@ -264,7 +270,7 @@ h2 {
   width: clamp(8px, 1.2vw, 12px);
   height: clamp(8px, 1.2vw, 12px);
   border: 1px solid black;
-  background: red;
+  background: yellow;
   border-radius: 50%;
   box-sizing: border-box;
 }
