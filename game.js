@@ -221,7 +221,7 @@ function luoKortit(kaikkiJatteet) {
   
   //console.log(kotijatteet);
   
-  for (let u = 0; u < 15; u++) { 
+  for (let u = 0; u < 1; u++) { 
 
   pallo[u]=document.createElement("div");
   pallo[u].id="pallo"+u;   
