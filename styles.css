@@ -194,8 +194,10 @@ h2 {
 }
 
 #restartBtn {
-  display: block;
-  margin: 10px auto 0 auto; /* keskittää vaakasuunnassa */
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   border: 2px solid darkblue;
   /*position: absolute;*/
   /*top: 45%;*/
@@ -284,8 +286,8 @@ h2 {
   transform: translateX(-50%);
 }
 
-#gameover { top: 20%; }
-#result   { top: 30%; }
+#gameover { top: 25%; }
+#result   { top: 35%; }
 
 #kierratys,
 #kierratys2 {
