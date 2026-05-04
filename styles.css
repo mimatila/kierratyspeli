@@ -194,7 +194,7 @@ h2 {
   min-height: 280px;  /*260px org */
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
-  margin: 15px auto 0;
+  margin: 25px auto 0;
   justify-content: center;
   align-items: center;
 }
