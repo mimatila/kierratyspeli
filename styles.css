@@ -56,20 +56,11 @@ html, body {
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr;
+  flex: 1; /* vain jos parent on flex */
   min-height: 0;
-  flex: 1;
-  margin: 0;
-  padding: 0;
 }
 
-sivupaneeli ul {
-  margin: 0; 
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* tekee välin linkkien väliin */
-}
+
 
 .jateteksti {
    font-size: clamp(0.6rem, 2.2vw, 0.8rem);   /* tai esim 10px / 0.8rem */ 
@@ -92,16 +83,27 @@ sivupaneeli ul {
 }
 
 /* Create two columns/boxes that floats next to each other */
-sivupaneeli { 
+.sivupaneeli { 
   margin: 0; 
   padding: 0;
+  width: 100%;
   background: lightgreen;
   padding: 16px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   display: flex;
+  justify-content: center; /* keskittää paneelin */
   align-items: center; /* 🔥 TÄMÄ keskittää vaakaan */
   flex-direction: column;
   gap: 10px;
+}
+
+.sivupaneeli ul {
+  margin: 0; 
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* tekee välin linkkien väliin */
 }
 
 [class^="droptarget"] {
@@ -196,15 +198,15 @@ h2 {
 
 #restartBtn {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 140px;
   height: 40px;
   background: yellow;
   font-weight: bold;
-  z-index: 9999;
   border-radius: 6px;
+  z-index: 9999;
 }
 
 .grid-pontot-container {
@@ -268,9 +270,11 @@ h2 {
   text-align: center;
 }*/
 
-grid-gameover-container {
-  position: relative;
-  height: 100vh;
+.grid-gameover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 #gameover,
@@ -281,7 +285,7 @@ grid-gameover-container {
 }
 
 #gameover { top: 20%; }
-#result   { top: 35%; }
+#result   { top: 30%; }
 
 #kierratys,
 #kierratys2 {
