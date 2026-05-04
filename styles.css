@@ -301,8 +301,6 @@ h2 {
   border: 2px solid darkgreen;
   background-color: yellow; /* 🔥 pakota takaisin */
   padding: 6px 10px;
-  cursor: pointer;
-  display: block;
   margin: 20px auto;
 }
 
