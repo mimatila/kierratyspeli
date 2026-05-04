@@ -331,6 +331,35 @@ h2 {
     flex-direction: column;
   }
 
+
+
+  
+  .sivupaneeli {
+    display: flex;
+    flex-direction: column; /* tärkein muutos */
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sivupaneeli ul {
+    display: flex;
+    flex-direction: column; /* linkit allekkain */
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sivupaneeli .button-row {
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(12px, 2.5vw, 16px);
+  padding: clamp(6px, 1.5vw, 10px) clamp(10px, 3vw, 16px);
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
   .grid-kortit-container {
     height: 260px;
     display: flex;
@@ -351,12 +380,7 @@ h2 {
     background-position: 8px center;
   }
   
-  #kotipainike {
-    transform: scale(1.3); /* 🔥 +30% koko */
-  }
-  #restartBtn {
-    transform: scale(1.3); /* 🔥 +30% koko */
-  }
+
 } 
 
  
