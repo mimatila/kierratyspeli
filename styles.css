@@ -207,15 +207,6 @@ h2 {
   border-radius: 6px;
 }
 
-.grid-gameover-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .grid-pontot-container {
   display: flex;
   flex-wrap: wrap;
@@ -277,17 +268,20 @@ h2 {
   text-align: center;
 }*/
 
+grid-gameover-container {
+  position: relative;
+  height: 100vh;
+}
 
 #gameover,
 #result {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
 }
 
-#gameover { top: 15%; }
-#result   { top: 25%; }
+#gameover { top: 20%; }
+#result   { top: 35%; }
 
 #kierratys,
 #kierratys2 {
