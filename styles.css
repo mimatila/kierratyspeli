@@ -194,15 +194,18 @@ h2 {
 }
 
 #restartBtn {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin: 10px auto 0 auto; /* keskittää vaakasuunnassa */
+  border: 2px solid darkblue;
+  /*position: absolute;*/
+  /*top: 45%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
   width: 140px;
   height: 40px;
   background: yellow;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 16px;
   z-index: 9999;
 }
 
