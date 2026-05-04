@@ -288,6 +288,9 @@ h2 {
   margin: 20px auto;
 }
 
+body {
+  background: hotpink !important;
+}
 #restartBtn {
   width: 80px;
   padding: 6px 6px;
