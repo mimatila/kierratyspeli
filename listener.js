@@ -102,7 +102,7 @@ function listener() {
   }
 
   // 🔥 GAME OVER (AINOASTAAN YKSI KERTA)
-  if (moveIndex >= 1) {
+  if (moveIndex >= 15) {
     gameState = "gameover";
     setTimeout(() => GameOver(), 50);
     return;

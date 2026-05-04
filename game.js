@@ -12,7 +12,7 @@ let valinta = "Kotijäte Peli";
 let pelitila = "playing"; // playing | gameover
 let resultEl;
 let gameoverEl;
-let restartBtn;
+const restartBtn = document.getElementById("restartBtn");
 let moveIndex = 0;
 let success_count=0;
 let gameover_status=false;
@@ -25,11 +25,12 @@ let ponttoTekstit;    //kategoriat voi sis. tyhjiä ja ÄÖ
 async function start() {
 
   console.log("START GAME");
-  
+  /*
   restartBtn = document.createElement("button");
   restartBtn.innerHTML = "Pelaa uudestaan";
   restartBtn.id = "restartBtn";
   restartBtn.style.display = "none";
+  */
 
   restartBtn.addEventListener("click", () => {
   resetGame();
@@ -39,8 +40,9 @@ async function start() {
   document.getElementById("kotipainike").addEventListener("click", function () {
   window.location.href = "index.html";
   });
-
+/*
   document.querySelector("#pelipaneeli").appendChild(restartBtn);
+  */
   console.log("1 OK");
   dataJSON = await loadGameData();
   console.log("2 OK", dataJSON);
@@ -78,6 +80,9 @@ async function start() {
 
 function myGame() {
   //console.log(kotijatteet);
+
+  restartBtn.style.display = "none";
+
   peliData =
   valinta === "Kotijäte Peli"
     ? dataJSON.kotijate
@@ -120,6 +125,8 @@ function updateScore() {
 
 function GameOver() {
   pelitila = "gameover";
+
+  restartBtn.style.display = "block";
 
   // 🔥 nollaa kaikki pöntöt
   document.querySelectorAll("[class^='droptarget']").forEach(el => {
@@ -214,7 +221,7 @@ function luoKortit(kaikkiJatteet) {
   
   //console.log(kotijatteet);
   
-  for (let u = 0; u < 1; u++) { 
+  for (let u = 0; u < 15; u++) { 
 
   pallo[u]=document.createElement("div");
   pallo[u].id="pallo"+u;   
