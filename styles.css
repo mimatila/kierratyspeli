@@ -196,6 +196,7 @@ h2 {
 #restartBtn {
   width: 120px;
   padding: 6px 6px;
+  margin: 20px auto;
   /*height: 40px;*/
   background: yellow;
   font-weight: bold;
