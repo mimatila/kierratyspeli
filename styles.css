@@ -357,7 +357,6 @@ h2 {
   padding: clamp(6px, 1.5vw, 10px) clamp(10px, 3vw, 16px);
   gap: 15px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
   .grid-kortit-container {
