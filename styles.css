@@ -193,19 +193,6 @@ h2 {
   align-items: center;
 }
 
-#restartBtn {
-  width: 120px;
-  padding: 6px 6px;
-  margin: 20px auto;
-  /*height: 40px;*/
-  background: yellow;
-  font-weight: bold;
-  border-radius: 16px;
-  border: 2px solid darkblue;
-  display: none;
-  /*z-index: 9999;*/
-}
-
 .grid-pontot-container {
   display: flex;
   flex-wrap: wrap;
@@ -298,7 +285,18 @@ h2 {
   border: 2px solid darkblue;
   background-color: yellow; /* 🔥 pakota takaisin */
   padding: 6px 6px;
-  margin: 20px auto;
+}
+
+#restartBtn {
+  width: 120px;
+  padding: 6px 6px;
+  /*height: 40px;*/
+  background: yellow;
+  font-weight: bold;
+  border-radius: 16px;
+  border: 2px solid darkblue;
+  display: none;
+  /*z-index: 9999;*/
 }
 
 #painike,
@@ -357,6 +355,7 @@ h2 {
   padding: clamp(6px, 1.5vw, 10px) clamp(10px, 3vw, 16px);
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
   .grid-kortit-container {
