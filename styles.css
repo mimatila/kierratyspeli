@@ -278,7 +278,7 @@ h2 {
 }
 
 #kotipainike {
-  width: 80px;
+  width: 120px;
   justify-content: center;
   border-radius: 16px;
   font-weight: bold;
@@ -288,11 +288,8 @@ h2 {
   margin: 20px auto;
 }
 
-body {
-  background: hotpink !important;
-}
 #restartBtn {
-  width: 80px;
+  width: 120px;
   padding: 6px 6px;
   margin: 20px auto;
   /*height: 40px;*/
