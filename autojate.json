@@ -18,14 +18,12 @@
 	],
 	"OLJYT_JA_NESTEET": [
 		"musta moottoriöljy",
-		"kirkas moottoriöljy",
-		"jarruneste",
-		"jäähdytinneste"
+		"kirkas moottoriöljy"
 	],
 	"KIINTEA_OLJYINEN": [
 		"öljynsuodattimet",
 		"polttoainesuodattimet",
-		"öljynpuhdistusliinat ja -imeytysaineet",
+		"öljynpuhdistusliinat",
 		"öljyllä sotkeutunut pahvi",
 		"muoviset voiteluainepurkit",
 		"öljykanisterit",
@@ -39,7 +37,6 @@
 		"ilmastointikompressorit",
 		"vetoakselit",
 		"starttimoottorit",
-		"jarrusatulat",
 		"ohjausvaihteet eli hammastangot",
 		"ruiskusuuttimet"
 	],
@@ -52,23 +49,23 @@
 		"likaiset paperit ja pahvit",
 		"puupakkaukset ja -laatikot",
 		"pakkausmuovit(ei pvc)",
-                "kartongit",
-                 "vaatteet",
+        "kartongit",
+        "työvaatteet",
 		"solumuovi(styrox)"
 	],
 	"POLTETTAVA": [
 		"lattioiden lakaisujäte",
 		"hiomapaperit ja -laikat",
-        	"elintarvike- ja ruokajäte",
+        "elintarvike- ja ruokajäte",
 		"hitsausjäte", 
 		"työhanskat",
-        	"siivousjäte ja pölypussit",
+        "siivousjäte ja pölypussit",
 		"moottorin ilmansuodattimet",
-       	 	"raitisilmasuodattimet",
-       		"PVC muovit, vain pienet määrät",
+       	"raitisilmasuodattimet",
+       	"PVC muovit, vain pienet määrät",
 		"ajovalojen lasit",
 		"maalauksen suojapaperit", 
-                "halogeenilamput ja hehkulamput", 
+        "halogeenilamput ja hehkulamput", 
 		"apulaite- ja jakohihnat"
 	],
 	"SER": [
@@ -76,7 +73,6 @@
 		"ilmastointikompressorit",
 		"led -lamput",
 		"paloilmaisimet ja termostaatit", 
-		"laturit ja starttimoottorit",
 		"sytytyspuolat",
 		"polttoainepumput",
 		"radiot ja kaiuttimet",

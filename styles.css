@@ -10,7 +10,7 @@ body {
   display: flex;
   min-height: 100vh;
   margin: 0; 
-  padding: 0px;
+  padding: 0;
   flex-direction: column;
   font-family:Arial, Helvetica, sans-serif;
   color:blue;
@@ -60,10 +60,8 @@ html, body {
   min-height: 0;
 }
 
-
-
 .jateteksti {
-   font-size: clamp(0.6rem, 2.2vw, 0.8rem);   /* tai esim 10px / 0.8rem */ 
+  font-size: clamp(0.6rem, 2.2vw, 0.8rem);   /* tai esim 10px / 0.8rem */ 
   text-align: center;
 }
 
@@ -78,31 +76,31 @@ html, body {
   background-image: url('recycling_image_trans.png');
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: clamp(60px, 6vw, 100px);
+  background-size: clamp(40px, 6vw, 60px);
   background-position: 10px center;
 }
 
 /* Create two columns/boxes that floats next to each other */
 .sivupaneeli { 
+  display: flex;
+  flex-direction: column;
   margin: 0; 
   padding: 0;
   width: 100%;
   background: lightgreen;
   padding: 16px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  display: flex;
-  justify-content: center; /* keskittää paneelin */
+  /* justify-content: center; keskittää paneelin */
   align-items: center; /* 🔥 TÄMÄ keskittää vaakaan */
-  flex-direction: column;
   gap: 10px;
 }
 
 .sivupaneeli ul {
+  display: flex;
+  flex-direction: column;
   margin: 0; 
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
   gap: 10px; /* tekee välin linkkien väliin */
 }
 
@@ -113,17 +111,16 @@ html, body {
 
 #pelipaneeli {
   display: flex;
+  flex-direction: column;
   margin: 0; 
   padding: 0;
   flex: 1;
   min-height: 0;
   overflow: visible;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: stretch; /* 🔥 EI center */
   background-color: rgb(144, 174, 238);
   position: relative;
-  /*position: relative;*/
 }
 
 #jateteksti{
@@ -241,7 +238,7 @@ h2 {
   max-width: 130px;
   height: 50px;
   font-size: clamp(10px, 2.2vw, 12px);
-  border: 2px solid darkgreen;
+  border: 2px solid darkblue;
   background-color: lightgreen;
   box-sizing: border-box;
   justify-content: center;
@@ -298,7 +295,7 @@ h2 {
   justify-content: center;
   border-radius: 6px;
   font-weight: bold;
-  border: 2px solid darkgreen;
+  border: 2px solid darkblue;
   background-color: yellow; /* 🔥 pakota takaisin */
   padding: 6px 10px;
   margin: 20px auto;
@@ -334,14 +331,14 @@ h2 {
   }
 
   .grid-kortit-container {
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .roskakortti:nth-child(n+2) {
-  display: none;
+    display: none;
   } 
   
   .grid-valot-container {
@@ -373,7 +370,6 @@ h2 {
   }
 
   .header-kuva { height: 9dvh; }
-  #peli { width: 80%; }
 
   .pallo { max-width: 0.7em; max-height: 0.7em; }
 

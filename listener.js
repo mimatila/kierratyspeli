@@ -33,7 +33,7 @@ function listener() {
     const target = event.target.closest("[class^='droptarget']");
     if (!target) return;
 
-    target.style.background = "lightyellow";
+    target.style.background = "yellow";
     target.style.borderRadius = "6px";
   });
 
