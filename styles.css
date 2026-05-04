@@ -293,7 +293,7 @@ h2 {
 #kotipainike {
   width: 140px;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 16px;
   font-weight: bold;
   border: 2px solid darkblue;
   background-color: yellow; /* 🔥 pakota takaisin */
@@ -305,7 +305,8 @@ h2 {
 #painike2 {
   margin: 10px;
   font-size: clamp(0.8rem, 2.2vw, 1rem);
-  border-radius: 6px;
+  border-radius: 16px;
+  border: 2px solid darkblue;
   font-weight: bold;
   background-color: yellow;
   height: clamp(28px, 5vw, 36px);
