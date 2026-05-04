@@ -191,10 +191,10 @@ h2 {
   align-content: start;
   grid-row-gap: 0px;
   grid-column-gap: 20px;
-  min-height: 240px;  /*260px org */
+  min-height: 260px;  /*260px org */
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
-  margin: 15px auto 0;
+  margin: 5px auto 0;
   justify-content: center;
   align-items: center;
 }
