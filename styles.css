@@ -278,18 +278,20 @@ h2 {
 }
 
 #kotipainike {
-  width: 120px;
+  width: 80px;
   justify-content: center;
   border-radius: 16px;
   font-weight: bold;
   border: 2px solid darkblue;
   background-color: yellow; /* 🔥 pakota takaisin */
   padding: 6px 6px;
+  margin: 20px auto;
 }
 
 #restartBtn {
-  width: 120px;
+  width: 80px;
   padding: 6px 6px;
+  margin: 20px auto;
   /*height: 40px;*/
   background: yellow;
   font-weight: bold;
