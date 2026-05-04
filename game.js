@@ -81,6 +81,9 @@ async function start() {
 function myGame() {
   //console.log(kotijatteet);
 
+  const el = document.getElementById("pelipaneeli");
+console.log(el.clientWidth, el.clientHeight);
+
   restartBtn.style.display = "none";
 
   peliData =
@@ -221,7 +224,7 @@ function luoKortit(kaikkiJatteet) {
   
   //console.log(kotijatteet);
   
-  for (let u = 0; u < 1; u++) { 
+  for (let u = 0; u < 15; u++) { 
 
   pallo[u]=document.createElement("div");
   pallo[u].id="pallo"+u;   

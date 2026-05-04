@@ -121,6 +121,12 @@ html, body {
   align-items: stretch; /* 🔥 EI center */
   background-color: rgb(144, 174, 238);
   position: relative;
+  /*
+  background-image: url("tree.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
 }
 
 #jateteksti{
@@ -184,11 +190,12 @@ h2 {
   gap: clamp(6px, 1.5vw, 30px);
   align-content: start;
   grid-row-gap: 0px;
-  grid-column-gap: 8px;
-  min-height: 260px;
+  grid-column-gap: 20px;
+  min-height: 300px;  /*260px org */
   width: 100%;        /* 🔥 tärkein muutos */
   max-width: 800px;   /* keskitys ilman rikkomista */
   margin: 0 auto;       /* 🔥 oikea keskitys */
+  margin-top: 15px;
   justify-content: center;
   align-items: center;
 }
@@ -285,13 +292,13 @@ h2 {
   border: 2px solid darkblue;
   background-color: yellow; /* 🔥 pakota takaisin */
   padding: 6px 6px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 #restartBtn {
   width: 120px;
   padding: 6px 6px;
-  margin: 20px auto;
+  margin: 10px auto;
   /*height: 40px;*/
   background: yellow;
   font-weight: bold;
