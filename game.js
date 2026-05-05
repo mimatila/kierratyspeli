@@ -122,7 +122,6 @@ function clearDropHighlight(target) {
 
 function updateScore() {
   if (resultEl) {
-    console.log("hehe: "+success_count+" hahahah: "+resultEl);
     resultEl.innerHTML = success_count + "/15";
   }
 }
