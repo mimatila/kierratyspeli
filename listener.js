@@ -1,4 +1,5 @@
 let listenersAdded = false;
+let resultColor="valkoinen";
 
 function listener() {
 
@@ -103,7 +104,17 @@ function listener() {
 
   // 🔥 GAME OVER (AINOASTAAN YKSI KERTA)
   if (moveIndex >= 15) {
+    console.log("hehe000: "+success_count+" hahahah: "+resultEl);
     gameState = "gameover";
+    if(success_count<9) {
+      result.style.color= "red";
+    }
+    if(success_count>=10&&success_count<14) {
+      result.style.color= "yellow";
+    }
+    if(success_count>=14) {
+      result.style.color= "green";
+    }
     setTimeout(() => GameOver(), 50);
     return;
   }
