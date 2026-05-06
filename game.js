@@ -131,6 +131,14 @@ function GameOver() {
 
   restartBtn.style.display = "block";
 
+  Swal.fire({
+  title: 'Hei!',
+  text: 'Muokattu väri',
+  icon: 'success',
+  background: '#222',
+  color: '#fff'
+});
+
   // 🔥 nollaa kaikki pöntöt
   document.querySelectorAll("[class^='droptarget']").forEach(el => {
     el.style.background = "";
@@ -241,13 +249,11 @@ function luoKortit(kaikkiJatteet) {
   kortti[u].className = "roskakortti";
   kortti[u].dataset.index = u;
   pallo[u].dataset.index = u;
-
   
     const randomItem = (arr) => {
     const u = Math.floor(Math.random() * arr.length);
     return arr.splice(u, 1)[0];
     };
-
     
   korttiTeksti[u].innerHTML=randomItem(kaikkiJatteet);
   korttiTeksti[u].style.fontWeight="bold";
@@ -255,8 +261,28 @@ function luoKortit(kaikkiJatteet) {
   kortti[u].draggable="true";  
   kortitAlue.appendChild(kortti[u]); 
 }
+/*
+Swal.fire({
+  title: 'Valmis!',
+  text: 'Tämä näyttää paljon paremmalta',
+  icon: 'success'
+});
+*/
 
-
+/*
+Swal.fire({
+  title: 'Oletko varma?',
+  text: 'Tätä ei voi perua!',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Kyllä',
+  cancelButtonText: 'Peruuta'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire('Poistettu!', '', 'success');
+  }
+});
+*/
 } 
 
 function luoPontot(pontot) {

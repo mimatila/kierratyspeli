@@ -12,7 +12,7 @@ function listener() {
     if (!card) return;
 
     event.dataTransfer.setData("kortti", card.id);
-    card.style.opacity = "0.4";
+    card.style.opacity = "0.6";
   });
 
   /* ---------------- DRAG ---------------- */
@@ -106,7 +106,12 @@ function listener() {
   if (moveIndex >= 15) {
     //console.log("hehe000: "+success_count+" hahahah: "+resultEl);
     gameState = "gameover";
+
+    if (success_count < 9) result.style.color = "red";
+      else if (success_count < 14) result.style.color = "yellow";
+        else result.style.color = "green";
     
+    /*
     if(success_count<9) {
       result.style.color= "red";
     }
@@ -116,6 +121,7 @@ function listener() {
     if(success_count>=14) {
       result.style.color= "green";
     }
+      */
     setTimeout(() => GameOver(), 50);
     return;
   }
