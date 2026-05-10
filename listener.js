@@ -103,7 +103,7 @@ function listener() {
   }
 
   // 🔥 GAME OVER (AINOASTAAN YKSI KERTA)
-  if (moveIndex >= 1) {
+  if (moveIndex >= 15) {
     //console.log("hehe000: "+success_count+" hahahah: "+resultEl);
     gameState = "gameover";
 
