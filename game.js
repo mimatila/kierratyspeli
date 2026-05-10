@@ -131,13 +131,20 @@ function GameOver() {
 
   restartBtn.style.display = "block";
 
-  Swal.fire({
-  title: 'Hei!',
-  text: 'Muokattu väri',
+const isMobile = window.innerWidth <= 749;
+
+Swal.fire({
+  title: 'GameOver!',
+  html: `<div class="swal-content">${resultEl.innerHTML}</div>`,
   icon: 'success',
   background: '#222',
-  color: '#fff'
+  color: '#fff',
+  width: isMobile ? '200px' : '320px',
+  heightAuto: true,
+  scrollbarPadding: false
 });
+
+//gameAlert('Muokattu väri');
 
   // 🔥 nollaa kaikki pöntöt
   document.querySelectorAll("[class^='droptarget']").forEach(el => {
@@ -232,7 +239,7 @@ function luoKortit(kaikkiJatteet) {
   
   //console.log(kotijatteet);
   
-  for (let u = 0; u < 15; u++) { 
+  for (let u = 0; u < 1; u++) { 
 
   pallo[u]=document.createElement("div");
   pallo[u].id="pallo"+u;   
@@ -319,6 +326,21 @@ function luoPontot(pontot) {
 
     pontotAlue.appendChild(item);
   }
+}
+
+function gameAlert(text) {
+  return Swal.fire({
+    text,
+    icon: 'success',
+    background: '#222',
+    color: '#fff',
+    heightAuto: false,
+    scrollbarPadding: false,
+    toast: true,
+    position: 'top-end',
+    timer: 2000,
+    showConfirmButton: false
+  });
 }
 
 function tarkistaData(dataKey, dataJSON) {
