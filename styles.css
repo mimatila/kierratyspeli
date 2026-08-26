@@ -350,6 +350,12 @@ body.swal2-shown {
 
 @media (max-width: 749px) {
 
+  body {
+  height: 100dvh;
+  margin: 0;
+  overflow: hidden; 
+}
+
   .layout {
     display: flex;
     flex-direction: column;
